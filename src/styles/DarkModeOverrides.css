@@ -1,0 +1,1458 @@
+/* ========================================
+   DARK MODE - WHITE BACKGROUND FIXES
+   ======================================== */
+
+/* Fix ALL white/light backgrounds across the system */
+
+/* Meeting invitation cards - white description boxes */
+.meeting-description,
+.task-description,
+.resolution-description,
+[class*="description-box"],
+[class*="desc-box"] {
+  background: var(--theme-surface-3, #162132) !important;
+  color: var(--theme-text-2, #b8c5da) !important;
+  border: 1px solid var(--theme-border, #24344c) !important;
+}
+
+/* Task assignment system - huge white section */
+.task-assignment-system,
+.task-assignment-container,
+.assignment-panel {
+  background: var(--theme-surface-2, #101826) !important;
+  color: var(--theme-text-1, #f5f8ff) !important;
+}
+
+/* Resolution workflow */
+.resolution-workflow,
+.resolution-container {
+  background: var(--theme-surface-2, #101826) !important;
+  color: var(--theme-text-1, #f5f8ff) !important;
+}
+
+/* Meeting invitation manager */
+.meeting-invitation-manager,
+.invitation-container {
+  background: var(--theme-surface-2, #101826) !important;
+  color: var(--theme-text-1, #f5f8ff) !important;
+}
+
+/* Email notification sections */
+.email-notification-section,
+.how-it-works-section,
+.instruction-panel,
+.guide-section,
+.info-section {
+  background: var(--theme-surface-2, #101826) !important;
+  color: var(--theme-text-1, #f5f8ff) !important;
+}
+
+/* Meeting type badges - white/light backgrounds */
+.meeting-type-badge,
+.committee-type-badge,
+.subcommittee-badge,
+[class*="-badge"]:not(.status-badge):not(.role-badge) {
+  background: var(--theme-surface-3, #162132) !important;
+  color: var(--theme-text-1, #f5f8ff) !important;
+  border: 1px solid var(--theme-border, #24344c) !important;
+}
+
+/* White badges with specific colors */
+.badge-white,
+.badge-light,
+[class*="badge"][style*="background: white"],
+[class*="badge"][style*="background: #fff"] {
+  background: var(--theme-surface-3, #162132) !important;
+  color: var(--theme-text-1, #f5f8ff) !important;
+}
+
+/* Fix contribution/weight sections */
+.task-contribution,
+.contribution-section,
+.weight-section {
+  background: linear-gradient(135deg, rgba(5, 150, 105, 0.15) 0%, rgba(4, 120, 87, 0.15) 100%) !important;
+  border: 1px solid rgba(5, 150, 105, 0.3) !important;
+}
+
+.contribution-label,
+.weight-label {
+  color: var(--theme-text-1, #f5f8ff) !important;
+}
+
+.contribution-description,
+.weight-description {
+  color: var(--theme-text-2, #b8c5da) !important;
+}
+
+/* Fix all headings in white sections */
+.task-assignment-system h1,
+.task-assignment-system h2,
+.task-assignment-system h3,
+.task-assignment-system h4,
+.resolution-workflow h1,
+.resolution-workflow h2,
+.resolution-workflow h3,
+.meeting-invitation-manager h1,
+.meeting-invitation-manager h2,
+.meeting-invitation-manager h3,
+.email-notification-section h1,
+.email-notification-section h2,
+.email-notification-section h3 {
+  color: var(--theme-text-1, #f5f8ff) !important;
+}
+
+/* Fix all paragraphs in white sections */
+.task-assignment-system p,
+.resolution-workflow p,
+.meeting-invitation-manager p,
+.email-notification-section p {
+  color: var(--theme-text-2, #b8c5da) !important;
+}
+
+/* Fix numbered steps sections */
+.steps-container,
+.numbered-steps,
+[class*="step-"] {
+  background: transparent !important;
+  color: var(--theme-text-1, #f5f8ff) !important;
+}
+
+/* Fix meeting cards with white backgrounds */
+.meeting-card,
+.meeting-item,
+[class*="meeting-card"] {
+  background: var(--theme-surface-2, #101826) !important;
+  border: 1px solid var(--theme-border, #24344c) !important;
+}
+
+/* Fix task cards with white backgrounds */
+.task-card,
+.task-item,
+[class*="task-card"] {
+  background: var(--theme-surface-2, #101826) !important;
+  border: 1px solid var(--theme-border, #24344c) !important;
+}
+
+/* Fix white panels and sections */
+.panel-white,
+.section-white,
+.bg-white,
+[class*="white"] {
+  background: var(--theme-surface-2, #101826) !important;
+  color: var(--theme-text-1, #f5f8ff) !important;
+}
+
+/* Fix light gray backgrounds that look white */
+.bg-gray-50,
+.bg-gray-100,
+[class*="bg-gray"] {
+  background: var(--theme-surface-2, #101826) !important;
+}
+
+/* Fix inline styles with white backgrounds */
+[style*="background: white"],
+[style*="background: #fff"],
+[style*="background: #ffffff"],
+[style*="background-color: white"],
+[style*="background-color: #fff"],
+[style*="background-color: #ffffff"] {
+  background: var(--theme-surface-2, #101826) !important;
+  color: var(--theme-text-1, #f5f8ff) !important;
+}
+
+/* Fix light colored backgrounds */
+[style*="background: #f"],
+[style*="background-color: #f"] {
+  background: var(--theme-surface-2, #101826) !important;
+  color: var(--theme-text-1, #f5f8ff) !important;
+}
+
+
+
+/* ========================================
+   TASK ASSIGNMENT PAGE - SPECIFIC FIXES
+   ======================================== */
+/* Main container */
+.comprehensive-secretary-dashboard,
+.secretary-portal,
+[class*="secretary"] {
+  background: var(--theme-surface-1, #070b14) !important;
+}
+
+/* Task assignment tab content */
+.task-assignment-tab,
+.task-assignment-content,
+.assignment-form,
+.assignment-wizard {
+  background: var(--theme-surface-2, #101826) !important;
+  color: var(--theme-text-1, #f5f8ff) !important;
+}
+
+/* Info panels and instruction boxes */
+.info-panel,
+.instruction-box,
+.help-panel,
+.guide-panel,
+[class*="info-"],
+[class*="instruction-"],
+[class*="help-"],
+[class*="guide-"] {
+  background: rgba(59, 130, 246, 0.15) !important;
+  border: 1px solid rgba(59, 130, 246, 0.3) !important;
+  color: var(--theme-text-1, #f5f8ff) !important;
+}
+
+/* Step indicators and numbered sections */
+.step-indicator,
+.step-number,
+.numbered-section,
+[class*="step-"] {
+  background: var(--theme-surface-3, #162132) !important;
+  color: var(--theme-text-1, #f5f8ff) !important;
+}
+
+/* ========================================
+   TAKE MINUTES PAGE - SPECIFIC FIXES
+   ======================================== */
+/* Minutes editor container */
+.take-minutes-container,
+.minutes-editor,
+.minutes-form,
+[class*="minutes-"] {
+  background: var(--theme-surface-1, #070b14) !important;
+}
+
+/* Minutes cards and sections */
+.minutes-card,
+.minutes-section,
+.meeting-minutes-card {
+  background: var(--theme-surface-2, #101826) !important;
+  border: 1px solid var(--theme-border, #24344c) !important;
+  color: var(--theme-text-1, #f5f8ff) !important;
+}
+
+/* Minutes tabs */
+.minutes-tabs,
+.pending-minutes,
+.ongoing-minutes,
+.upcoming-minutes {
+  background: transparent !important;
+}
+
+/* Meeting info sections in minutes */
+.meeting-info,
+.meeting-details-section {
+  background: var(--theme-surface-3, #162132) !important;
+  color: var(--theme-text-1, #f5f8ff) !important;
+}
+
+/* ========================================
+   TAKE ATTENDANCE PAGE - SPECIFIC FIXES
+   ======================================== */
+/* Attendance container */
+.take-attendance-container,
+.attendance-form,
+.attendance-page,
+[class*="attendance-"] {
+  background: var(--theme-surface-1, #070b14) !important;
+}
+
+/* Attendance cards */
+.attendance-card,
+.attendance-section,
+.meeting-attendance-card {
+  background: var(--theme-surface-2, #101826) !important;
+  border: 1px solid var(--theme-border, #24344c) !important;
+  color: var(--theme-text-1, #f5f8ff) !important;
+}
+
+/* Step headers */
+.step-header,
+.section-header,
+[class*="header-"] {
+  background: var(--theme-surface-2, #101826) !important;
+  color: var(--theme-text-1, #f5f8ff) !important;
+}
+
+/* Meeting selection cards */
+.meeting-selection,
+.meeting-selector,
+.select-meeting-card {
+  background: var(--theme-surface-2, #101826) !important;
+  border: 1px solid var(--theme-border, #24344c) !important;
+}
+
+/* Attendance list items */
+.attendance-list-item,
+.member-attendance-item {
+  background: var(--theme-surface-3, #162132) !important;
+  border: 1px solid var(--theme-border, #24344c) !important;
+  color: var(--theme-text-1, #f5f8ff) !important;
+}
+
+/* ========================================
+   COMMON FIXES FOR ALL PAGES
+   ======================================== */
+/* Tab navigation backgrounds */
+.tab-navigation,
+.tabs-container,
+[class*="tab-nav"] {
+  background: var(--theme-surface-2, #101826) !important;
+  border: 1px solid var(--theme-border, #24344c) !important;
+}
+
+/* Tab buttons */
+.tab-button,
+.tab-btn,
+[class*="tab-button"] {
+  background: transparent !important;
+  color: var(--theme-text-2, #b8c5da) !important;
+}
+
+.tab-button.active,
+.tab-btn.active {
+  background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%) !important;
+  color: white !important;
+}
+
+/* Content sections */
+.content-section,
+.main-content-section,
+[class*="content-section"] {
+  background: transparent !important;
+}
+
+/* Headers with white backgrounds */
+.page-header,
+.section-header,
+.content-header,
+[class*="-header"]:not(.modal-header) {
+  background: var(--theme-surface-2, #101826) !important;
+  color: var(--theme-text-1, #f5f8ff) !important;
+}
+
+/* Lists and grids */
+.list-container,
+.grid-container,
+[class*="-list"],
+[class*="-grid"] {
+  background: transparent !important;
+}
+
+/* Cards in lists */
+.list-item-card,
+.grid-item-card {
+  background: var(--theme-surface-2, #101826) !important;
+  border: 1px solid var(--theme-border, #24344c) !important;
+}
+
+/* Form sections */
+.form-section,
+.form-group-section {
+  background: transparent !important;
+}
+
+/* Buttons with white backgrounds */
+button[style*="background: white"],
+button[style*="background: #fff"],
+.btn-white,
+.btn-light {
+  background: var(--theme-surface-3, #162132) !important;
+  color: var(--theme-text-1, #f5f8ff) !important;
+  border: 1px solid var(--theme-border, #24344c) !important;
+}
+
+/* Fix all remaining white backgrounds */
+div[style*="background: white"],
+div[style*="background: #fff"],
+div[style*="background: #ffffff"],
+div[style*="backgroundColor: white"],
+div[style*="backgroundColor: #fff"],
+section[style*="background: white"],
+section[style*="background: #fff"] {
+  background: var(--theme-surface-2, #101826) !important;
+  color: var(--theme-text-1, #f5f8ff) !important;
+}
+
+
+/* ========================================
+   FIX MEETING TYPE BADGES - WHITE TEXT ON WHITE BACKGROUND
+   ======================================== */
+/* All meeting type badges */
+.meeting-type-badge,
+.committee-type-badge,
+.subcommittee-badge,
+.commissioner-badge,
+.technical-badge,
+[class*="meeting-type"],
+[class*="committee-type"],
+[class*="meeting-badge"] {
+  background: var(--theme-surface-3, #162132) !important;
+  color: var(--theme-text-1, #f5f8ff) !important;
+  border: 1px solid var(--theme-border, #24344c) !important;
+  font-weight: 600 !important;
+}
+
+/* Specific badge types with better colors */
+.badge-subcommittee,
+[class*="subcommittee"][class*="badge"] {
+  background: rgba(245, 158, 11, 0.2) !important;
+  color: #fbbf24 !important;
+  border: 1px solid rgba(245, 158, 11, 0.4) !important;
+}
+
+.badge-technical,
+[class*="technical"][class*="badge"] {
+  background: rgba(59, 130, 246, 0.2) !important;
+  color: #60a5fa !important;
+  border: 1px solid rgba(59, 130, 246, 0.4) !important;
+}
+
+.badge-commissioner,
+[class*="commissioner"][class*="badge"] {
+  background: rgba(139, 92, 246, 0.2) !important;
+  color: #a78bfa !important;
+  border: 1px solid rgba(139, 92, 246, 0.4) !important;
+}
+
+/* Fix light colored badges in general */
+.badge-light,
+.badge-white,
+.badge-gray,
+[class*="badge"][style*="background: #f"],
+[class*="badge"][style*="background: white"] {
+  background: var(--theme-surface-3, #162132) !important;
+  color: var(--theme-text-1, #f5f8ff) !important;
+  border: 1px solid var(--theme-border, #24344c) !important;
+}
+
+/* Fix badges with inline light styles */
+span[style*="background: #f"],
+span[style*="background: white"],
+span[style*="background-color: #f"],
+span[style*="background-color: white"] {
+  background: var(--theme-surface-3, #162132) !important;
+  color: var(--theme-text-1, #f5f8ff) !important;
+}
+
+/* Ensure text is always visible in badges */
+.badge,
+.tag,
+.label,
+[class*="badge"],
+[class*="tag"],
+[class*="label"] {
+  color: var(--theme-text-1, #f5f8ff) !important;
+  font-weight: 600 !important;
+}
+
+/* Fix specific meeting card badges */
+.meeting-card .badge,
+.attendance-card .badge,
+.minutes-card .badge {
+  background: var(--theme-surface-3, #162132) !important;
+  color: var(--theme-text-1, #f5f8ff) !important;
+  border: 1px solid var(--theme-border, #24344c) !important;
+}
+
+
+/* ========================================
+   FIX BLACK BACKGROUND BOXES ON HEADINGS
+   ======================================== */
+/* Remove black background boxes from section headings */
+.section-title,
+.page-title,
+.content-title,
+.step-title,
+[class*="-title"],
+[class*="-heading"] {
+  background: transparent !important;
+  color: var(--theme-text-1, #f5f8ff) !important;
+  padding: 0 !important;
+}
+
+/* Specific fix for "Select a Meeting" heading */
+h2[style*="background"],
+h3[style*="background"],
+h4[style*="background"] {
+  background: transparent !important;
+}
+
+/* Remove background from all headings */
+h1, h2, h3, h4, h5, h6 {
+  background: transparent !important;
+  color: var(--theme-text-1, #f5f8ff) !important;
+}
+
+/* Fix headings with icon backgrounds */
+.heading-with-icon,
+.title-with-icon {
+  background: transparent !important;
+}
+
+
+/* ========================================
+   SECRETARY PORTAL - AGGRESSIVE WHITE BACKGROUND FIX
+   ======================================== */
+/* Override Secretary Portal white backgrounds */
+.secretary-portal-container {
+  background-color: var(--theme-surface-1, #070b14) !important;
+}
+
+.tab-buttons {
+  background: var(--theme-surface-2, #101826) !important;
+  border: 1px solid var(--theme-border, #24344c) !important;
+}
+
+.tab-button:not(.active) {
+  background-color: var(--theme-surface-3, #162132) !important;
+  color: var(--theme-text-1, #f5f8ff) !important;
+  border: 1px solid var(--theme-border, #24344c) !important;
+}
+
+.dashboard-card {
+  background: var(--theme-surface-2, #101826) !important;
+  color: var(--theme-text-1, #f5f8ff) !important;
+  border: 1px solid var(--theme-border, #24344c) !important;
+}
+
+.stat-card {
+  background: var(--theme-surface-2, #101826) !important;
+  color: var(--theme-text-1, #f5f8ff) !important;
+  border: 1px solid var(--theme-border, #24344c) !important;
+}
+
+.quick-action {
+  background: var(--theme-surface-2, #101826) !important;
+  color: var(--theme-text-1, #f5f8ff) !important;
+  border: 1px solid var(--theme-border, #24344c) !important;
+}
+
+.btn-secondary {
+  background: var(--theme-surface-3, #162132) !important;
+  color: var(--theme-text-1, #f5f8ff) !important;
+  border: 1px solid var(--theme-border, #24344c) !important;
+}
+
+/* Task Assignment specific white box */
+.task-assignment-wrapper,
+.task-assignment-content,
+.assignment-system-wrapper {
+  background: var(--theme-surface-2, #101826) !important;
+  color: var(--theme-text-1, #f5f8ff) !important;
+}
+
+/* Override any remaining white backgrounds in secretary portal */
+.secretary-portal-container * {
+  background-color: inherit !important;
+}
+
+.secretary-portal-container .dashboard-card,
+.secretary-portal-container .stat-card,
+.secretary-portal-container .quick-action,
+.secretary-portal-container .tab-buttons {
+  background: var(--theme-surface-2, #101826) !important;
+}
+
+
+/* ========================================
+   FIX PAGE TITLES - MAKE THEM VISIBLE
+   ======================================== */
+/* Dashboard titles */
+.dashboard-title,
+.page-title,
+.portal-title,
+.secretary-title,
+.admin-title,
+.chair-title,
+.hod-title,
+.commissioner-title,
+.member-title,
+[class*="dashboard-title"],
+[class*="portal-title"] {
+  color: var(--theme-text-1, #f5f8ff) !important;
+  font-weight: 700 !important;
+  font-size: 1.75rem !important;
+  margin-bottom: 0.5rem !important;
+  background: transparent !important;
+}
+
+/* Dashboard subtitles */
+.dashboard-subtitle,
+.page-subtitle,
+.portal-subtitle,
+[class*="dashboard-subtitle"],
+[class*="portal-subtitle"] {
+  color: var(--theme-text-2, #b8c5da) !important;
+  font-size: 1rem !important;
+  background: transparent !important;
+}
+
+/* Header sections */
+.dashboard-header,
+.page-header-section,
+.portal-header,
+[class*="dashboard-header"],
+[class*="portal-header"] {
+  background: transparent !important;
+  padding: 1rem 0 !important;
+  margin-bottom: 1.5rem !important;
+}
+
+/* Ensure all h1, h2 in dashboards are visible */
+.secretary-portal-container h1,
+.admin-dashboard h1,
+.chair-dashboard h1,
+.hod-dashboard h1,
+.commissioner-dashboard h1,
+.member-dashboard h1,
+[class*="dashboard"] h1,
+[class*="portal"] h1 {
+  color: var(--theme-text-1, #f5f8ff) !important;
+  background: transparent !important;
+}
+
+.secretary-portal-container h2,
+.admin-dashboard h2,
+.chair-dashboard h2,
+.hod-dashboard h2,
+.commissioner-dashboard h2,
+.member-dashboard h2,
+[class*="dashboard"] h2,
+[class*="portal"] h2 {
+  color: var(--theme-text-1, #f5f8ff) !important;
+  background: transparent !important;
+}
+
+
+/* ========================================
+   FIX SECRETARY DASHBOARD TITLE VISIBILITY - AGGRESSIVE
+   ======================================== */
+/* Main title - Committee Secretary Dashboard */
+.enhanced-secretary-dashboard .main-title,
+.enhanced-secretary-dashboard h1.main-title,
+.dashboard-header .main-title,
+.header-title .main-title,
+h1[class*="main-title"],
+[class*="main-title"] {
+  color: #60a5fa !important;
+  font-size: 1.75rem !important;
+  font-weight: 800 !important;
+  margin: 0 !important;
+  background: transparent !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: block !important;
+  text-shadow: 0 0 1px rgba(96, 165, 250, 0.5) !important;
+  -webkit-text-fill-color: #60a5fa !important;
+  background-clip: unset !important;
+  -webkit-background-clip: unset !important;
+}
+
+/* Subtitle */
+.enhanced-secretary-dashboard .subtitle,
+.header-title .subtitle,
+p[class*="subtitle"],
+[class*="subtitle"] {
+  color: var(--theme-text-2, #b8c5da) !important;
+  font-size: 1.1rem !important;
+  font-weight: 500 !important;
+  background: transparent !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: block !important;
+}
+
+/* Dashboard header */
+.enhanced-secretary-dashboard .dashboard-header,
+.dashboard-header {
+  background: var(--theme-surface-2, #101826) !important;
+  padding: 1.5rem 0 !important;
+  border-bottom: 1px solid var(--theme-border, #24344c) !important;
+}
+
+.enhanced-secretary-dashboard .header-content,
+.header-content {
+  background: transparent !important;
+}
+
+.enhanced-secretary-dashboard .header-title,
+.header-title {
+  background: transparent !important;
+}
+
+
+/* ========================================
+   NEW SECRETARY WORKFLOW COMPONENTS - DARK MODE
+   ======================================== */
+
+/* AOBManager Component */
+.dark-mode .aob-manager,
+body.dark-mode .aob-manager,
+[data-theme="dark"] .aob-manager {
+  background: var(--theme-surface-2, #101826) !important;
+  color: var(--theme-text-1, #f5f8ff) !important;
+  border: 1px solid var(--theme-border, #24344c) !important;
+}
+
+.dark-mode .aob-header h3,
+body.dark-mode .aob-header h3 {
+  color: var(--theme-text-1, #f5f8ff) !important;
+}
+
+.dark-mode .aob-description,
+body.dark-mode .aob-description {
+  color: var(--theme-text-2, #b8c5da) !important;
+}
+
+.dark-mode .aob-item,
+body.dark-mode .aob-item {
+  background: var(--theme-surface-3, #162132) !important;
+  border-color: var(--theme-border, #24344c) !important;
+}
+
+.dark-mode .aob-item-input,
+body.dark-mode .aob-item-input {
+  background: var(--theme-surface-1, #070b14) !important;
+  border-color: var(--theme-border, #24344c) !important;
+  color: var(--theme-text-1, #f5f8ff) !important;
+}
+
+.dark-mode .aob-item-input:disabled,
+body.dark-mode .aob-item-input:disabled {
+  background: var(--theme-surface-3, #162132) !important;
+}
+
+.dark-mode .aob-item-input::placeholder,
+body.dark-mode .aob-item-input::placeholder {
+  color: var(--theme-text-3, #6b7c95) !important;
+}
+
+.dark-mode .text-muted,
+body.dark-mode .text-muted {
+  color: var(--theme-text-2, #b8c5da) !important;
+}
+
+/* TaskDescriptionForm Component */
+.dark-mode .task-description-form,
+body.dark-mode .task-description-form,
+[data-theme="dark"] .task-description-form {
+  background: var(--theme-surface-2, #101826) !important;
+  color: var(--theme-text-1, #f5f8ff) !important;
+  border: 1px solid var(--theme-border, #24344c) !important;
+}
+
+.dark-mode .form-header h3,
+body.dark-mode .form-header h3 {
+  color: var(--theme-text-1, #f5f8ff) !important;
+}
+
+.dark-mode .form-description,
+body.dark-mode .form-description {
+  color: var(--theme-text-2, #b8c5da) !important;
+}
+
+.dark-mode .task-card,
+body.dark-mode .task-card {
+  background: var(--theme-surface-3, #162132) !important;
+  border-color: var(--theme-border, #24344c) !important;
+}
+
+.dark-mode .task-card.expanded,
+body.dark-mode .task-card.expanded {
+  background: var(--theme-surface-2, #101826) !important;
+  border-color: #3b82f6 !important;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2) !important;
+}
+
+.dark-mode .task-title,
+body.dark-mode .task-title {
+  color: var(--theme-text-1, #f5f8ff) !important;
+}
+
+.dark-mode .form-group label,
+body.dark-mode .form-group label {
+  color: var(--theme-text-1, #f5f8ff) !important;
+}
+
+.dark-mode .form-control,
+body.dark-mode .form-control {
+  background: var(--theme-surface-1, #070b14) !important;
+  border-color: var(--theme-border, #24344c) !important;
+  color: var(--theme-text-1, #f5f8ff) !important;
+}
+
+.dark-mode .form-control:focus,
+body.dark-mode .form-control:focus {
+  border-color: #3b82f6 !important;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2) !important;
+}
+
+.dark-mode .form-control:disabled,
+body.dark-mode .form-control:disabled {
+  background: var(--theme-surface-3, #162132) !important;
+}
+
+.dark-mode .task-meta,
+body.dark-mode .task-meta {
+  background: var(--theme-surface-1, #070b14) !important;
+  color: var(--theme-text-2, #b8c5da) !important;
+}
+
+.dark-mode .empty-state h4,
+body.dark-mode .empty-state h4 {
+  color: var(--theme-text-1, #f5f8ff) !important;
+}
+
+.dark-mode .empty-state p,
+body.dark-mode .empty-state p {
+  color: var(--theme-text-2, #b8c5da) !important;
+}
+
+/* WorkflowIndicator Component - Keep gradient but ensure text is visible */
+.dark-mode .workflow-indicator,
+body.dark-mode .workflow-indicator {
+  /* Keep gradient background */
+  color: white !important;
+}
+
+.dark-mode .workflow-title,
+body.dark-mode .workflow-title {
+  color: white !important;
+}
+
+.dark-mode .step-text,
+body.dark-mode .step-text {
+  color: white !important;
+}
+
+/* Alert components in new workflow */
+.dark-mode .alert-error,
+body.dark-mode .alert-error {
+  background: rgba(127, 29, 29, 0.3) !important;
+  color: #fecaca !important;
+  border-color: #991b1b !important;
+}
+
+.dark-mode .alert-success,
+body.dark-mode .alert-success {
+  background: rgba(20, 83, 45, 0.3) !important;
+  color: #bbf7d0 !important;
+  border-color: #166534 !important;
+}
+
+.dark-mode .alert-info,
+body.dark-mode .alert-info {
+  background: rgba(30, 58, 138, 0.3) !important;
+  color: #bfdbfe !important;
+  border-color: #1e40af !important;
+}
+
+/* Buttons in new components */
+.dark-mode .btn-primary,
+body.dark-mode .btn-primary {
+  background: #2563eb !important;
+  color: white !important;
+}
+
+.dark-mode .btn-primary:hover:not(:disabled),
+body.dark-mode .btn-primary:hover:not(:disabled) {
+  background: #1d4ed8 !important;
+}
+
+.dark-mode .btn-secondary,
+body.dark-mode .btn-secondary {
+  background: var(--theme-surface-3, #162132) !important;
+  color: var(--theme-text-1, #f5f8ff) !important;
+  border: 1px solid var(--theme-border, #24344c) !important;
+}
+
+.dark-mode .btn-secondary:hover:not(:disabled),
+body.dark-mode .btn-secondary:hover:not(:disabled) {
+  background: var(--theme-surface-2, #101826) !important;
+}
+
+.dark-mode .btn-remove,
+body.dark-mode .btn-remove {
+  background: #ef4444 !important;
+  color: white !important;
+}
+
+.dark-mode .btn-remove:hover:not(:disabled),
+body.dark-mode .btn-remove:hover:not(:disabled) {
+  background: #dc2626 !important;
+}
+
+/* Task badge colors */
+.dark-mode .task-badge,
+body.dark-mode .task-badge {
+  background: rgba(245, 158, 11, 0.2) !important;
+  color: #fbbf24 !important;
+  border: 1px solid rgba(245, 158, 11, 0.4) !important;
+}
+
+/* Workflow badge */
+.dark-mode .workflow-badge,
+body.dark-mode .workflow-badge {
+  background: rgba(255, 255, 255, 0.2) !important;
+  color: white !important;
+}
+
+/* Expand icon */
+.dark-mode .expand-icon,
+body.dark-mode .expand-icon {
+  color: var(--theme-text-2, #b8c5da) !important;
+}
+
+/* Step icons */
+.dark-mode .step-icon,
+body.dark-mode .step-icon {
+  background: rgba(255, 255, 255, 0.2) !important;
+}
+
+.dark-mode .step-icon.enabled,
+body.dark-mode .step-icon.enabled {
+  background: #10b981 !important;
+}
+
+/* Loading states */
+.dark-mode .task-description-form.loading,
+body.dark-mode .task-description-form.loading,
+.dark-mode .aob-manager.loading,
+body.dark-mode .aob-manager.loading {
+  color: var(--theme-text-2, #b8c5da) !important;
+}
+
+/* Workflow summary in Secretary Portal */
+.dark-mode .bg-gradient-to-r,
+body.dark-mode .bg-gradient-to-r {
+  /* Keep gradient backgrounds */
+  color: white !important;
+}
+
+.dark-mode .bg-gradient-to-r h2,
+body.dark-mode .bg-gradient-to-r h2,
+.dark-mode .bg-gradient-to-r h3,
+body.dark-mode .bg-gradient-to-r h3,
+.dark-mode .bg-gradient-to-r p,
+body.dark-mode .bg-gradient-to-r p,
+.dark-mode .bg-gradient-to-r li,
+body.dark-mode .bg-gradient-to-r li {
+  color: white !important;
+}
+
+/* Fix any remaining white backgrounds in new components */
+.aob-manager,
+.task-description-form,
+.workflow-indicator {
+  background: var(--theme-surface-2, #101826) !important;
+}
+
+/* Ensure all text is visible */
+.aob-manager *,
+.task-description-form *,
+.workflow-indicator * {
+  color: inherit !important;
+}
+
+/* Override any inline styles */
+.aob-manager [style*="background: white"],
+.aob-manager [style*="background: #fff"],
+.task-description-form [style*="background: white"],
+.task-description-form [style*="background: #fff"] {
+  background: var(--theme-surface-2, #101826) !important;
+}
+
+
+/* ========================================
+   HOD DASHBOARD - FIX WHITE BACKGROUNDS
+   ======================================== */
+/* Main HOD dashboard container */
+.hod-dashboard,
+.hod-dashboard-container,
+[class*="hod-dashboard"] {
+  background: var(--theme-surface-1, #070b14) !important;
+  color: var(--theme-text-1, #f5f8ff) !important;
+}
+
+/* Progress details boxes - CRITICAL FIX */
+.progress-details,
+.progress-details-box,
+.progress-section,
+[class*="progress-details"],
+[class*="progress-box"] {
+  background: var(--theme-surface-2, #101826) !important;
+  color: var(--theme-text-1, #f5f8ff) !important;
+  border: 1px solid var(--theme-border, #24344c) !important;
+}
+
+/* Resolution cards on HOD dashboard */
+.hod-dashboard .resolution-card,
+.hod-dashboard .report-card,
+.hod-dashboard .task-card {
+  background: var(--theme-surface-2, #101826) !important;
+  border: 1px solid var(--theme-border, #24344c) !important;
+  color: var(--theme-text-1, #f5f8ff) !important;
+}
+
+/* HOD dashboard stat cards */
+.hod-dashboard .stat-card,
+.hod-dashboard .dashboard-card,
+.hod-dashboard .metric-card {
+  background: var(--theme-surface-2, #101826) !important;
+  border: 1px solid var(--theme-border, #24344c) !important;
+  color: var(--theme-text-1, #f5f8ff) !important;
+}
+
+/* HOD notification section */
+.hod-dashboard .notification-section,
+.hod-dashboard .notification-card {
+  background: var(--theme-surface-2, #101826) !important;
+  border: 1px solid var(--theme-border, #24344c) !important;
+  color: var(--theme-text-1, #f5f8ff) !important;
+}
+
+/* HOD text elements */
+.hod-dashboard h1,
+.hod-dashboard h2,
+.hod-dashboard h3,
+.hod-dashboard h4 {
+  color: var(--theme-text-1, #f5f8ff) !important;
+  background: transparent !important;
+}
+
+.hod-dashboard p,
+.hod-dashboard span,
+.hod-dashboard div {
+  color: var(--theme-text-2, #b8c5da) !important;
+}
+
+/* HOD labels and metadata */
+.hod-dashboard .label,
+.hod-dashboard .meta,
+.hod-dashboard .info {
+  color: var(--theme-text-2, #b8c5da) !important;
+}
+
+
+/* ========================================
+   CHAIR DASHBOARD - FIX WHITE BACKGROUNDS
+   ======================================== */
+/* Main chair dashboard container */
+.chair-dashboard,
+.chair-dashboard-container,
+[class*="chair-dashboard"] {
+  background: var(--theme-surface-1, #070b14) !important;
+  color: var(--theme-text-1, #f5f8ff) !important;
+}
+
+/* Chair dashboard header - white box fix */
+.chair-dashboard .dashboard-header,
+.chair-dashboard-header,
+[class*="chair-dashboard"] .dashboard-header {
+  background: var(--theme-surface-2, #101826) !important;
+  color: var(--theme-text-1, #f5f8ff) !important;
+  border: 1px solid var(--theme-border, #24344c) !important;
+}
+
+/* Chair dashboard title section */
+.chair-dashboard .header-title,
+.chair-dashboard .page-title,
+[class*="chair-dashboard"] h1 {
+  color: var(--theme-text-1, #f5f8ff) !important;
+  background: transparent !important;
+}
+
+/* Assigned Resolutions section */
+.assigned-resolutions,
+.assigned-resolutions-section,
+[class*="assigned-resolutions"] {
+  background: var(--theme-surface-2, #101826) !important;
+  color: var(--theme-text-1, #f5f8ff) !important;
+  border: 1px solid var(--theme-border, #24344c) !important;
+}
+
+/* Resolution cards in chair dashboard */
+.chair-dashboard .resolution-card,
+.assigned-resolutions .resolution-card,
+[class*="assigned-resolutions"] .card {
+  background: var(--theme-surface-3, #162132) !important;
+  border: 1px solid var(--theme-border, #24344c) !important;
+  color: var(--theme-text-1, #f5f8ff) !important;
+}
+
+/* Resolution Reports section */
+.resolution-reports,
+.resolution-reports-section,
+[class*="resolution-reports"] {
+  background: var(--theme-surface-2, #101826) !important;
+  color: var(--theme-text-1, #f5f8ff) !important;
+  border: 1px solid var(--theme-border, #24344c) !important;
+}
+
+/* My Reports section */
+.my-reports,
+.my-reports-section,
+[class*="my-reports"] {
+  background: var(--theme-surface-2, #101826) !important;
+  color: var(--theme-text-1, #f5f8ff) !important;
+  border: 1px solid var(--theme-border, #24344c) !important;
+}
+
+/* Report cards */
+.chair-dashboard .report-card,
+.my-reports .report-card,
+.resolution-reports .report-card {
+  background: var(--theme-surface-3, #162132) !important;
+  border: 1px solid var(--theme-border, #24344c) !important;
+  color: var(--theme-text-1, #f5f8ff) !important;
+}
+
+/* Notification section on chair dashboard */
+.chair-dashboard .notification-section,
+.chair-dashboard .notifications,
+[class*="chair-dashboard"] .notification-card {
+  background: var(--theme-surface-2, #101826) !important;
+  border: 1px solid var(--theme-border, #24344c) !important;
+  color: var(--theme-text-1, #f5f8ff) !important;
+}
+
+/* Chair dashboard tabs */
+.chair-dashboard .tab-buttons,
+.chair-dashboard .tabs {
+  background: var(--theme-surface-2, #101826) !important;
+  border: 1px solid var(--theme-border, #24344c) !important;
+}
+
+/* Chair dashboard filter section */
+.chair-dashboard .filter-section,
+.chair-dashboard .filter-bar {
+  background: var(--theme-surface-2, #101826) !important;
+  border: 1px solid var(--theme-border, #24344c) !important;
+  color: var(--theme-text-1, #f5f8ff) !important;
+}
+
+/* Chair dashboard text elements */
+.chair-dashboard h1,
+.chair-dashboard h2,
+.chair-dashboard h3,
+.chair-dashboard h4 {
+  color: var(--theme-text-1, #f5f8ff) !important;
+  background: transparent !important;
+}
+
+.chair-dashboard p,
+.chair-dashboard span {
+  color: var(--theme-text-2, #b8c5da) !important;
+}
+
+
+/* ========================================
+   COMMISSIONER DASHBOARD - FIX WHITE BACKGROUNDS
+   ======================================== */
+/* Main commissioner dashboard container */
+.commissioner-dashboard,
+.commissioner-dashboard-container,
+[class*="commissioner-dashboard"] {
+  background: var(--theme-surface-1, #070b14) !important;
+  color: var(--theme-text-1, #f5f8ff) !important;
+}
+
+/* Performance Dashboard tab content */
+.performance-dashboard,
+.performance-dashboard-content,
+[class*="performance-dashboard"] {
+  background: var(--theme-surface-1, #070b14) !important;
+  color: var(--theme-text-1, #f5f8ff) !important;
+}
+
+/* Subcommittee Performance chart - white box fix */
+.subcommittee-performance,
+.subcommittee-performance-chart,
+[class*="subcommittee-performance"] {
+  background: var(--theme-surface-2, #101826) !important;
+  color: var(--theme-text-1, #f5f8ff) !important;
+  border: 1px solid var(--theme-border, #24344c) !important;
+}
+
+/* Report Status Distribution chart - white box fix */
+.report-status-distribution,
+.report-status-chart,
+[class*="report-status"] {
+  background: var(--theme-surface-2, #101826) !important;
+  color: var(--theme-text-1, #f5f8ff) !important;
+  border: 1px solid var(--theme-border, #24344c) !important;
+}
+
+/* Chart containers */
+.chart-container,
+.chart-box,
+[class*="chart-container"] {
+  background: var(--theme-surface-2, #101826) !important;
+  border: 1px solid var(--theme-border, #24344c) !important;
+}
+
+/* Chart titles and labels */
+.chart-title,
+.chart-header,
+[class*="chart-title"] {
+  color: var(--theme-text-1, #f5f8ff) !important;
+  background: transparent !important;
+}
+
+/* Chart legends */
+.chart-legend,
+.legend-item {
+  color: var(--theme-text-2, #b8c5da) !important;
+}
+
+/* Commissioner dashboard stat cards */
+.commissioner-dashboard .stat-card,
+.commissioner-dashboard .metric-card,
+.commissioner-dashboard .dashboard-card {
+  background: var(--theme-surface-2, #101826) !important;
+  border: 1px solid var(--theme-border, #24344c) !important;
+  color: var(--theme-text-1, #f5f8ff) !important;
+}
+
+/* Commissioner dashboard tabs */
+.commissioner-dashboard .tab-buttons,
+.commissioner-dashboard .tabs {
+  background: var(--theme-surface-2, #101826) !important;
+  border: 1px solid var(--theme-border, #24344c) !important;
+}
+
+/* Commissioner dashboard filter section */
+.commissioner-dashboard .filter-section,
+.commissioner-dashboard .filter-bar {
+  background: var(--theme-surface-2, #101826) !important;
+  border: 1px solid var(--theme-border, #24344c) !important;
+  color: var(--theme-text-1, #f5f8ff) !important;
+}
+
+/* Commissioner dashboard text elements */
+.commissioner-dashboard h1,
+.commissioner-dashboard h2,
+.commissioner-dashboard h3,
+.commissioner-dashboard h4 {
+  color: var(--theme-text-1, #f5f8ff) !important;
+  background: transparent !important;
+}
+
+.commissioner-dashboard p,
+.commissioner-dashboard span {
+  color: var(--theme-text-2, #b8c5da) !important;
+}
+
+/* Notifications tab */
+.commissioner-dashboard .notifications,
+.commissioner-dashboard .notification-section {
+  background: var(--theme-surface-2, #101826) !important;
+  border: 1px solid var(--theme-border, #24344c) !important;
+  color: var(--theme-text-1, #f5f8ff) !important;
+}
+
+/* Meetings & Resolutions tab */
+.commissioner-dashboard .meetings-section,
+.commissioner-dashboard .resolutions-section {
+  background: var(--theme-surface-2, #101826) !important;
+  border: 1px solid var(--theme-border, #24344c) !important;
+  color: var(--theme-text-1, #f5f8ff) !important;
+}
+
+/* Report Review tab */
+.commissioner-dashboard .report-review,
+.commissioner-dashboard .review-section {
+  background: var(--theme-surface-2, #101826) !important;
+  border: 1px solid var(--theme-border, #24344c) !important;
+  color: var(--theme-text-1, #f5f8ff) !important;
+}
+
+
+/* ========================================
+   COMMON DASHBOARD FIXES - ALL ROLES
+   ======================================== */
+/* Fix all white content boxes across all dashboards */
+.content-box,
+.content-panel,
+.content-section,
+[class*="content-box"],
+[class*="content-panel"] {
+  background: var(--theme-surface-2, #101826) !important;
+  color: var(--theme-text-1, #f5f8ff) !important;
+  border: 1px solid var(--theme-border, #24344c) !important;
+}
+
+/* Fix all white cards across all dashboards */
+.card,
+.dashboard-card,
+.info-card,
+[class*="-card"]:not(.status-card) {
+  background: var(--theme-surface-2, #101826) !important;
+  border: 1px solid var(--theme-border, #24344c) !important;
+  color: var(--theme-text-1, #f5f8ff) !important;
+}
+
+/* Fix all white panels */
+.panel,
+.dashboard-panel,
+.info-panel,
+[class*="-panel"] {
+  background: var(--theme-surface-2, #101826) !important;
+  border: 1px solid var(--theme-border, #24344c) !important;
+  color: var(--theme-text-1, #f5f8ff) !important;
+}
+
+/* Fix all white sections */
+.section,
+.dashboard-section,
+[class*="-section"] {
+  background: transparent !important;
+  color: var(--theme-text-1, #f5f8ff) !important;
+}
+
+/* Fix filter bars across all dashboards */
+.filter-bar,
+.filter-section,
+.filter-panel,
+[class*="filter-"] {
+  background: var(--theme-surface-2, #101826) !important;
+  border: 1px solid var(--theme-border, #24344c) !important;
+  color: var(--theme-text-1, #f5f8ff) !important;
+}
+
+/* Fix date pickers and inputs in filters */
+.filter-bar input,
+.filter-section input,
+.filter-bar select,
+.filter-section select {
+  background: var(--theme-surface-3, #162132) !important;
+  border: 1px solid var(--theme-border, #24344c) !important;
+  color: var(--theme-text-1, #f5f8ff) !important;
+}
+
+/* Fix export buttons */
+.export-button,
+.btn-export,
+[class*="export-"] {
+  background: var(--theme-surface-3, #162132) !important;
+  color: var(--theme-text-1, #f5f8ff) !important;
+  border: 1px solid var(--theme-border, #24344c) !important;
+}
+
+/* Fix tab navigation across all dashboards */
+.tab-navigation,
+.tab-buttons,
+.tabs-container {
+  background: var(--theme-surface-2, #101826) !important;
+  border: 1px solid var(--theme-border, #24344c) !important;
+}
+
+.tab-button:not(.active),
+.tab:not(.active) {
+  background: var(--theme-surface-3, #162132) !important;
+  color: var(--theme-text-2, #b8c5da) !important;
+  border: 1px solid var(--theme-border, #24344c) !important;
+}
+
+/* Fix empty states */
+.empty-state,
+.no-data,
+[class*="empty-"],
+[class*="no-data"] {
+  background: transparent !important;
+  color: var(--theme-text-2, #b8c5da) !important;
+}
+
+/* Fix loading states */
+.loading,
+.loading-spinner,
+[class*="loading"] {
+  color: var(--theme-text-2, #b8c5da) !important;
+}
+
+
+/* ========================================
+   AGGRESSIVE FIX - CATCH ALL WHITE BACKGROUNDS
+   ======================================== */
+/* Target any remaining white backgrounds with inline styles */
+[style*="background-color: white"],
+[style*="background-color: #fff"],
+[style*="background-color: #ffffff"],
+[style*="background-color: rgb(255, 255, 255)"],
+[style*="backgroundColor: white"],
+[style*="backgroundColor: #fff"] {
+  background-color: var(--theme-surface-2, #101826) !important;
+  color: var(--theme-text-1, #f5f8ff) !important;
+}
+
+/* Target light gray backgrounds that look white */
+[style*="background-color: #f"],
+[style*="background-color: rgb(24"],
+[style*="background-color: rgb(25"],
+[style*="backgroundColor: #f"] {
+  background-color: var(--theme-surface-2, #101826) !important;
+  color: var(--theme-text-1, #f5f8ff) !important;
+}
+
+/* Fix divs with white backgrounds */
+div[style*="background: white"],
+div[style*="background: #fff"],
+section[style*="background: white"],
+section[style*="background: #fff"],
+article[style*="background: white"],
+article[style*="background: #fff"] {
+  background: var(--theme-surface-2, #101826) !important;
+  color: var(--theme-text-1, #f5f8ff) !important;
+}
+
+/* Ensure all text in white boxes is visible */
+[style*="background-color: white"] *,
+[style*="background-color: #fff"] *,
+[style*="background: white"] *,
+[style*="background: #fff"] * {
+  color: inherit !important;
+}
+
+/* Fix text that might be white on white */
+[style*="color: white"],
+[style*="color: #fff"] {
+  color: var(--theme-text-1, #f5f8ff) !important;
+}
+
+
+/* ========================================
+   FIX MAIN CONTENT AREA WHITE BACKGROUND
+   ======================================== */
+/* Main content wrapper - the white area around all dashboard content */
+.main-content,
+.main-content-wrapper,
+.content-wrapper,
+.dashboard-content,
+.page-content,
+[class*="main-content"],
+[class*="content-wrapper"] {
+  background: var(--theme-surface-1, #070b14) !important;
+  color: var(--theme-text-1, #f5f8ff) !important;
+}
+
+/* Chair dashboard main container */
+.chair-dashboard-content,
+.chair-main-content {
+  background: var(--theme-surface-1, #070b14) !important;
+}
+
+/* Fix any remaining white page backgrounds */
+.page,
+.page-wrapper,
+.app-content,
+[class*="page-wrapper"] {
+  background: var(--theme-surface-1, #070b14) !important;
+}
+
+/* Dashboard layout containers */
+.dashboard-layout,
+.layout-content,
+[class*="dashboard-layout"] {
+  background: var(--theme-surface-1, #070b14) !important;
+}

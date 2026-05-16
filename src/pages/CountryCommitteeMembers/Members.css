@@ -1,0 +1,175 @@
+.member-container {
+  background: white;
+  padding: 14px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.member-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.member-table th, .member-table td {
+  padding: 9px 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  font-size: 0.85rem;
+}
+
+.member-table th {
+  background-color: #f8f9fa;
+}
+
+.member-form-container {
+  background: white;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.checkbox-group label {
+  display: inline-block;
+  margin-right: 15px;
+  margin-top: 5px;
+}
+
+/* Action buttons */
+.btn-edit, .btn-delete {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  cursor: pointer;
+  padding: 6px 8px;
+  font-size: 12px;
+  margin: 0 2px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 30px;
+  min-height: 30px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.btn-edit {
+  color: #2563eb;
+}
+
+.btn-delete {
+  color: #dc2626;
+}
+
+.btn-edit:hover, .btn-delete:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.btn-resend {
+  background-color: #17a2b8;
+  color: white;
+  border: none;
+  padding: 6px 9px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-left: 4px;
+  font-size: 12px;
+  transition: background-color 0.3s;
+}
+
+.btn-resend:hover {
+  background-color: #138496;
+}
+
+.btn-resend:active {
+  background-color: #117a8b;
+}
+
+.btn-status {
+  background-color: #8b5cf6;
+  color: white;
+  border: none;
+  padding: 6px 9px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-left: 4px;
+  font-size: 12px;
+  transition: background-color 0.3s;
+}
+
+.member-table td:last-child {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px;
+  min-width: 180px;
+}
+
+.btn-status:hover {
+  background-color: #7c3aed;
+}
+
+.btn-status:active {
+  background-color: #6d28d9;
+}
+
+/* Role icons */
+.role-icons {
+  display: flex;
+  gap: 8px;
+}
+
+.role-icons span {
+  cursor: default;
+  color: #555;
+}
+
+.role-icons svg {
+  vertical-align: middle;
+}
+
+/* Table responsiveness */
+@media (max-width: 768px) {
+  .member-table {
+    display: block;
+    overflow-x: auto;
+  }
+}
+
+/* Error message styling */
+.error-message {
+  color: #ffffff;
+  margin-bottom: 20px;
+  padding: 12px 16px;
+  background-color: #dc2626;
+  border: 2px solid #b91c1c;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  box-shadow: 0 2px 4px rgba(220, 38, 38, 0.2);
+}
+
+/* No results message styling */
+.no-results {
+  color: #1f2937;
+  font-style: italic;
+  font-weight: 500;
+  padding: 1rem;
+  background-color: #fef3c7;
+  border: 1px solid #fbbf24;
+  border-radius: 4px;
+  text-align: center;
+}
+
+/* Loading message styling */
+.loading {
+  color: #1f2937;
+  font-weight: 500;
+  padding: 1rem;
+  background-color: #dbeafe;
+  border: 1px solid #3b82f6;
+  border-radius: 4px;
+  text-align: center;
+}

@@ -1,0 +1,755 @@
+/* Theme Layer — complements GlobalStyles without heavy visual overrides */
+
+:root {
+  --theme-surface-1: var(--bg-primary, #070b14);
+  --theme-surface-2: var(--bg-secondary, #101826);
+  --theme-surface-3: var(--bg-tertiary, #162132);
+  --theme-text-1: var(--text-primary, #f5f8ff);
+  --theme-text-2: var(--text-secondary, #b8c5da);
+  --theme-text-3: var(--text-muted, #8fa1bf);
+  --theme-border: var(--border-color, #24344c);
+  --theme-accent: var(--accent, #3b82f6);
+  --theme-accent-strong: var(--accent-strong, #2563eb);
+  --theme-focus: rgba(59, 130, 246, 0.24);
+  --theme-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.32);
+  --theme-shadow-md: 0 10px 24px rgba(0, 0, 0, 0.4);
+  --theme-card-radius: var(--radius-card, 10px);
+  --theme-control-height: var(--control-height, 34px);
+  --theme-control-height-sm: var(--control-height-sm, 30px);
+}
+
+body.dark {
+  color-scheme: dark;
+  --theme-surface-1: var(--bg-primary, #070b14);
+  --theme-surface-2: var(--bg-secondary, #101826);
+  --theme-surface-3: var(--bg-tertiary, #162132);
+  --theme-text-1: var(--text-primary, #f5f8ff);
+  --theme-text-2: var(--text-secondary, #b8c5da);
+  --theme-text-3: var(--text-muted, #8fa1bf);
+  --theme-border: var(--border-color, #24344c);
+  --theme-accent: var(--accent, #3b82f6);
+  --theme-accent-strong: var(--accent-strong, #2563eb);
+  --theme-focus: rgba(59, 130, 246, 0.24);
+  --theme-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.35);
+  --theme-shadow-md: 0 10px 24px rgba(0, 0, 0, 0.45);
+}
+
+/* App-wide compact density defaults */
+body.dark :where(
+  .card,
+  .dashboard-card,
+  .stat-card,
+  .task-card,
+  .meeting-card,
+  .report-card,
+  .notification-item,
+  .table-container,
+  .form-section,
+  .content-section,
+  .modal-content,
+  .ui-card
+) {
+  border-radius: var(--theme-card-radius) !important;
+}
+
+body.dark :where(button, .btn, .ui-btn, input, select, textarea) {
+  min-height: var(--theme-control-height);
+  font-size: 0.875rem;
+}
+
+body.dark :where(.btn-sm, .ui-btn-sm, input.small, select.small, textarea.small) {
+  min-height: var(--theme-control-height-sm);
+}
+
+body.dark :where(.p-6, .px-6, .py-6) {
+  padding: 1rem !important;
+}
+
+body.dark :where(.p-5, .px-5, .py-5) {
+  padding: 0.875rem !important;
+}
+
+body.dark :where(.p-4, .px-4, .py-4) {
+  padding: 0.75rem !important;
+}
+
+/* Hard lock app shell in dark mode so page-level CSS cannot drift to light surfaces */
+body.dark,
+body.dark #root,
+body.dark .app,
+body.dark .layout,
+body.dark .main-content {
+  background: var(--bg-primary, #070b14) !important;
+  color: var(--theme-text-1);
+}
+
+/* Keep transitions smooth but restrained */
+body,
+.main-content,
+.card,
+.stat-card,
+.report-card,
+.notification-item,
+input,
+textarea,
+select,
+button {
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Support dark theme while preserving global design language */
+body.dark {
+  color: var(--theme-text-1);
+}
+
+body.dark .main-content,
+body.dark .card,
+body.dark .stat-card,
+body.dark .report-card,
+body.dark .notification-item,
+body.dark .modal-content,
+body.dark .panel,
+body.dark .content-card {
+  background: var(--theme-surface-2);
+  border-color: var(--theme-border);
+  color: var(--theme-text-1);
+}
+
+/* Broad page-level dark surfaces for feature pages with local CSS backgrounds */
+body.dark :where(
+  .page-shell,
+  .page-content,
+  .content-wrapper,
+  .dashboard-content,
+  .dashboard-header,
+  .dashboard-tabs,
+  .tab-content,
+  .committee-container,
+  .committee-card,
+  .members-modal,
+  .modal,
+  .form-section,
+  .table-container,
+  .empty-state,
+  .dashboard-card,
+  .resolution-card,
+  .notification-card,
+  .users-table,
+  .performance-table
+) {
+  background: var(--theme-surface-2) !important;
+  color: var(--theme-text-1) !important;
+  border-color: var(--theme-border) !important;
+}
+
+body.dark .card-title,
+body.dark .report-title,
+body.dark .dashboard-title,
+body.dark .page-title,
+body.dark h1,
+body.dark h2,
+body.dark h3 {
+  color: var(--theme-text-1);
+}
+
+body.dark p,
+body.dark .card-subtitle,
+body.dark .report-text,
+body.dark .meta-text,
+body.dark .notification-message {
+  color: var(--theme-text-2);
+}
+
+body.dark .page-subtitle,
+body.dark .form-help,
+body.dark small,
+body.dark td,
+body.dark th,
+body.dark li {
+  color: var(--theme-text-2) !important;
+}
+
+/* Inputs and focus states */
+input,
+textarea,
+select {
+  color: var(--theme-text-1);
+  border-color: var(--theme-border);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--theme-accent);
+  box-shadow: 0 0 0 3px var(--theme-focus);
+  outline: none;
+}
+
+body.dark input,
+body.dark textarea,
+body.dark select {
+  background: var(--theme-surface-3);
+  color: var(--theme-text-1);
+  border-color: var(--theme-border);
+}
+
+/* Keep links crisp and modern */
+a {
+  color: var(--theme-accent-strong);
+}
+
+a:hover {
+  color: var(--theme-accent);
+  text-decoration: underline;
+}
+
+/* Subtle table support in dark mode */
+body.dark table,
+body.dark .table,
+body.dark .users-table,
+body.dark .performance-table {
+  background: var(--theme-surface-2);
+  color: var(--theme-text-1);
+  border-color: var(--theme-border);
+}
+
+body.dark th,
+body.dark td {
+  border-color: var(--theme-border);
+}
+
+body.dark :where(
+  table tbody tr,
+  .table tbody tr,
+  .users-table tbody tr,
+  .member-table tbody tr,
+  .sub-members-table tbody tr
+) {
+  background: var(--theme-surface-2) !important;
+}
+
+body.dark :where(
+  table tbody tr:nth-child(even),
+  .table tbody tr:nth-child(even),
+  .users-table tbody tr:nth-child(even),
+  .member-table tbody tr:nth-child(even),
+  .sub-members-table tbody tr:nth-child(even)
+) {
+  background: var(--theme-surface-3) !important;
+}
+
+/* Role-wide dashboard dark enforcement (Secretary, Chair, Member, HOD, Commissioner, Admin) */
+body.dark :where(
+  .enhanced-secretary-dashboard,
+  .enhanced-chair-dashboard,
+  .member-dashboard,
+  .hod-dashboard,
+  .commissioner-dashboard,
+  .chair-of-head-of-delegation-dashboard,
+  .admin-dashboard,
+  .secretary-dashboard,
+  .member-container,
+  .hod-container,
+  .commissioner-container,
+  .dashboard-main,
+  .dashboard-content,
+  .member-main-content,
+  .hod-main-content,
+  .commissioner-main-content
+) {
+  background: #0b1220 !important;
+  color: var(--theme-text-1) !important;
+}
+
+body.dark :where(
+  .dashboard-header,
+  .secretary-header,
+  .member-header,
+  .hod-header,
+  .commissioner-header,
+  .admin-header,
+  .dashboard-tabs,
+  .tab-navigation,
+  .tab-content,
+  .content-section,
+  .content-section-header,
+  .quick-actions-section,
+  .quick-action-card,
+  .stat-card,
+  .task-card,
+  .meeting-card,
+  .item-card,
+  .report-card,
+  .notification-item,
+  .filter-bar,
+  .table-container,
+  .sub-members-container,
+  .sub-members-table-container,
+  .users-table,
+  .performance-table,
+  .modal-content,
+  .card
+) {
+  background: var(--theme-surface-2) !important;
+  color: var(--theme-text-1) !important;
+  border-color: var(--theme-border) !important;
+}
+
+body.dark :where(
+  .main-title,
+  .dashboard-title,
+  .member-title,
+  .hod-title,
+  .commissioner-title,
+  .section-title,
+  .content-section-title,
+  .item-title,
+  .stat-value
+) {
+  color: var(--theme-text-1) !important;
+}
+
+body.dark :where(
+  .subtitle,
+  .member-subtitle,
+  .hod-subtitle,
+  .commissioner-subtitle,
+  .stat-label,
+  .item-detail,
+  .item-details,
+  .empty-state p,
+  .view-all-btn,
+  .member-email,
+  .member-role,
+  .member-number,
+  .member-status,
+  p,
+  small,
+  td,
+  th,
+  li
+) {
+  color: var(--theme-text-2) !important;
+}
+
+/* Secretary dashboard has decorative light overlays; darken them explicitly */
+body.dark .enhanced-secretary-dashboard::before {
+  background:
+    radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.14) 0%, transparent 52%),
+    radial-gradient(circle at 80% 20%, rgba(30, 41, 59, 0.45) 0%, transparent 55%),
+    radial-gradient(circle at 40% 40%, rgba(37, 99, 235, 0.1) 0%, transparent 52%) !important;
+}
+
+/* Tailwind-style utility class fallback for pages that use utility names */
+body.dark :where(
+  .bg-white,
+  .bg-gray-50,
+  .bg-gray-100,
+  .bg-slate-50,
+  .bg-slate-100
+) {
+  background: var(--theme-surface-2) !important;
+}
+
+body.dark :where(
+  .from-white,
+  .via-white,
+  .to-white,
+  .from-gray-50,
+  .via-gray-50,
+  .to-gray-50,
+  .from-gray-100,
+  .via-gray-100,
+  .to-gray-100
+) {
+  --tw-gradient-from: var(--theme-surface-2) !important;
+  --tw-gradient-via: var(--theme-surface-2) !important;
+  --tw-gradient-to: var(--theme-surface-3) !important;
+}
+
+body.dark :where(
+  .text-gray-900,
+  .text-gray-800,
+  .text-slate-900,
+  .text-slate-800
+) {
+  color: var(--theme-text-1) !important;
+}
+
+body.dark :where(
+  .text-gray-700,
+  .text-gray-600,
+  .text-gray-500,
+  .text-slate-700,
+  .text-slate-600,
+  .text-slate-500
+) {
+  color: var(--theme-text-2) !important;
+}
+
+body.dark :where(
+  .placeholder-gray-400,
+  .placeholder-gray-500,
+  .placeholder-slate-400,
+  .placeholder-slate-500
+)::placeholder {
+  color: #94a3b8 !important;
+}
+
+body.dark :where(
+  .border-gray-100,
+  .border-gray-200,
+  .border-gray-300,
+  .border-slate-100,
+  .border-slate-200,
+  .border-slate-300
+) {
+  border-color: var(--theme-border) !important;
+}
+
+/* Inline-style light background fallback */
+body.dark :where(
+  [style*="background: white"],
+  [style*="background:white"],
+  [style*="background-color: white"],
+  [style*="background-color:white"],
+  [style*="background: #ffffff"],
+  [style*="background:#ffffff"],
+  [style*="background-color: #ffffff"],
+  [style*="background-color:#ffffff"],
+  [style*="background: #fff"],
+  [style*="background:#fff"],
+  [style*="background: #f8fafc"],
+  [style*="background:#f8fafc"],
+  [style*="background: #f9fafb"],
+  [style*="background:#f9fafb"],
+  [style*="background: #f3f4f6"],
+  [style*="background:#f3f4f6"],
+  [style*="background-color: #fff"],
+  [style*="background-color:#fff"],
+  [style*="background: rgb(255, 255, 255)"],
+  [style*="background-color: rgb(255, 255, 255)"],
+  [style*="background: rgba(255, 255, 255"],
+  [style*="background-color: rgba(255, 255, 255"]
+) {
+  background: var(--theme-surface-2) !important;
+}
+
+body.dark :where(
+  [style*="background: linear-gradient"],
+  [style*="background-image: linear-gradient"],
+  [style*="background:linear-gradient"],
+  [style*="background-image:linear-gradient"]
+):not([style*="#0"]):not([style*="#1"]):not([style*="#2"]):not([style*="rgb(0"]) {
+  background-image: none !important;
+  background: var(--theme-surface-2) !important;
+}
+
+body.dark :where(
+  [style*="color: #333"],
+  [style*="color:#333"],
+  [style*="color: #666"],
+  [style*="color:#666"],
+  [style*="color: #1e293b"],
+  [style*="color:#1e293b"],
+  [style*="color: #1f2937"],
+  [style*="color:#1f2937"],
+  [style*="color: #374151"],
+  [style*="color:#374151"],
+  [style*="color: #4b5563"],
+  [style*="color:#4b5563"],
+  [style*="color: #6b7280"],
+  [style*="color:#6b7280"],
+  [style*="color: #64748b"],
+  [style*="color:#64748b"],
+  [style*="color: #94a3b8"],
+  [style*="color:#94a3b8"],
+  [style*="color: #475569"],
+  [style*="color:#475569"],
+  [style*="color: black"],
+  [style*="color:black"],
+  [style*="color: #000"],
+  [style*="color:#000"],
+  [style*="color: #111"],
+  [style*="color:#111"],
+  [style*="color: #111827"],
+  [style*="color:#111827"],
+  [style*="color: rgb(51, 51, 51)"],
+  [style*="color: rgb(30, 41, 59)"]
+) {
+  color: var(--theme-text-2) !important;
+}
+
+body.dark :where(
+  [class*="modal"],
+  [class*="dropdown"],
+  [class*="select"],
+  [class*="input"],
+  [class*="search"],
+  [class*="filter"],
+  [class*="tooltip"],
+  [class*="popover"]
+):not(.btn):not(button):not([class*="icon"]) {
+  background: var(--theme-surface-2) !important;
+  color: var(--theme-text-1) !important;
+  border-color: var(--theme-border) !important;
+}
+
+body.dark :where(
+  .chart-widget,
+  .recharts-wrapper,
+  .chart-container,
+  .apexcharts-canvas,
+  canvas
+) {
+  background-color: transparent !important;
+}
+
+body.dark :where(
+  .recharts-cartesian-axis-tick-value,
+  .recharts-legend-item-text,
+  .recharts-label,
+  .recharts-text
+) {
+  fill: var(--theme-text-2) !important;
+  color: var(--theme-text-2) !important;
+}
+
+body.dark :where(
+  .recharts-default-tooltip,
+  .recharts-tooltip-wrapper .recharts-default-tooltip
+) {
+  background: var(--theme-surface-3) !important;
+  border: 1px solid var(--theme-border) !important;
+  color: var(--theme-text-1) !important;
+}
+
+body.dark :where(
+  [style*="border: 1px solid #e2e8f0"],
+  [style*="border:1px solid #e2e8f0"],
+  [style*="border: 1px solid #e5e7eb"],
+  [style*="border:1px solid #e5e7eb"],
+  [style*="border: 1px solid #d1d5db"],
+  [style*="border:1px solid #d1d5db"],
+  [style*="border-bottom: 1px solid #e5e7eb"],
+  [style*="border-bottom:1px solid #e5e7eb"]
+) {
+  border-color: var(--theme-border) !important;
+}
+
+body.dark :where(
+  [style*="linear-gradient(135deg, #fff3cd"],
+  [style*="linear-gradient(135deg,#fff3cd"],
+  [style*="linear-gradient(135deg, #ffe0b2"],
+  [style*="linear-gradient(135deg,#ffe0b2"]
+) {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.18) 0%, rgba(180, 83, 9, 0.18) 100%) !important;
+}
+
+/* Browser-like global fallback: catch remaining light page components by common structural class names */
+body.dark :where(
+  [class*="-container"],
+  [class*="-page"],
+  [class*="-card"],
+  [class*="-widget"],
+  [class*="-selector"],
+  [class*="-panel"],
+  [class*="-section"],
+  [class*="-content"],
+  [class*="-wrapper"],
+  [class*="-form"],
+  [class*="-grid"],
+  [class*="-table"],
+  [class*="-header"],
+  [class*="-main"],
+  [class*="-body"],
+  [class*="-footer"],
+  [class*="-list"],
+  [class*="-item"],
+  [class*="-row"],
+  [class*="-summary"],
+  [class*="-details"]
+):not(.sidebar):not(.sidebar *):not(.btn):not(button):not(.status-badge):not(.badge):not(.profile-avatar):not([class*="icon"]) {
+  background: var(--theme-surface-2) !important;
+  border-color: var(--theme-border) !important;
+  color: var(--theme-text-1) !important;
+}
+
+/* Force dark on light gradients used by legacy page CSS */
+body.dark :where(
+  [class*="-header"],
+  [class*="-summary"],
+  [class*="-filter"],
+  [class*="-meta"],
+  [class*="-deadline"],
+  [class*="-description"],
+  [class*="-notes"]
+):not(.sidebar):not(.sidebar *):not(.btn):not(button):not(.badge):not(.status-badge) {
+  background-image: none !important;
+}
+
+/* Additional text fallback for page-specific heading/value classes */
+body.dark :where(
+  [class*="-title"],
+  [class*="-name"],
+  [class*="-value"],
+  [class*="-heading"]
+):not(.status-badge):not(.badge):not(.btn):not([class*="icon"]) {
+  color: var(--theme-text-1) !important;
+}
+
+body.dark :where(
+  [class*="-subtitle"],
+  [class*="-label"],
+  [class*="-description"],
+  [class*="-detail"],
+  [class*="-time"],
+  [class*="-date"],
+  [class*="-message"],
+  [class*="-meta"]
+):not(.status-badge):not(.badge):not(.btn):not([class*="icon"]) {
+  color: var(--theme-text-2) !important;
+}
+
+/* Direct overrides for high-traffic pages where class specificity is heavy */
+body.dark :where(
+  .create-meeting-container,
+  .create-meeting-form,
+  .member-dashboard,
+  .member-main-content,
+  .member-header,
+  .meeting-card,
+  .task-card,
+  .sub-members-container,
+  .sub-members-table,
+  .reports-hub-page,
+  .reports-header-card,
+  .filter-reports-page,
+  .filter-reports-card
+) {
+  background: var(--theme-surface-2) !important;
+  border-color: var(--theme-border) !important;
+  color: var(--theme-text-1) !important;
+}
+
+body.dark :where(
+  .create-meeting-header h1,
+  .create-meeting-header p,
+  .member-title,
+  .member-subtitle,
+  .meeting-title,
+  .task-title,
+  .reports-header-card h1,
+  .reports-header-card h2,
+  .filter-reports-header h1,
+  .filter-reports-header p
+) {
+  color: var(--theme-text-1) !important;
+}
+
+/* Keep labels/help text readable in all forms */
+body.dark label,
+body.dark .form-group label,
+body.dark .help-text,
+body.dark .input-label {
+  color: var(--theme-text-2) !important;
+}
+
+/* Native controls dark support (especially file upload button) */
+body.dark input[type="file"] {
+  color: var(--theme-text-1) !important;
+  background: var(--theme-surface-3) !important;
+  border-color: var(--theme-border) !important;
+}
+
+body.dark input[type="file"]::file-selector-button {
+  background: #334155;
+  color: #f8fafc;
+  border: 1px solid #475569;
+  border-radius: 6px;
+  padding: 0.35rem 0.75rem;
+  margin-right: 0.6rem;
+}
+
+body.dark input[type="file"]::-webkit-file-upload-button {
+  background: #334155;
+  color: #f8fafc;
+  border: 1px solid #475569;
+  border-radius: 6px;
+  padding: 0.35rem 0.75rem;
+  margin-right: 0.6rem;
+}
+
+body.dark input::placeholder,
+body.dark textarea::placeholder {
+  color: #94a3b8 !important;
+}
+
+/* Final runtime polish for shared interactive states */
+body.dark :where(
+  .loading,
+  .loading-state,
+  .loading-container,
+  .spinner-container,
+  .empty-state,
+  .empty-chart-state
+) {
+  background: var(--theme-surface-2) !important;
+  color: var(--theme-text-2) !important;
+  border-color: var(--theme-border) !important;
+}
+
+body.dark :where(
+  .meeting-detail-modal,
+  .personal-info-popup,
+  .resolution-assignment-form,
+  .meeting-minutes-editor,
+  .app-topbar,
+  .topbar-user-btn,
+  .topbar-notification-btn
+) {
+  background: var(--theme-surface-2) !important;
+  border-color: var(--theme-border) !important;
+  color: var(--theme-text-1) !important;
+}
+
+body.dark :where(
+  .meeting-detail-modal input,
+  .meeting-detail-modal select,
+  .meeting-detail-modal textarea,
+  .personal-info-popup input,
+  .personal-info-popup select,
+  .resolution-assignment-form input,
+  .resolution-assignment-form select,
+  .meeting-minutes-editor textarea
+) {
+  background: var(--theme-surface-3) !important;
+  color: var(--theme-text-1) !important;
+  border-color: var(--theme-border) !important;
+}
+
+body.dark :where(
+  .meeting-detail-modal button:hover,
+  .personal-info-popup button:hover,
+  .resolution-assignment-form button:hover,
+  .meeting-minutes-editor button:hover,
+  .topbar-user-btn:hover,
+  .topbar-notification-btn:hover
+) {
+  filter: brightness(1.05);
+}
+
+body.dark :where(
+  .meeting-detail-modal button:focus-visible,
+  .personal-info-popup button:focus-visible,
+  .resolution-assignment-form button:focus-visible,
+  .meeting-minutes-editor button:focus-visible,
+  .meeting-detail-modal input:focus,
+  .personal-info-popup input:focus,
+  .resolution-assignment-form input:focus,
+  .resolution-assignment-form select:focus,
+  .meeting-minutes-editor textarea:focus
+) {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--theme-focus) !important;
+}

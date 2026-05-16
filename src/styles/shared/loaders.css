@@ -1,0 +1,58 @@
+/* Shared loader primitives (Phase 1)
+   Keep specificity intentionally low for legacy aliases via :where() so
+   page-level loader styles can continue overriding safely during migration.
+*/
+
+/* Shared animation token */
+@keyframes shared-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Shared loading container */
+.shared-loading-container,
+:where(.loading-container) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+/* Shared optional wrapper/content */
+.shared-loading-content,
+:where(.loading-content) {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+/* Shared base loader/spinner */
+.shared-loader,
+:where(.loading-spinner, .spinner, .loading) {
+  width: var(--loader-size, 24px);
+  height: var(--loader-size, 24px);
+  border: var(--loader-border-size, 3px) solid var(--loader-track-color, rgba(148, 163, 184, 0.3));
+  border-top-color: var(--loader-color, var(--accent, #3b82f6));
+  border-radius: 50%;
+  animation: shared-spin var(--loader-speed, 1s) linear infinite;
+}
+
+/* Shared optional loading text */
+.shared-loading-text,
+:where(.loading-text) {
+  color: var(--loader-text-color, var(--text-secondary, #64748b));
+  font-size: var(--loader-text-size, 0.95rem);
+  font-weight: 500;
+}
+
+/* Optional size modifiers */
+.shared-loader--sm {
+  --loader-size: 16px;
+  --loader-border-size: 2px;
+}
+
+.shared-loader--lg,
+:where(.spinner-lg) {
+  --loader-size: 32px;
+  --loader-border-size: 4px;
+}
