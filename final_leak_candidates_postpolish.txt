@@ -1,0 +1,147 @@
+src/components/ReportExportBar.css:6:  background: #ffffff;
+src/components/ReportExportBar.css:39:  background: #fff;
+src/components/Sidebar/Sidebar.css:42:  background: #ffffff;
+src/pages/AdminDashboard.css:79:    background: #ffffff;
+src/pages/AdminDashboard.css:189:    background: #ffffff;
+src/pages/AdminDashboard.css:247:    background: white;
+src/pages/AdminDashboard.css:440:    background: white;
+src/pages/AdminDashboard.css:521:    background: white;
+src/pages/AdminDashboard.css:536:    background: white;
+src/pages/AdminProfile.css:31:  background: white;
+src/pages/AdminProfile.css:107:  background: white;
+src/pages/AdminTestInterface.css:14:  background: white;
+src/pages/AdminTestInterface.css:41:  background: white;
+src/pages/AdminTestInterface.css:212:  background: white;
+src/pages/Attendance/TakeAttendance.css:95:  background: #fff;
+src/pages/Attendance/TakeAttendance.css:277:  background: #fff;
+src/pages/Attendance/TakeAttendance.css:310:  background: #fff;
+src/pages/Attendance/TakeAttendance.css:460:  background: #fff;
+src/pages/ChairDashboard/ChairmanTaskAssignment.css:48:  background: white;
+src/pages/ChairDashboard/ChairmanTaskAssignment.css:112:  background: white;
+src/pages/ChairDashboard/EnhancedChairDashboard.css:103:  background: white;
+src/pages/ChairDashboard/EnhancedChairDashboard.css:125:  background: white;
+src/pages/ChairDashboard/EnhancedChairDashboard.css:167:  background: white;
+src/pages/ChairDashboard/EnhancedChairDashboard.css:515:  background: white;
+src/pages/ChairDashboard/EnhancedChairDashboard.css:703:  background: white;
+src/pages/ChairDashboard/EnhancedChairDashboard.css:722:  background: white;
+src/pages/ChairDashboard/EnhancedChairDashboard.css:727:  background: white;
+src/pages/ChairDashboard/EnhancedChairDashboard.css:732:  background: white;
+src/pages/ChairDashboard/EnhancedChairDashboard.css:785:  background: white;
+src/pages/ChairDashboard/EnhancedChairDashboard.css:870:  background: white;
+src/pages/ChairDashboard/EnhancedChairDashboard.css:969:  background: white;
+src/pages/ChairDashboard/EnhancedChairDashboard.css:1141:  background: #ffffff;
+src/pages/ChairDashboard/EnhancedChairDashboard.css:1224:  background: #ffffff !important;
+src/pages/ChairOfHeadOfDelegationDashboard.css:176:  background: white;
+src/pages/ChairOfHeadOfDelegationDashboard.css:379:  background: white;
+src/pages/ChairOfHeadOfDelegationDashboard.css:427:  background: white;
+src/pages/ChairOfHeadOfDelegationDashboard.css:460:  background: white;
+src/pages/ChairOfHeadOfDelegationDashboard.css:746:  background: white;
+src/pages/ChairOfHeadOfDelegationDashboard.css:848:  background: white;
+src/pages/ChairOfHeadOfDelegationDashboard.css:926:  background: white;
+src/pages/ChairOfHeadOfDelegationDashboard.css:1012:  background: white;
+src/pages/Countries/Countries.css:17:  background: white;
+src/pages/Countries/Countries.css:100:  background: white;
+src/pages/Countries/Countries.css:166:  background-color: white;
+src/pages/Countries/Countries.css:257:  background: white;
+src/pages/Countries/Countries.css:289:  background: white;
+src/pages/Countries/Countries.css:377:  background: white;
+src/pages/Countries/Countries.css:462:  background-color: white;
+src/pages/Countries/Countries.css:485:  background-color: white;
+src/pages/Countries/Countries.css:515:  background-color: white;
+src/pages/Countries/Countries.css:589:  background-color: #ffffff;
+src/pages/Countries/Countries.css:872:  background: #ffffff;
+src/pages/Countries/Countries.css:993:  background: #ffffff;
+src/pages/Countries/Countries.css:1003:  background: #ffffff;
+src/pages/Countries/Countries.css:1035:  background: #ffffff;
+src/pages/Countries/Countries.css:1131:  background-color: #ffffff;
+src/pages/CountryCommitteeMembers/Members.css:2:  background: white;
+src/pages/CountryCommitteeMembers/Members.css:25:  background: white;
+src/pages/Dashboard.css:45:  background: white;
+src/pages/Dashboard.css:133:  background: white;
+src/pages/EARAPerformanceDashboard/EARAPerformanceDashboardPage.css:8:  background: white;
+src/pages/HomePage.css:10:  background: #ffffff;
+src/pages/HomePage.css:50:  background: #ffffff;
+src/pages/HomePage.css:426:  background: #ffffff;
+src/pages/HomePage.css:502:  background: #ffffff;
+src/pages/HomePage.css:548:  background: #ffffff;
+src/pages/HomePage.css:624:  background: #ffffff;
+src/pages/HomePage.css:641:  background: #ffffff;
+src/pages/InvitationManager/InvitationManager.css:17:  background: white;
+src/pages/InvitationManager/InvitationManager.css:104:  background: white;
+src/pages/InvitationManager/InvitationManager.css:140:  background: white;
+src/pages/InvitationManager/InvitationManager.css:222:  background: white;
+src/pages/InvitationManager/InvitationManager.css:305:  background: white;
+src/pages/InvitationManager/InvitationManager.css:331:  background: white;
+src/pages/InvitationManager/InvitationManager.css:351:  background: white;
+src/pages/InvitationManager/InvitationManager.css:461:  background: white;
+src/pages/InvitationManager/InvitationManager.css:528:  background: white;
+src/pages/InvitationManager/InvitationManager.css:565:  background: white;
+src/pages/InvitationManager/InvitationManager.css:747:  background: white;
+src/pages/InvitationManager/SendInvitations.css:14:  background: white;
+src/pages/InvitationManager/SendInvitations.css:81:  background: white;
+src/pages/InvitationManager/SendInvitations.css:124:  background: white;
+src/pages/InvitationManager/SendInvitations.css:202:  background: white;
+src/pages/InvitationManager/SendInvitations.css:262:  background: white;
+src/pages/Login.css:156:  background: #ffffff;
+src/pages/Meetings/ArchiveMeetings.css:31:  background: white;
+src/pages/Meetings/ArchiveMeetings.css:67:  background: white;
+src/pages/Meetings/ArchiveMeetings.css:95:  background: white;
+src/pages/Meetings/ArchiveMeetings.css:138:  background: white;
+src/pages/Meetings/ArchiveMeetings.css:378:  background: white;
+src/pages/Meetings/CreateMeeting.css:24:  background: white;
+src/pages/Meetings/CreateMeeting.css:38:  background: #ffffff;
+src/pages/Minutes/TakeMinutes.css:12:  background: white;
+src/pages/Minutes/TakeMinutes.css:102:  background: white;
+src/pages/Minutes/TakeMinutes.css:281:  background: white;
+src/pages/Notifications/Notifications.css:62:  background: white;
+src/pages/Resolutions/EnhancedResolutionWorkflow.css:663:    background: white;
+src/pages/Resolutions/EnhancedResolutionWorkflow.css:1128:    background: white;
+src/pages/Resolutions/EnhancedResolutionWorkflow.css:1165:    background: white;
+src/pages/Resolutions/Resolutions.css:57:  background: white;
+src/pages/Resolutions/Resolutions.css:87:  background: white;
+src/pages/Resolutions/Resolutions.css:146:  background: white;
+src/pages/Resolutions/Resolutions.css:228:  background: white;
+src/pages/SecretaryDashboard.css:34:  background: white;
+src/pages/SecretaryDashboard.css:115:  background: white;
+src/pages/SecretaryDashboard.css:184:  background: white;
+src/pages/SecretaryPortal/SecretaryPortal.css:16:    background: white;
+src/pages/SecretaryPortal/SecretaryPortal.css:60:    background-color: white;
+src/pages/SecretaryPortal/SecretaryPortal.css:133:    background: white;
+src/pages/SecretaryPortal/SecretaryPortal.css:213:    background: white;
+src/pages/SecretaryPortal/SecretaryPortal.css:323:    background: white;
+src/pages/SecretaryPortal/SecretaryPortal.css:398:    background: white;
+src/pages/SecretaryPortal/SecretaryPortal.css:446:    background: white;
+src/pages/SubCommitteeMembers/SubCommitteeMembers.css:3:  background: white;
+src/pages/SubCommitteeMembers/SubCommitteeMembers.css:93:  background: white;
+src/pages/SubCommitteeMembers/SubCommitteeMembers.css:180:  background: white;
+src/pages/UserProfile/UserProfile.css:93:  background: white;
+src/pages/UserProfile/UserProfile.css:224:  background: white;
+src/pages/UserProfile/UserProfile.css:366:  background: white;
+src/styles/GlobalStyles.css:432:  background: white;
+src/styles/GlobalStyles.css:460:  background: white;
+src/styles/GlobalStyles.css:544:  background: white;
+src/styles/GlobalStyles.css:574:  background: white;
+src/styles/GlobalStyles.css:734:  background: #fff;
+src/styles/GlobalStyles.css:749:  background: #fff;
+src/styles/GlobalStyles.css:755:  background: #fff;
+src/styles/PhoneField.css:10:  background: #ffffff !important;
+src/styles/PhoneField.css:25:  background: #ffffff !important;
+src/styles/PhoneField.css:30:  background: #ffffff !important;
+src/styles/Theme.css:412:  [style*="background: white"],
+src/styles/Theme.css:413:  [style*="background:white"],
+src/styles/Theme.css:414:  [style*="background-color: white"],
+src/styles/Theme.css:415:  [style*="background-color:white"],
+src/styles/Theme.css:416:  [style*="background: #ffffff"],
+src/styles/Theme.css:417:  [style*="background:#ffffff"],
+src/styles/Theme.css:418:  [style*="background-color: #ffffff"],
+src/styles/Theme.css:419:  [style*="background-color:#ffffff"],
+src/styles/Theme.css:420:  [style*="background: #fff"],
+src/styles/Theme.css:421:  [style*="background:#fff"],
+src/styles/Theme.css:428:  [style*="background-color: #fff"],
+src/styles/Theme.css:429:  [style*="background-color:#fff"],
+src/styles/Theme.css:430:  [style*="background: rgb(255, 255, 255)"],
+src/styles/Theme.css:431:  [style*="background-color: rgb(255, 255, 255)"],
+src/styles/Theme.css:469:  [style*="color: black"],
+src/styles/Theme.css:470:  [style*="color:black"],
+src/styles/Theme.css:471:  [style*="color: #000"],
+src/styles/Theme.css:472:  [style*="color:#000"],
