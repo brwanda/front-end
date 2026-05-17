@@ -1,5 +1,6 @@
 // services/profileService.js
 import http from './http';
+import { API_BASE } from './apiConfig';
 
 export class ProfileService {
 
@@ -129,7 +130,9 @@ export class ProfileService {
 
     // If it's a relative path, prepend the backend root URL (without /api)
     if (profilePictureUrl.startsWith('/')) {
-      return `http://localhost:8081${profilePictureUrl}`;
+      // Remove /api from API_BASE if it exists, since file paths don't use /api
+      const baseUrl = API_BASE ? API_BASE.replace(/\/api\/?$/, '') : 'http://localhost:8081';
+      return `${baseUrl}${profilePictureUrl}`;
     }
 
     return profilePictureUrl;

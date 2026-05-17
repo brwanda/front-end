@@ -27,6 +27,7 @@ const EnhancedAdminDashboard = () => {
 
   const [users, setUsers] = useState([]);
   const [countries, setCountries] = useState([]);
+  const [committees, setCommittees] = useState([]);
   const [subcommittees, setSubcommittees] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
@@ -42,6 +43,7 @@ const EnhancedAdminDashboard = () => {
     phone: '',
     role: '',
     country: { id: '' },
+    committee: { id: '' },
     subcommittee: { id: '' }
   });
 
@@ -106,6 +108,7 @@ const EnhancedAdminDashboard = () => {
       await Promise.all([
         fetchUsers(),
         fetchCountries(),
+        fetchCommittees(),
         fetchSubcommittees(),
         fetchDashboardStats()
       ]);
@@ -217,6 +220,29 @@ const EnhancedAdminDashboard = () => {
     }
   };
 
+  const fetchCommittees = async () => {
+    try {
+      let committeesData = [];
+
+      try {
+        const { data } = await http.get('/api/committees');
+        committeesData = Array.isArray(data) ? data : [];
+      } catch (apiError) {
+        console.warn('Committees API failed, using fallback data');
+
+        // Provide fallback main committees data (CG and HOD only)
+        committeesData = [
+          { id: 1, name: "Commissioner General", committeeName: "Commissioner General" },
+          { id: 2, name: "Head of Delegation", committeeName: "Head of Delegation" }
+        ];
+      }
+
+      setCommittees(committeesData);
+    } catch (error) {
+      console.error('Error fetching committees:', error);
+    }
+  };
+
   const fetchSubcommittees = async () => {
     try {
       let subcommitteesData = [];
@@ -271,6 +297,11 @@ const EnhancedAdminDashboard = () => {
         country: { id: value },
         phone: applyCountryCodeToPhone(prev.phone, selectedCountry?.name || '')
       }));
+    } else if (name === 'committee') {
+      setForm(prev => ({
+        ...prev,
+        committee: { id: value }
+      }));
     } else if (name === 'subcommittee') {
       setForm(prev => ({
         ...prev,
@@ -312,6 +343,7 @@ const EnhancedAdminDashboard = () => {
       phone: normalizedPhone,
       role: user.role || '',
       country: { id: user.country?.id || '' },
+      committee: { id: user.committee?.id || '' },
       subcommittee: { id: user.subcommittee?.id || '' }
     });
     setError('');
@@ -328,6 +360,7 @@ const EnhancedAdminDashboard = () => {
       phone: '',
       role: '',
       country: { id: '' },
+      committee: { id: '' },
       subcommittee: { id: '' }
     });
     setError('');
@@ -346,7 +379,9 @@ const EnhancedAdminDashboard = () => {
         role: form.role,
         country: ['COMMITTEE_SECRETARY', 'DELEGATION_SECRETARY', 'HOD'].includes(form.role)
           ? { id: parseInt(form.country.id) } : null,
-        subcommittee: ['CHAIR', 'VICE_CHAIR', 'SUBCOMMITTEE_MEMBER', 'COMMITTEE_MEMBER', 'COMMITTEE_SECRETARY'].includes(form.role)
+        committee: ['COMMITTEE_MEMBER'].includes(form.role)
+          ? { id: parseInt(form.committee.id) } : null,
+        subcommittee: ['CHAIR', 'VICE_CHAIR', 'SUBCOMMITTEE_MEMBER', 'COMMITTEE_SECRETARY'].includes(form.role)
           ? { id: parseInt(form.subcommittee.id) } : null
       };
 
@@ -514,7 +549,7 @@ const EnhancedAdminDashboard = () => {
       'HOD': 'Requires country. Head of Delegation with administrative responsibilities for the country delegation.',
       'COMMISSIONER_GENERAL': 'Senior executive role with organization-wide authority and responsibilities.',
       'SUBCOMMITTEE_MEMBER': 'Requires subcommittee. Participates in subcommittee work and decisions.',
-      'COMMITTEE_MEMBER': 'Requires subcommittee. Participates in committee-level work.',
+      'COMMITTEE_MEMBER': 'Requires committee (CG or HOD). Participates in main committee-level work.',
     };
     return roleInfo[role] || '';
   };
@@ -872,8 +907,31 @@ const EnhancedAdminDashboard = () => {
                   </div>
                 )}
 
-                {/* Subcommittee field */}
-                {['CHAIR', 'VICE_CHAIR', 'SUBCOMMITTEE_MEMBER', 'COMMITTEE_MEMBER', 'COMMITTEE_SECRETARY'].includes(form.role) && (
+                {/* Committee field - for COMMITTEE_MEMBER only (CG or HOD) */}
+                {['COMMITTEE_MEMBER'].includes(form.role) && (
+                  <div className="form-group">
+                    <label className="form-label">
+                      Committee Assignment <span className="required-asterisk">*</span>
+                    </label>
+                    <select
+                      name="committee"
+                      value={form.committee.id}
+                      onChange={handleFormChange}
+                      className="form-select"
+                      required
+                    >
+                      <option value="">Select Committee</option>
+                      {committees.map(committee => (
+                        <option key={committee.id} value={committee.id}>
+                          {committee.name || committee.committeeName}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                )}
+
+                {/* Subcommittee field - for technical subcommittees */}
+                {['CHAIR', 'VICE_CHAIR', 'SUBCOMMITTEE_MEMBER', 'COMMITTEE_SECRETARY'].includes(form.role) && (
                   <div className="form-group">
                     <label className="form-label">
                       Subcommittee Assignment <span className="required-asterisk">*</span>
