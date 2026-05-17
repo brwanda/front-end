@@ -1,5 +1,8 @@
+// App.js
+
 import React, { useState, useEffect } from 'react';
 import { API_BASE } from './services/apiConfig';
+
 import {
   BrowserRouter as Router,
   Route,
@@ -8,28 +11,18 @@ import {
   Outlet
 } from 'react-router-dom';
 
-import HODPermissionService from './services/hodPermissionService';
-
-// Styles
-import './styles/GlobalStyles.css';
-import './styles/shared/loaders.css';
-import './styles/Theme.css';
-import './styles/DarkModeOverrides.css';
-
 import { ThemeProvider } from './context/ThemeContext';
+import { AuthContext } from './context/AuthContext';
 
-// Layouts
 import Layout from './components/Layout';
 import PublicLayout from './components/PublicLayout';
 import LoadingScreen from './components/LoadingScreen';
 
-// Public Pages
 import HomePage from './pages/HomePage';
 import Login from './pages/Login';
 import ForgotPassword from './pages/ForgotPassword';
 import ResetPassword from './pages/ResetPassword';
 
-// Dashboards
 import EnhancedAdminDashboard from './pages/EnhancedAdminDashboard';
 import ComprehensiveSecretaryDashboard from './pages/SecretaryPortal/ComprehensiveSecretaryDashboard';
 import EnhancedChairDashboard from './pages/ChairDashboard/EnhancedChairDashboard';
@@ -37,27 +30,29 @@ import EnhancedHODDashboard from './pages/EnhancedHODDashboard';
 import EnhancedCommissionerDashboard from './pages/EnhancedCommissionerDashboard';
 import EnhancedMemberDashboard from './pages/EnhancedMemberDashboard';
 
-// Other Pages
-import CommitteeList from './pages/Committees/CommitteeList';
-import CountryList from './pages/Countries/CountryList';
-import MemberList from './pages/CountryCommitteeMembers/MemberList';
-import SubMemberList from './pages/SubCommitteeMembers/MemberList';
-import CreateMeeting from './pages/Meetings/CreateMeeting';
-import TakeMinutes from './pages/Minutes/TakeMinutes';
-import TakeAttendance from './pages/Attendance/TakeAttendance';
-import UserProfile from './pages/UserProfile/UserProfile';
+import HODPermissionService from './services/hodPermissionService';
+
+import './styles/GlobalStyles.css';
+import './styles/shared/loaders.css';
+import './styles/Theme.css';
+import './styles/DarkModeOverrides.css';
 
 const AuthService = {
+
   SESSION_TIMEOUT: 30 * 60 * 1000,
-  ACTIVITY_CHECK_INTERVAL: 60 * 1000,
 
   getCurrentUser: () => {
+
     try {
-      const userData = localStorage.getItem('user');
+
+      const userData =
+        localStorage.getItem('user');
+
       const isAuthenticated =
         localStorage.getItem('isAuthenticated') === 'true';
 
-      const lastActivity = localStorage.getItem('lastActivity');
+      const lastActivity =
+        localStorage.getItem('lastActivity');
 
       console.log(
         '[AUTH:getCurrentUser] isAuthenticated:',
@@ -65,46 +60,77 @@ const AuthService = {
       );
 
       if (isAuthenticated && userData) {
+
         if (lastActivity) {
+
           const timeSinceLastActivity =
             Date.now() - parseInt(lastActivity, 10);
 
-          if (timeSinceLastActivity > AuthService.SESSION_TIMEOUT) {
-            console.warn('[AUTH] Session expired');
+          if (
+            timeSinceLastActivity >
+            AuthService.SESSION_TIMEOUT
+          ) {
+
+            console.warn(
+              '[AUTH] Session expired'
+            );
+
             AuthService.logout();
+
             return null;
           }
         }
 
         const parsed = JSON.parse(userData);
 
-        console.log('[AUTH] Returning user:', parsed);
+        console.log(
+          '[AUTH] Returning user:',
+          parsed
+        );
 
         return parsed;
       }
 
       return null;
+
     } catch (error) {
-      console.error('[AUTH:getCurrentUser] Error:', error);
+
+      console.error(
+        '[AUTH:getCurrentUser] Error:',
+        error
+      );
+
       return null;
     }
   },
 
   updateActivity: () => {
-    localStorage.setItem('lastActivity', Date.now().toString());
+    localStorage.setItem(
+      'lastActivity',
+      Date.now().toString()
+    );
   },
 
   logout: () => {
+
     localStorage.removeItem('user');
-    localStorage.removeItem('isAuthenticated');
-    localStorage.removeItem('token');
-    localStorage.removeItem('lastActivity');
+
+    localStorage.removeItem(
+      'isAuthenticated'
+    );
+
+    localStorage.removeItem(
+      'lastActivity'
+    );
   },
 
   verifySession: async () => {
-    const localUser = AuthService.getCurrentUser();
+
+    const localUser =
+      AuthService.getCurrentUser();
 
     try {
+
       const response = await fetch(
         `${API_BASE}/auth/current-user`,
         {
@@ -116,14 +142,23 @@ const AuthService = {
         }
       );
 
-      console.log('[AUTH] verifySession status:', response.status);
+      console.log(
+        '[AUTH] verifySession status:',
+        response.status
+      );
 
       if (response.ok) {
-        const userData = await response.json();
 
-        console.log('[AUTH] verifySession userData:', userData);
+        const userData =
+          await response.json();
+
+        console.log(
+          '[AUTH] verifySession userData:',
+          userData
+        );
 
         if (userData?.id) {
+
           localStorage.setItem(
             'user',
             JSON.stringify(userData)
@@ -141,13 +176,20 @@ const AuthService = {
       }
 
       if (response.status === 401) {
+
         AuthService.logout();
+
         return null;
       }
 
       return localUser;
+
     } catch (error) {
-      console.error('[AUTH] verifySession error:', error);
+
+      console.error(
+        '[AUTH] verifySession error:',
+        error
+      );
 
       return localUser;
     }
@@ -155,72 +197,29 @@ const AuthService = {
 };
 
 const ROLE_PERMISSIONS = {
+
   ADMIN: {
-    dashboards: ['/admin/dashboard'],
-    routes: [
-      '/dashboard',
-      '/admin/dashboard',
-      '/committees',
-      '/countries',
-      '/members',
-      '/sub-committee-members',
-      '/meetings',
-      '/notifications',
-      '/reports',
-      '/profile'
-    ]
+    dashboards: ['/admin/dashboard']
   },
 
   SECRETARY: {
-    dashboards: ['/secretary/dashboard'],
-    routes: [
-      '/dashboard',
-      '/secretary/dashboard',
-      '/committees',
-      '/meetings',
-      '/minutes',
-      '/attendance',
-      '/profile'
-    ]
+    dashboards: ['/secretary/dashboard']
   },
 
   CHAIR: {
-    dashboards: ['/chair/dashboard'],
-    routes: [
-      '/dashboard',
-      '/chair/dashboard',
-      '/reports',
-      '/profile'
-    ]
+    dashboards: ['/chair/dashboard']
   },
 
   HOD: {
-    dashboards: ['/hod/dashboard'],
-    routes: [
-      '/dashboard',
-      '/hod/dashboard',
-      '/reports',
-      '/profile'
-    ]
+    dashboards: ['/hod/dashboard']
   },
 
   COMMISSIONER_GENERAL: {
-    dashboards: ['/commissioner/dashboard'],
-    routes: [
-      '/dashboard',
-      '/commissioner/dashboard',
-      '/reports',
-      '/profile'
-    ]
+    dashboards: ['/commissioner/dashboard']
   },
 
   COMMITTEE_MEMBER: {
-    dashboards: ['/member/dashboard'],
-    routes: [
-      '/dashboard',
-      '/member/dashboard',
-      '/profile'
-    ]
+    dashboards: ['/member/dashboard']
   }
 };
 
@@ -229,15 +228,26 @@ const ProtectedLayout = ({
   isAuthenticated
 }) => {
 
-  console.log('[ProtectedLayout]', {
-    user,
-    isAuthenticated
-  });
+  console.log(
+    '[ProtectedLayout]',
+    {
+      user,
+      isAuthenticated
+    }
+  );
 
   if (!isAuthenticated || !user) {
-    console.log('[ProtectedLayout] Redirect login');
 
-    return <Navigate to="/login" replace />;
+    console.log(
+      '[ProtectedLayout] Redirect login'
+    );
+
+    return (
+      <Navigate
+        to="/login"
+        replace
+      />
+    );
   }
 
   return (
@@ -247,62 +257,25 @@ const ProtectedLayout = ({
   );
 };
 
-const ProtectedRoute = ({
-  children,
-  user,
-  isAuthenticated,
-  requiredPermissions = []
-}) => {
-
-  console.log('[ProtectedRoute]', {
-    user,
-    isAuthenticated,
-    requiredPermissions
-  });
-
-  if (!isAuthenticated || !user?.role) {
-    console.log('[ProtectedRoute] Redirect login');
-
-    return <Navigate to="/login" replace />;
-  }
-
-  const userPermissions =
-    ROLE_PERMISSIONS[user.role];
-
-  if (!userPermissions) {
-    console.log('[ProtectedRoute] No permissions');
-
-    return <Navigate to="/login" replace />;
-  }
-
-  if (requiredPermissions.length > 0) {
-    const hasPermission =
-      requiredPermissions.some(permission =>
-        userPermissions.routes.includes(permission)
-      );
-
-    console.log(
-      '[ProtectedRoute] hasPermission:',
-      hasPermission
-    );
-
-    if (!hasPermission) {
-      return <Navigate to="/dashboard" replace />;
-    }
-  }
-
-  return children;
-};
-
 const DashboardRouter = ({ user }) => {
+
+  console.log(
+    '[DashboardRouter] user:',
+    user
+  );
 
   const getDefaultDashboard = () => {
 
-    if (HODPermissionService.hasHODPrivileges(user)) {
+    if (
+      HODPermissionService.hasHODPrivileges(
+        user
+      )
+    ) {
       return '/hod/dashboard';
     }
 
     switch (user.role) {
+
       case 'ADMIN':
         return '/admin/dashboard';
 
@@ -323,9 +296,17 @@ const DashboardRouter = ({ user }) => {
     }
   };
 
+  const target =
+    getDefaultDashboard();
+
+  console.log(
+    '[DashboardRouter] redirecting:',
+    target
+  );
+
   return (
     <Navigate
-      to={getDefaultDashboard()}
+      to={target}
       replace
     />
   );
@@ -333,19 +314,25 @@ const DashboardRouter = ({ user }) => {
 
 function App() {
 
-  const [user, setUser] = useState(null);
+  const [user, setUser] =
+    useState(null);
 
-  const [isAuthenticated, setIsAuthenticated] =
-    useState(false);
+  const [
+    isAuthenticated,
+    setIsAuthenticated
+  ] = useState(false);
 
   const [loading, setLoading] =
     useState(true);
 
   useEffect(() => {
 
-    const initializeAuth = async () => {
+    const initializeAuth =
+      async () => {
 
-      console.log('[APP INIT] START');
+      console.log(
+        '[APP INIT] START'
+      );
 
       try {
 
@@ -358,9 +345,13 @@ function App() {
         );
 
         if (!localUser) {
+
           setUser(null);
+
           setIsAuthenticated(false);
+
           setLoading(false);
+
           return;
         }
 
@@ -406,45 +397,19 @@ function App() {
 
     initializeAuth();
 
-    const activityEvents = [
-      'mousedown',
-      'keydown',
-      'scroll',
-      'touchstart',
-      'click'
-    ];
-
-    const handleActivity = () => {
-      if (isAuthenticated) {
-        AuthService.updateActivity();
-      }
-    };
-
-    activityEvents.forEach(event => {
-      window.addEventListener(
-        event,
-        handleActivity
-      );
-    });
-
-    return () => {
-      activityEvents.forEach(event => {
-        window.removeEventListener(
-          event,
-          handleActivity
-        );
-      });
-    };
-
   }, []);
 
-  console.log('[APP RENDER]', {
-    loading,
-    isAuthenticated,
-    user
-  });
+  console.log(
+    '[APP RENDER]',
+    {
+      loading,
+      isAuthenticated,
+      user
+    }
+  );
 
   if (loading) {
+
     return (
       <LoadingScreen
         message="Initializing dashboard..."
@@ -453,314 +418,173 @@ function App() {
   }
 
   return (
-    <ThemeProvider>
-      <Router>
 
-        <Routes>
+    <AuthContext.Provider
+      value={{
+        user,
+        setUser,
+        isAuthenticated,
+        setIsAuthenticated
+      }}
+    >
 
-          {/* PUBLIC */}
+      <ThemeProvider>
 
-          <Route
-            path="/"
-            element={
-              <PublicLayout>
-                <HomePage />
-              </PublicLayout>
-            }
-          />
+        <Router>
 
-         <Route
-  path="/login"
-  element={
-    isAuthenticated ? (
-      <Navigate to="/dashboard" replace />
-    ) : (
-      <PublicLayout>
-        <Login />
-      </PublicLayout>
-    )
-  }
-/>
+          <Routes>
 
-         <Route
-  path="/forgot-password"
-  element={
-    isAuthenticated ? (
-      <Navigate to="/dashboard" replace />
-    ) : (
-      <PublicLayout>
-        <ForgotPassword />
-      </PublicLayout>
-    )
-  }
-/>
+            {/* PUBLIC */}
 
-<Route
-  path="/reset-password"
-  element={
-    isAuthenticated ? (
-      <Navigate to="/dashboard" replace />
-    ) : (
-      <PublicLayout>
-        <ResetPassword />
-      </PublicLayout>
-    )
-  }
-/>
+            <Route
+              path="/"
+              element={
+                <PublicLayout>
+                  <HomePage />
+                </PublicLayout>
+              }
+            />
 
-          {/* PROTECTED LAYOUT */}
+            <Route
+              path="/login"
+              element={
+                isAuthenticated ? (
+                  <Navigate
+                    to="/dashboard"
+                    replace
+                  />
+                ) : (
+                  <PublicLayout>
+                    <Login />
+                  </PublicLayout>
+                )
+              }
+            />
 
-          <Route
-            element={
-              <ProtectedLayout
-                user={user}
-                isAuthenticated={isAuthenticated}
+            <Route
+              path="/forgot-password"
+              element={
+                isAuthenticated ? (
+                  <Navigate
+                    to="/dashboard"
+                    replace
+                  />
+                ) : (
+                  <PublicLayout>
+                    <ForgotPassword />
+                  </PublicLayout>
+                )
+              }
+            />
+
+            <Route
+              path="/reset-password"
+              element={
+                isAuthenticated ? (
+                  <Navigate
+                    to="/dashboard"
+                    replace
+                  />
+                ) : (
+                  <PublicLayout>
+                    <ResetPassword />
+                  </PublicLayout>
+                )
+              }
+            />
+
+            {/* PROTECTED */}
+
+            <Route
+              element={
+                <ProtectedLayout
+                  user={user}
+                  isAuthenticated={
+                    isAuthenticated
+                  }
+                />
+              }
+            >
+
+              <Route
+                path="/dashboard"
+                element={
+                  <DashboardRouter
+                    user={user}
+                  />
+                }
               />
-            }
-          >
 
-            <Route
-              path="/dashboard"
-              element={
-                <DashboardRouter user={user} />
-              }
-            />
-
-            <Route
-              path="/admin/dashboard"
-              element={
-                <ProtectedRoute
-                  user={user}
-                  isAuthenticated={isAuthenticated}
-                  requiredPermissions={[
-                    '/admin/dashboard'
-                  ]}
-                >
+              <Route
+                path="/admin/dashboard"
+                element={
                   <EnhancedAdminDashboard />
-                </ProtectedRoute>
-              }
-            />
+                }
+              />
 
-            <Route
-              path="/secretary/dashboard"
-              element={
-                <ProtectedRoute
-                  user={user}
-                  isAuthenticated={isAuthenticated}
-                  requiredPermissions={[
-                    '/secretary/dashboard'
-                  ]}
-                >
+              <Route
+                path="/secretary/dashboard"
+                element={
                   <ComprehensiveSecretaryDashboard />
-                </ProtectedRoute>
-              }
-            />
+                }
+              />
 
-            <Route
-              path="/chair/dashboard"
-              element={
-                <ProtectedRoute
-                  user={user}
-                  isAuthenticated={isAuthenticated}
-                  requiredPermissions={[
-                    '/chair/dashboard'
-                  ]}
-                >
+              <Route
+                path="/chair/dashboard"
+                element={
                   <EnhancedChairDashboard />
-                </ProtectedRoute>
-              }
-            />
+                }
+              />
 
-            <Route
-              path="/hod/dashboard"
-              element={
-                <ProtectedRoute
-                  user={user}
-                  isAuthenticated={isAuthenticated}
-                  requiredPermissions={[
-                    '/hod/dashboard'
-                  ]}
-                >
+              <Route
+                path="/hod/dashboard"
+                element={
                   <EnhancedHODDashboard />
-                </ProtectedRoute>
-              }
-            />
+                }
+              />
 
-            <Route
-              path="/commissioner/dashboard"
-              element={
-                <ProtectedRoute
-                  user={user}
-                  isAuthenticated={isAuthenticated}
-                  requiredPermissions={[
-                    '/commissioner/dashboard'
-                  ]}
-                >
+              <Route
+                path="/commissioner/dashboard"
+                element={
                   <EnhancedCommissionerDashboard />
-                </ProtectedRoute>
-              }
-            />
+                }
+              />
 
-            <Route
-              path="/member/dashboard"
-              element={
-                <ProtectedRoute
-                  user={user}
-                  isAuthenticated={isAuthenticated}
-                  requiredPermissions={[
-                    '/member/dashboard'
-                  ]}
-                >
+              <Route
+                path="/member/dashboard"
+                element={
                   <EnhancedMemberDashboard />
-                </ProtectedRoute>
-              }
-            />
+                }
+              />
+
+            </Route>
+
+            {/* FALLBACK */}
 
             <Route
-              path="/committees"
+              path="*"
               element={
-                <ProtectedRoute
-                  user={user}
-                  isAuthenticated={isAuthenticated}
-                  requiredPermissions={[
-                    '/committees'
-                  ]}
-                >
-                  <CommitteeList />
-                </ProtectedRoute>
+                isAuthenticated ? (
+                  <Navigate
+                    to="/dashboard"
+                    replace
+                  />
+                ) : (
+                  <Navigate
+                    to="/login"
+                    replace
+                  />
+                )
               }
             />
 
-            <Route
-              path="/countries"
-              element={
-                <ProtectedRoute
-                  user={user}
-                  isAuthenticated={isAuthenticated}
-                  requiredPermissions={[
-                    '/countries'
-                  ]}
-                >
-                  <CountryList />
-                </ProtectedRoute>
-              }
-            />
+          </Routes>
 
-            <Route
-              path="/members"
-              element={
-                <ProtectedRoute
-                  user={user}
-                  isAuthenticated={isAuthenticated}
-                  requiredPermissions={[
-                    '/members'
-                  ]}
-                >
-                  <MemberList />
-                </ProtectedRoute>
-              }
-            />
+        </Router>
 
-            <Route
-              path="/sub-committee-members"
-              element={
-                <ProtectedRoute
-                  user={user}
-                  isAuthenticated={isAuthenticated}
-                  requiredPermissions={[
-                    '/sub-committee-members'
-                  ]}
-                >
-                  <SubMemberList />
-                </ProtectedRoute>
-              }
-            />
+      </ThemeProvider>
 
-            <Route
-              path="/meetings/create"
-              element={
-                <ProtectedRoute
-                  user={user}
-                  isAuthenticated={isAuthenticated}
-                  requiredPermissions={[
-                    '/meetings'
-                  ]}
-                >
-                  <CreateMeeting />
-                </ProtectedRoute>
-              }
-            />
-
-            <Route
-              path="/minutes/take"
-              element={
-                <ProtectedRoute
-                  user={user}
-                  isAuthenticated={isAuthenticated}
-                  requiredPermissions={[
-                    '/minutes'
-                  ]}
-                >
-                  <TakeMinutes />
-                </ProtectedRoute>
-              }
-            />
-
-            <Route
-              path="/attendance/take"
-              element={
-                <ProtectedRoute
-                  user={user}
-                  isAuthenticated={isAuthenticated}
-                  requiredPermissions={[
-                    '/attendance'
-                  ]}
-                >
-                  <TakeAttendance />
-                </ProtectedRoute>
-              }
-            />
-
-            <Route
-              path="/profile"
-              element={
-                <ProtectedRoute
-                  user={user}
-                  isAuthenticated={isAuthenticated}
-                  requiredPermissions={[
-                    '/profile'
-                  ]}
-                >
-                  <UserProfile />
-                </ProtectedRoute>
-              }
-            />
-
-          </Route>
-
-          {/* FALLBACK */}
-
-          <Route
-            path="*"
-            element={
-              isAuthenticated ? (
-                <Navigate
-                  to="/dashboard"
-                  replace
-                />
-              ) : (
-                <Navigate
-                  to="/login"
-                  replace
-                />
-              )
-            }
-          />
-
-        </Routes>
-
-      </Router>
-    </ThemeProvider>
+    </AuthContext.Provider>
   );
 }
 
