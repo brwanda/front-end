@@ -20,34 +20,23 @@ const normalizeUrl = (inputUrl) => {
 };
 
 const getAuthHeaders = () => {
-  // Relying on browser session cookies (JSESSIONID) instead of localStorage tokens
+  // Relying on browser session cookies (JSESSIONID) instead of localstorage tokens
   return {};
 };
 
-// Auth endpoints that should NOT trigger redirect on 401
-const AUTH_ENDPOINTS = ['/auth/login', '/auth/logout', '/auth/refresh', '/forgot-password', '/reset-password'];
-
-const isAuthEndpoint = (url = '') => AUTH_ENDPOINTS.some((ep) => url.includes(ep));
-
-const handleRedirects = (status, url = '') => {
+const handleRedirects = (status) => {
   if (typeof window === 'undefined') return;
-
-  if (status === 401 && !isAuthEndpoint(url)) {
+  if (status === 401) {
     try {
       localStorage.removeItem('authToken');
       localStorage.removeItem('user');
-      localStorage.removeItem('isAuthenticated');
-      localStorage.removeItem('lastActivity');
-    } catch (_) {}
-    // Redirect to login, preserving the attempted path so we can restore after login
-    const current = window.location.pathname;
-    if (current !== '/login') {
-      window.location.href = `/login?redirect=${encodeURIComponent(current)}`;
-    }
+    } catch (_) { }
+    
   } else if (status === 403) {
-    // Optionally redirect to an unauthorized page
+    // console.warn('Access forbidden - session might be invalid or role unauthorized');
     // window.location.href = '/unauthorized';
   }
+  
 };
 
 const parseResponse = async (res, expectBlob = false) => {
@@ -72,7 +61,7 @@ const parseResponse = async (res, expectBlob = false) => {
 };
 
 const request = async (method, url, options = {}) => {
-  const { headers = {}, params, body, expectBlob = false } = options;
+  const { headers = {}, params, body, expectBlob = false, credentials } = options;
 
   let finalUrl = normalizeUrl(url);
   if (params && typeof params === 'object') {
@@ -83,7 +72,7 @@ const request = async (method, url, options = {}) => {
 
   const init = { method, headers: { ...getAuthHeaders(), ...headers } };
 
-  // Preserve HOD-specific headers
+  // Preserve HOD-specific headers that were previously set in axios interceptors
   const hodPathRegex = /\/hod\//i;
   if ((typeof url === 'string' && hodPathRegex.test(url)) || hodPathRegex.test(finalUrl)) {
     if (!init.headers['X-User-Role']) init.headers['X-User-Role'] = 'HOD';
@@ -92,7 +81,7 @@ const request = async (method, url, options = {}) => {
 
   if (body !== undefined && body !== null) {
     if (body instanceof FormData) {
-      init.body = body;
+      init.body = body; // Let the browser set proper multipart boundary
     } else if (typeof body === 'string') {
       init.body = body;
       if (!init.headers['Content-Type']) {
@@ -106,17 +95,15 @@ const request = async (method, url, options = {}) => {
     }
   }
 
-  // Always include credentials so session cookies are sent
+  // Default to include credentials so session cookies are sent
   init.credentials = 'include';
 
   const res = await fetch(finalUrl, init);
   const { data } = await parseResponse(res, expectBlob);
 
   if (!res.ok) {
-    handleRedirects(res.status, finalUrl);
-    const error = new Error(
-      (data && (data.message || data.error)) || `Request failed with status ${res.status}`
-    );
+    handleRedirects(res.status);
+    const error = new Error((data && (data.message || data.error)) || `Request failed with status ${res.status}`);
     error.response = { status: res.status, data };
     throw error;
   }
@@ -129,11 +116,13 @@ const request = async (method, url, options = {}) => {
   };
 };
 
-export const get  = (url, options = {})        => request('GET',    url, options);
-export const post = (url, body, options = {})  => request('POST',   url, { ...options, body });
-export const put  = (url, body, options = {})  => request('PUT',    url, { ...options, body });
-export const patch= (url, body, options = {})  => request('PATCH',  url, { ...options, body });
-export const del  = (url, options = {})        => request('DELETE', url, options);
+export const get = (url, options = {}) => request('GET', url, options);
+export const post = (url, body, options = {}) => request('POST', url, { ...options, body });
+export const put = (url, body, options = {}) => request('PUT', url, { ...options, body });
+export const patch = (url, body, options = {}) => request('PATCH', url, { ...options, body });
+export const del = (url, options = {}) => request('DELETE', url, options);
 
 const http = { get, post, put, patch, del };
 export default http;
+
+
