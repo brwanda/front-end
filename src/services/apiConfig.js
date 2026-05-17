@@ -1,5 +1,7 @@
-// Centralized API base URL configuration
-// Uses CRA env var with safe fallback to preserve current functionality
-export const API_BASE = process.env.REACT_APP_BASE_URL;
 
+// PRODUCTION BACKEND
+const PROD_API = 'https://backend-sandra-production.up.railway.app/api';
 
+export const API_BASE =  PROD_API;
+
+console.log('API_BASE:', API_BASE);

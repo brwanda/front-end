@@ -1,117 +1,111 @@
 import React, { useState } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { FaArrowLeft } from 'react-icons/fa';
 import HODPermissionService from '../services/hodPermissionService';
-import http from '../services/http';
+import http, { saveToken, clearToken } from '../services/http';
 import './Login.css';
 
 import EaracgRealLogo from '../assets/earacg-faceted-peak.svg';
-import RwandaLogo from '../assets/Rwanda.jpeg';
-import KenyaLogo from '../assets/Kenya.jpeg';
-import UgandaLogo from '../assets/Uganda.jpeg';
-import TanzaniaLogo from '../assets/Tanzania.png';
-import BurundiLogo from '../assets/Burundi.jpeg';
+import RwandaLogo     from '../assets/Rwanda.jpeg';
+import KenyaLogo      from '../assets/Kenya.jpeg';
+import UgandaLogo     from '../assets/Uganda.jpeg';
+import TanzaniaLogo   from '../assets/Tanzania.png';
+import BurundiLogo    from '../assets/Burundi.jpeg';
 import SouthSudanLogo from '../assets/South Sudan.jpeg';
-import ZanzibarLogo from '../assets/Zanzibar.jpeg';
+import ZanzibarLogo   from '../assets/Zanzibar.jpeg';
 
 const loginLogos = [
-  { src: RwandaLogo, alt: 'Rwanda Revenue Authority' },
-  { src: KenyaLogo, alt: 'Kenya Revenue Authority' },
-  { src: UgandaLogo, alt: 'Uganda Revenue Authority' },
-  { src: TanzaniaLogo, alt: 'Tanzania Revenue Authority' },
-  { src: BurundiLogo, alt: 'Office Burundais des Recettes' },
-  { src: SouthSudanLogo, alt: 'National Revenue Authority' },
-  { src: ZanzibarLogo, alt: 'Zanzibar Revenue Authority' },
+  { src: RwandaLogo,     alt: 'Rwanda Revenue Authority'      },
+  { src: KenyaLogo,      alt: 'Kenya Revenue Authority'       },
+  { src: UgandaLogo,     alt: 'Uganda Revenue Authority'      },
+  { src: TanzaniaLogo,   alt: 'Tanzania Revenue Authority'    },
+  { src: BurundiLogo,    alt: 'Office Burundais des Recettes' },
+  { src: SouthSudanLogo, alt: 'National Revenue Authority'    },
+  { src: ZanzibarLogo,   alt: 'Zanzibar Revenue Authority'    },
 ];
 
+const ROLE_REDIRECTS = {
+  ADMIN:                '/admin/dashboard',
+  SECRETARY:            '/secretary/dashboard',
+  CHAIR:                '/chair/dashboard',
+  VICE_CHAIR:           '/chair/dashboard',
+  COMMISSIONER_GENERAL: '/commissioner/dashboard',
+  HOD:                  '/hod/dashboard',
+};
+
+const getRedirectPath = (user) => {
+  if (HODPermissionService.hasHODPrivileges(user)) return '/hod/dashboard';
+  return ROLE_REDIRECTS[user.role] ?? '/dashboard';
+};
+
 const Login = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [showPassword, setShowPassword] = useState(false);
-  const [error, setError] = useState('');
-  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
+  const [email,        setEmail]        = useState('');
+  const [password,     setPassword]     = useState('');
+  const [showPassword, setShowPassword] = useState(false);
+  const [error,        setError]        = useState('');
+  const [loading,      setLoading]      = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
     setError('');
 
+    // Clear any stale auth state before attempting login
+    clearToken();
+    try {
+      localStorage.removeItem('user');
+      localStorage.removeItem('isAuthenticated');
+      localStorage.removeItem('lastActivity');
+    } catch (_) {}
+
     try {
       const { data } = await http.post('/auth/login', { email, password });
 
-      if (data && data.success) {
-        // Store user data in localStorage
-        localStorage.setItem('user', JSON.stringify(data.user));
-        localStorage.setItem('isAuthenticated', 'true');
-        localStorage.setItem('lastActivity', Date.now().toString());
-
-        // Redirect based on user role and HoD privileges
+      if (data?.success === true) {
         const user = data.user;
-        let redirectPath = '/dashboard'; // Default to general dashboard
 
-        // Check if user has HoD privileges first (Chair of Head of Delegation)
-        const hasHODPrivileges = HODPermissionService.hasHODPrivileges(user);
-
-        if (hasHODPrivileges) {
-          redirectPath = '/hod/dashboard';
-        } else {
-          const userRole = user.role;
-          switch (userRole) {
-            case 'ADMIN':
-              redirectPath = '/admin/dashboard';
-              break;
-            case 'SECRETARY':
-              redirectPath = '/secretary/dashboard';
-              break;
-            case 'CHAIR':
-              redirectPath = '/chair/dashboard';
-              break;
-            case 'VICE_CHAIR':
-              redirectPath = '/chair/dashboard';
-              break;
-            case 'COMMISSIONER_GENERAL':
-              redirectPath = '/commissioner/dashboard';
-              break;
-            case 'HOD':
-              redirectPath = '/hod/dashboard';
-              break;
-            case 'SUBCOMMITTEE_MEMBER':
-            case 'COMMITTEE_MEMBER':
-              redirectPath = '/member/dashboard';
-              break;
-            case 'COMMITTEE_SECRETARY':
-            case 'DELEGATION_SECRETARY':
-              redirectPath = '/secretary/dashboard';
-              break;
-            default:
-              redirectPath = '/dashboard';
-          }
+        // ── Save JWT token returned by the backend ──────────────────────────
+        // Your backend must return { success: true, token: "eyJ...", user: {...} }
+        // If it currently returns a session cookie instead, see the migration
+        // notes in http.js — the backend needs to be updated to return a JWT.
+        if (data.token) {
+          saveToken(data.token);
         }
 
-        // Use React Router style redirect
-        window.location.href = redirectPath;
-      } else {
-        setError(data.error || 'Login failed');
+        localStorage.setItem('user',            JSON.stringify(user));
+        localStorage.setItem('isAuthenticated', 'true');
+        localStorage.setItem('lastActivity',    Date.now().toString());
+
+        setLoading(false);
+        navigate(getRedirectPath(user));
+        return;
       }
+
+      // HTTP 200 but success: false
+      setError(data?.message || 'Invalid credentials. Please try again.');
+      setLoading(false);
+
     } catch (err) {
-      // Show correct backend error message instead of generic network error
-      const backendError = err?.response?.data?.error;
-      if (backendError) {
-        setError(backendError);
-      } else if (err?.message) {
-        setError(err.message);
+      const status = err?.response?.status;
+
+      if (status === 401) {
+        setError('Invalid email or password.');
+      } else if (status === 403) {
+        setError('Your account has been disabled. Please contact support.');
+      } else if (status >= 500) {
+        setError('Server error. Please try again later.');
       } else {
-        setError('Network error. Please check your connection and try again.');
+        setError(err?.response?.data?.message || 'Login failed. Please try again.');
       }
-    } finally {
+
       setLoading(false);
     }
   };
 
   return (
     <div className="login-container">
-      <button 
+      <button
         className="login-back-to-home"
         onClick={() => navigate('/')}
         aria-label="Back to home"
@@ -120,18 +114,15 @@ const Login = () => {
         <FaArrowLeft />
         <span>Back to Home</span>
       </button>
-      
+
       <div className="login-floating-logos">
         {loginLogos.map((logo, i) => (
-          <div
-            className="login-floating-orb"
-            key={i}
-            style={{ '--orb-index': i }}
-          >
+          <div className="login-floating-orb" key={i} style={{ '--orb-index': i }}>
             <img src={logo.src} alt={logo.alt} />
           </div>
         ))}
       </div>
+
       <div className="login-card">
         <div className="login-header">
           <div className="login-logo-ring">
@@ -151,6 +142,7 @@ const Login = () => {
               onChange={(e) => setEmail(e.target.value)}
               required
               placeholder="Enter your email"
+              autoComplete="email"
             />
           </div>
 
@@ -164,6 +156,7 @@ const Login = () => {
                 onChange={(e) => setPassword(e.target.value)}
                 required
                 placeholder="Enter your password"
+                autoComplete="current-password"
               />
               <button
                 type="button"
@@ -192,10 +185,15 @@ const Login = () => {
             </div>
           </div>
 
-          {error && <div className="error-message">{error}</div>}
+          {error && <div className="error-message" role="alert">{error}</div>}
 
-          <button type="submit" className="login-button login-anim-field" style={{ '--field-index': 2 }} disabled={loading}>
-            {loading ? 'Signing in...' : 'Sign In'}
+          <button
+            type="submit"
+            className="login-button login-anim-field"
+            style={{ '--field-index': 2 }}
+            disabled={loading}
+          >
+            {loading ? 'Signing in…' : 'Sign In'}
           </button>
         </form>
 
@@ -207,4 +205,4 @@ const Login = () => {
   );
 };
 
-export default Login; 
+export default Login;
