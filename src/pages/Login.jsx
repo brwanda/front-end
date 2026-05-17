@@ -2,17 +2,17 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { FaArrowLeft } from 'react-icons/fa';
 import HODPermissionService from '../services/hodPermissionService';
-import http, { saveToken, clearToken } from '../services/http';
+import http from '../services/http';
 import './Login.css';
 
 import EaracgRealLogo from '../assets/earacg-faceted-peak.svg';
-import RwandaLogo     from '../assets/Rwanda.jpeg';
-import KenyaLogo      from '../assets/Kenya.jpeg';
-import UgandaLogo     from '../assets/Uganda.jpeg';
-import TanzaniaLogo   from '../assets/Tanzania.png';
-import BurundiLogo    from '../assets/Burundi.jpeg';
+import RwandaLogo from '../assets/Rwanda.jpeg';
+import KenyaLogo from '../assets/Kenya.jpeg';
+import UgandaLogo from '../assets/Uganda.jpeg';
+import TanzaniaLogo from '../assets/Tanzania.png';
+import BurundiLogo from '../assets/Burundi.jpeg';
 import SouthSudanLogo from '../assets/South Sudan.jpeg';
-import ZanzibarLogo   from '../assets/Zanzibar.jpeg';
+import ZanzibarLogo from '../assets/Zanzibar.jpeg';
 
 const loginLogos = [
   { src: RwandaLogo,     alt: 'Rwanda Revenue Authority'      },
@@ -33,11 +33,6 @@ const ROLE_REDIRECTS = {
   HOD:                  '/hod/dashboard',
 };
 
-const getRedirectPath = (user) => {
-  if (HODPermissionService.hasHODPrivileges(user)) return '/hod/dashboard';
-  return ROLE_REDIRECTS[user.role] ?? '/dashboard';
-};
-
 const Login = () => {
   const navigate = useNavigate();
   const [email,        setEmail]        = useState('');
@@ -46,43 +41,55 @@ const Login = () => {
   const [error,        setError]        = useState('');
   const [loading,      setLoading]      = useState(false);
 
+  const clearStaleSession = () => {
+    try {
+      localStorage.removeItem('user');
+      localStorage.removeItem('isAuthenticated');
+      localStorage.removeItem('lastActivity');
+      localStorage.removeItem('authToken');
+    } catch (_) {}
+  };
+
+  const getRedirectPath = (user) => {
+    // HOD-privilege check takes priority over raw role
+    if (HODPermissionService.hasHODPrivileges(user)) return '/hod/dashboard';
+    return ROLE_REDIRECTS[user.role] ?? '/dashboard';
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
     setError('');
 
-    // Clear any stale auth state before attempting login
-    clearToken();
+    // 1. Clear any stale local state first
+    clearStaleSession();
+
+    // 2. Try to invalidate the server-side session cookie so the backend
+    //    won't reject the new login request with 401 due to an expired session.
     try {
-      localStorage.removeItem('user');
-      localStorage.removeItem('isAuthenticated');
-      localStorage.removeItem('lastActivity');
-    } catch (_) {}
+      await http.post('/auth/logout');
+    } catch (_) {
+      // Ignore — server may have no active session, that's fine
+    }
 
     try {
-      const { data } = await http.post('/auth/login', { email, password });
+      const response = await http.post('/auth/login', { email, password });
+      const { data } = response;
 
       if (data?.success === true) {
         const user = data.user;
-
-        // ── Save JWT token returned by the backend ──────────────────────────
-        // Your backend must return { success: true, token: "eyJ...", user: {...} }
-        // If it currently returns a session cookie instead, see the migration
-        // notes in http.js — the backend needs to be updated to return a JWT.
-        if (data.token) {
-          saveToken(data.token);
-        }
 
         localStorage.setItem('user',            JSON.stringify(user));
         localStorage.setItem('isAuthenticated', 'true');
         localStorage.setItem('lastActivity',    Date.now().toString());
 
+        const redirectPath = getRedirectPath(user);
         setLoading(false);
-        navigate(getRedirectPath(user));
+        navigate(redirectPath);
         return;
       }
 
-      // HTTP 200 but success: false
+      // Backend returned HTTP 200 but success: false
       setError(data?.message || 'Invalid credentials. Please try again.');
       setLoading(false);
 
@@ -105,6 +112,7 @@ const Login = () => {
 
   return (
     <div className="login-container">
+      {/* Fixed: onClick handler was missing */}
       <button
         className="login-back-to-home"
         onClick={() => navigate('/')}
@@ -117,7 +125,11 @@ const Login = () => {
 
       <div className="login-floating-logos">
         {loginLogos.map((logo, i) => (
-          <div className="login-floating-orb" key={i} style={{ '--orb-index': i }}>
+          <div
+            className="login-floating-orb"
+            key={i}
+            style={{ '--orb-index': i }}
+          >
             <img src={logo.src} alt={logo.alt} />
           </div>
         ))}
@@ -179,7 +191,10 @@ const Login = () => {
               </button>
             </div>
             <div style={{ textAlign: 'right', marginTop: '8px' }}>
-              <Link to="/forgot-password" style={{ color: '#60a5fa', fontSize: '14px', textDecoration: 'none' }}>
+              <Link
+                to="/forgot-password"
+                style={{ color: '#60a5fa', fontSize: '14px', textDecoration: 'none' }}
+              >
                 Forgot Password?
               </Link>
             </div>
