@@ -39,7 +39,6 @@ import TakeMinutes from './pages/Minutes/TakeMinutes';
 import TakeAttendance from './pages/Attendance/TakeAttendance';
 import UserProfile from './pages/UserProfile/UserProfile';
 
-// Eagerly load all pages for instant navigation
 import CommitteeForm from './pages/Committees/CommitteeForm';
 import CountryForm from './pages/Countries/CountryForm';
 import MemberForm from './pages/CountryCommitteeMembers/MemberForm';
@@ -49,49 +48,52 @@ import ArchiveMeetings from './pages/Meetings/ArchiveMeetings';
 import MeetingResolutions from './pages/Resolutions/MeetingResolutions';
 import CommitteeSecretaryTaskManagement from './pages/Tasks/CommitteeSecretaryTaskManagement';
 
-// Invitation Pages
 import InvitationManager from './pages/InvitationManager/InvitationManager';
 import EnhancedSendInvitations from './pages/InvitationManager/EnhancedSendInvitations';
-
-// Enhanced Secretary Portal Components
 import EnhancedMeetingInvitationManager from './pages/Meetings/EnhancedMeetingInvitationManager';
 import EnhancedResolutionWorkflow from './pages/Resolutions/EnhancedResolutionWorkflow';
 
-// Other Pages
 import Notifications from './pages/Notifications/Notifications';
 import EARAPerformanceDashboardPage from './pages/EARAPerformanceDashboard/EARAPerformanceDashboardPage';
 import SimplePerformanceDashboardPage from './pages/SimplePerformanceDashboard/SimplePerformanceDashboardPage';
 import ReportsHubPage from './pages/Reports/ReportsHubPage';
 import FilterReportsPage from './pages/Reports/FilterReportsPage';
 
-// Authentication Service (single source of truth)
 const AuthService = {
-  SESSION_TIMEOUT: 30 * 60 * 1000, // 30 minutes in milliseconds
-  ACTIVITY_CHECK_INTERVAL: 60 * 1000, // Check every minute
+  SESSION_TIMEOUT: 30 * 60 * 1000,
+  ACTIVITY_CHECK_INTERVAL: 60 * 1000,
 
   getCurrentUser: () => {
     try {
       const userData = localStorage.getItem('user');
       const isAuthenticated = localStorage.getItem('isAuthenticated') === 'true';
       const lastActivity = localStorage.getItem('lastActivity');
-      
+
+      console.log('[AUTH:getCurrentUser] isAuthenticated flag:', isAuthenticated);
+      console.log('[AUTH:getCurrentUser] userData exists:', !!userData);
+      console.log('[AUTH:getCurrentUser] lastActivity:', lastActivity);
+
       if (isAuthenticated && userData) {
-        // Check if session has expired
         if (lastActivity) {
           const timeSinceLastActivity = Date.now() - parseInt(lastActivity, 10);
+          const minutesAgo = Math.round(timeSinceLastActivity / 60000);
+          console.log('[AUTH:getCurrentUser] Time since last activity:', minutesAgo, 'minutes');
+          console.log('[AUTH:getCurrentUser] Session timeout is:', AuthService.SESSION_TIMEOUT / 60000, 'minutes');
           if (timeSinceLastActivity > AuthService.SESSION_TIMEOUT) {
-            // Session expired, clear everything
+            console.warn('[AUTH:getCurrentUser] ⏰ Session EXPIRED — logging out');
             AuthService.logout();
             return null;
           }
         }
-        
-        // Update last activity timestamp
         AuthService.updateActivity();
-        return JSON.parse(userData);
+        const parsed = JSON.parse(userData);
+        console.log('[AUTH:getCurrentUser] ✅ Returning user:', parsed?.email);
+        return parsed;
       }
+      console.warn('[AUTH:getCurrentUser] ❌ isAuthenticated=false or no userData — returning null');
       return null;
     } catch (error) {
+      console.error('[AUTH:getCurrentUser] 💥 Error parsing user:', error);
       return null;
     }
   },
@@ -112,42 +114,52 @@ const AuthService = {
     localStorage.removeItem('lastActivity');
   },
 
-  // Verify session with backend
   verifySession: async () => {
+    const localUser = AuthService.getCurrentUser();
+    const url = `${API_BASE}/auth/current-user`;
+    console.log('[AUTH:verifySession] 📡 Fetching:', url);
+    console.log('[AUTH:verifySession] API_BASE value:', API_BASE);
     try {
-      // Try to fetch current user from backend to verify session is still valid
-      const response = await fetch(`${API_BASE}/auth/current-user`, {
+      const response = await fetch(url, {
         method: 'GET',
         credentials: 'include',
-        headers: {
-          'Content-Type': 'application/json'
-        }
+        headers: { 'Content-Type': 'application/json' },
       });
+
+      console.log('[AUTH:verifySession] 📥 Response status:', response.status);
+      console.log('[AUTH:verifySession] 📥 Response ok:', response.ok);
 
       if (response.ok) {
         const userData = await response.json();
+        console.log('[AUTH:verifySession] 📥 Response data:', userData);
         if (userData && userData.id) {
-          // Session is valid, update localStorage
           localStorage.setItem('user', JSON.stringify(userData));
           localStorage.setItem('isAuthenticated', 'true');
           AuthService.updateActivity();
+          console.log('[AUTH:verifySession] ✅ Session valid for:', userData.email);
           return userData;
         }
+        console.warn('[AUTH:verifySession] ⚠️ Response ok but no id in data:', userData);
       }
-      
-      // Session invalid, clear localStorage
-      AuthService.logout();
-      return null;
+
+      if (response.status === 401) {
+        console.warn('[AUTH:verifySession] 🔒 401 — session truly invalid, logging out');
+        AuthService.logout();
+        return null;
+      }
+
+      console.warn('[AUTH:verifySession] ⚠️ Status', response.status, '— keeping local session');
+      return localUser;
+
     } catch (error) {
-      console.error('Session verification failed:', error);
-      // On error, clear localStorage and return null
-      AuthService.logout();
-      return null;
+      console.error('[AUTH:verifySession] 💥 Network/fetch error:', error.message);
+      console.error('[AUTH:verifySession] 💥 Full error:', error);
+      console.warn('[AUTH:verifySession] ↩️ Falling back to localUser:', localUser?.email);
+      return localUser;
     }
-  }
+  },
 };
 
-// Role-based access control configuration
 const ROLE_PERMISSIONS = {
   ADMIN: {
     dashboards: ['/admin/dashboard'],
@@ -245,19 +257,16 @@ const ROLE_PERMISSIONS = {
   }
 };
 
-// Enhanced Protected Route Component
 const ProtectedRoute = ({ children, requiredPermissions = [], user }) => {
   if (!AuthService.isAuthenticated() || !user?.role) {
     return <Navigate to="/login" replace />;
   }
 
   const userPermissions = ROLE_PERMISSIONS[user.role];
-
   if (!userPermissions) {
     return <Navigate to="/login" replace />;
   }
 
-  // Check if user has required permissions
   if (requiredPermissions.length > 0) {
     const hasPermission = requiredPermissions.some(permission =>
       userPermissions.routes.some(route =>
@@ -266,7 +275,6 @@ const ProtectedRoute = ({ children, requiredPermissions = [], user }) => {
     );
 
     if (!hasPermission) {
-      // Unauthorized access attempt - force logout and redirect to login
       AuthService.logout();
       return <Navigate to="/login" replace />;
     }
@@ -275,23 +283,13 @@ const ProtectedRoute = ({ children, requiredPermissions = [], user }) => {
   return children;
 };
 
-// Dashboard Router Component
 const DashboardRouter = ({ user }) => {
   const getDefaultDashboard = (user) => {
-    // Check if user has HoD privileges first (Chair of Head of Delegation)
-    if (HODPermissionService.hasHODPrivileges(user)) {
-      return '/hod/dashboard';
-    }
-
-    // CG default dashboard is Commissioner Dashboard
-    if (user.role === 'COMMISSIONER_GENERAL') {
-      return '/commissioner/dashboard';
-    }
-
+    if (HODPermissionService.hasHODPrivileges(user)) return '/hod/dashboard';
+    if (user.role === 'COMMISSIONER_GENERAL') return '/commissioner/dashboard';
     const permissions = ROLE_PERMISSIONS[user.role];
     return permissions?.dashboards[0] || '/member/dashboard';
   };
-
   return <Navigate to={getDefaultDashboard(user)} replace />;
 };
 
@@ -302,60 +300,83 @@ function App() {
 
   useEffect(() => {
     const initializeAuth = async () => {
-      try {
-        const isAuth = AuthService.isAuthenticated();
-        const currentUser = AuthService.getCurrentUser();
+      console.log('[APP:INIT] ▶️ initializeAuth started');
+      console.log('[APP:INIT] 📦 localStorage keys:', Object.keys(localStorage));
+      console.log('[APP:INIT] 📦 isAuthenticated in storage:', localStorage.getItem('isAuthenticated'));
+      console.log('[APP:INIT] 📦 user in storage:', localStorage.getItem('user'));
+      console.log('[APP:INIT] 📦 lastActivity in storage:', localStorage.getItem('lastActivity'));
 
-        if (isAuth && currentUser) {
-          // Verify session with backend to ensure it's still valid
-          const verifiedUser = await AuthService.verifySession();
-          
-          if (verifiedUser) {
-            setUser(verifiedUser);
-            setIsAuthenticated(true);
-          } else {
-            // Session invalid, redirect to login
-            setIsAuthenticated(false);
-            setUser(null);
-          }
+      try {
+        const localUser = AuthService.getCurrentUser();
+        console.log('[APP:INIT] 👤 getCurrentUser() returned:', localUser);
+
+        if (!localUser) {
+          console.log('[APP:INIT] ❌ No local user — staying on loading until we confirm no session');
+          setIsAuthenticated(false);
+          setUser(null);
+          // DO NOT setLoading(false) here — stay stuck so we can see this in console
+          // Comment the next line in once we know why localUser is null:
+          // setLoading(false);
+          console.log('[APP:INIT] ⏸️  STUCK HERE — localUser is null. Check localStorage above.');
+          return;
+        }
+
+        console.log('[APP:INIT] ✅ Local user found:', localUser.email, '| role:', localUser.role);
+        console.log('[APP:INIT] 🌐 API_BASE is:', API_BASE);
+        console.log('[APP:INIT] 📡 Calling verifySession → GET', API_BASE + '/auth/current-user');
+
+        const verifiedUser = await AuthService.verifySession();
+
+        console.log('[APP:INIT] 📥 verifySession returned:', verifiedUser);
+
+        if (verifiedUser) {
+          console.log('[APP:INIT] ✅ Verified! Setting user + isAuthenticated=true, then setLoading(false)');
+          setUser(verifiedUser);
+          setIsAuthenticated(true);
+          console.log('[APP:INIT] 🔓 About to call setLoading(false)...');
+          setLoading(false);
+          console.log('[APP:INIT] 🟢 setLoading(false) called — dashboard should render now');
+        } else {
+          console.warn('[APP:INIT] ❌ verifySession returned null — going to login');
+          setIsAuthenticated(false);
+          setUser(null);
+          setLoading(false);
+        }
+
+      } catch (error) {
+        console.error('[APP:INIT] 💥 Caught error in initializeAuth:', error);
+        console.error('[APP:INIT] 💥 Error message:', error.message);
+        console.error('[APP:INIT] 💥 Error stack:', error.stack);
+        const localUser = AuthService.getCurrentUser();
+        console.log('[APP:INIT] 🔄 Fallback: getCurrentUser after error:', localUser);
+        if (localUser) {
+          setUser(localUser);
+          setIsAuthenticated(true);
         } else {
           setIsAuthenticated(false);
           setUser(null);
         }
-      } catch (error) {
-        console.error('Auth initialization error:', error);
-        setIsAuthenticated(false);
-        setUser(null);
-        localStorage.removeItem('user');
-        localStorage.removeItem('isAuthenticated');
-      } finally {
         setLoading(false);
       }
     };
 
     initializeAuth();
 
-    // Listen for storage changes (logout from another tab)
     const handleStorageChange = (e) => {
       if (e.key === 'isAuthenticated' || e.key === 'user') {
         initializeAuth();
       }
     };
 
-    // Track user activity to update session timestamp
     const activityEvents = ['mousedown', 'keydown', 'scroll', 'touchstart', 'click'];
     const handleActivity = () => {
-      if (AuthService.isAuthenticated()) {
-        AuthService.updateActivity();
-      }
+      if (AuthService.isAuthenticated()) AuthService.updateActivity();
     };
 
-    // Check session validity periodically
     const sessionCheckInterval = setInterval(() => {
       if (isAuthenticated) {
         const isStillValid = AuthService.isAuthenticated();
         if (!isStillValid) {
-          // Session expired, force logout
           setIsAuthenticated(false);
           setUser(null);
           window.location.href = '/login';
@@ -363,21 +384,15 @@ function App() {
       }
     }, AuthService.ACTIVITY_CHECK_INTERVAL);
 
-    // Add activity listeners
-    activityEvents.forEach(event => {
-      window.addEventListener(event, handleActivity);
-    });
-
+    activityEvents.forEach(event => window.addEventListener(event, handleActivity));
     window.addEventListener('storage', handleStorageChange);
 
     return () => {
       clearInterval(sessionCheckInterval);
-      activityEvents.forEach(event => {
-        window.removeEventListener(event, handleActivity);
-      });
+      activityEvents.forEach(event => window.removeEventListener(event, handleActivity));
       window.removeEventListener('storage', handleStorageChange);
     };
-  }, [isAuthenticated]);
+  }, []); // ← empty: run once on mount only
 
   if (loading) {
     return <LoadingScreen message="Initializing dashboard..." />;
@@ -388,14 +403,8 @@ function App() {
       <Router>
         <Routes>
           {/* Public Routes */}
-          <Route
-            path="/"
-            element={<PublicLayout><HomePage /></PublicLayout>}
-          />
-          <Route
-            path="/login"
-            element={<PublicLayout><Login /></PublicLayout>}
-          />
+          <Route path="/" element={<PublicLayout><HomePage /></PublicLayout>} />
+          <Route path="/login" element={<PublicLayout><Login /></PublicLayout>} />
           <Route path="/forgot-password" element={<PublicLayout><ForgotPassword /></PublicLayout>} />
           <Route path="/reset-password" element={<PublicLayout><ResetPassword /></PublicLayout>} />
 
@@ -406,155 +415,59 @@ function App() {
               isAuthenticated && user ? (
                 <Layout user={user}>
                   <Routes>
-                    {/* Dashboard Router */}
-                    <Route
-                      path="/dashboard"
-                      element={<DashboardRouter user={user} />}
-                    />
+                    <Route path="/dashboard" element={<DashboardRouter user={user} />} />
 
-                    {/* Role-specific Dashboards */}
-                    <Route
-                      path="/admin/dashboard"
-                      element={
-                        <ProtectedRoute user={user} requiredPermissions={['/admin/dashboard']}>
-                          <EnhancedAdminDashboard />
-                        </ProtectedRoute>
-                      }
-                    />
-                    <Route
-                      path="/secretary/dashboard"
-                      element={
-                        <ProtectedRoute user={user} requiredPermissions={['/secretary/dashboard']}>
-                          <ComprehensiveSecretaryDashboard />
-                        </ProtectedRoute>
-                      }
-                    />
-                    <Route
-                      path="/chair/dashboard"
-                      element={
-                        <ProtectedRoute user={user} requiredPermissions={['/chair/dashboard']}>
-                          <EnhancedChairDashboard />
-                        </ProtectedRoute>
-                      }
-                    />
-                    <Route
-                      path="/hod/dashboard"
-                      element={
-                        <ProtectedRoute user={user} requiredPermissions={['/hod/dashboard']}>
-                          <EnhancedHODDashboard />
-                        </ProtectedRoute>
-                      }
-                    />
-                    <Route
-                      path="/commissioner/dashboard"
-                      element={
-                        <ProtectedRoute user={user} requiredPermissions={['/commissioner/dashboard']}>
-                          <EnhancedCommissionerDashboard />
-                        </ProtectedRoute>
-                      }
-                    />
-                    {/* Keep /activities as alias for commissioner dashboard */}
-                    <Route
-                      path="/activities"
-                      element={<Navigate to="/commissioner/dashboard" replace />}
-                    />
-                    <Route
-                      path="/member/dashboard"
-                      element={
-                        <ProtectedRoute user={user} requiredPermissions={['/member/dashboard']}>
-                          <EnhancedMemberDashboard />
-                        </ProtectedRoute>
-                      }
-                    />
+                    <Route path="/admin/dashboard" element={<ProtectedRoute user={user} requiredPermissions={['/admin/dashboard']}><EnhancedAdminDashboard /></ProtectedRoute>} />
+                    <Route path="/secretary/dashboard" element={<ProtectedRoute user={user} requiredPermissions={['/secretary/dashboard']}><ComprehensiveSecretaryDashboard /></ProtectedRoute>} />
+                    <Route path="/chair/dashboard" element={<ProtectedRoute user={user} requiredPermissions={['/chair/dashboard']}><EnhancedChairDashboard /></ProtectedRoute>} />
+                    <Route path="/hod/dashboard" element={<ProtectedRoute user={user} requiredPermissions={['/hod/dashboard']}><EnhancedHODDashboard /></ProtectedRoute>} />
+                    <Route path="/commissioner/dashboard" element={<ProtectedRoute user={user} requiredPermissions={['/commissioner/dashboard']}><EnhancedCommissionerDashboard /></ProtectedRoute>} />
+                    <Route path="/activities" element={<Navigate to="/commissioner/dashboard" replace />} />
+                    <Route path="/member/dashboard" element={<ProtectedRoute user={user} requiredPermissions={['/member/dashboard']}><EnhancedMemberDashboard /></ProtectedRoute>} />
 
-                    {/* Performance Dashboards */}
-                    <Route
-                      path="/eara-performance-dashboard"
-                      element={
-                        <ProtectedRoute user={user} requiredPermissions={['/eara-performance-dashboard']}>
-                          <EARAPerformanceDashboardPage />
-                        </ProtectedRoute>
-                      }
-                    />
-                    <Route
-                      path="/simple-performance-dashboard"
-                      element={
-                        <ProtectedRoute user={user} requiredPermissions={['/simple-performance-dashboard']}>
-                          <SimplePerformanceDashboardPage />
-                        </ProtectedRoute>
-                      }
-                    />
+                    <Route path="/eara-performance-dashboard" element={<ProtectedRoute user={user} requiredPermissions={['/eara-performance-dashboard']}><EARAPerformanceDashboardPage /></ProtectedRoute>} />
+                    <Route path="/simple-performance-dashboard" element={<ProtectedRoute user={user} requiredPermissions={['/simple-performance-dashboard']}><SimplePerformanceDashboardPage /></ProtectedRoute>} />
 
-                    {/* Committee Routes */}
                     <Route path="/committees" element={<ProtectedRoute user={user} requiredPermissions={['/committees']}><CommitteeList /></ProtectedRoute>} />
                     <Route path="/committees/new" element={<ProtectedRoute user={user} requiredPermissions={['/committees']}><CommitteeForm /></ProtectedRoute>} />
                     <Route path="/committees/:id/edit" element={<ProtectedRoute user={user} requiredPermissions={['/committees']}><CommitteeForm /></ProtectedRoute>} />
 
-                    {/* Country Routes */}
                     <Route path="/countries" element={<ProtectedRoute user={user} requiredPermissions={['/countries']}><CountryList /></ProtectedRoute>} />
                     <Route path="/countries/new" element={<ProtectedRoute user={user} requiredPermissions={['/countries']}><CountryForm /></ProtectedRoute>} />
                     <Route path="/countries/:id/edit" element={<ProtectedRoute user={user} requiredPermissions={['/countries']}><CountryForm /></ProtectedRoute>} />
 
-                    {/* Committee Members Routes */}
                     <Route path="/members" element={<ProtectedRoute user={user} requiredPermissions={['/members']}><MemberList /></ProtectedRoute>} />
                     <Route path="/members/new" element={<ProtectedRoute user={user} requiredPermissions={['/members']}><MemberForm /></ProtectedRoute>} />
                     <Route path="/members/:id/edit" element={<ProtectedRoute user={user} requiredPermissions={['/members']}><MemberForm /></ProtectedRoute>} />
 
-                    {/* Sub-Committee Members Routes */}
                     <Route path="/sub-committee-members" element={<ProtectedRoute user={user} requiredPermissions={['/sub-committee-members']}><SubMemberList /></ProtectedRoute>} />
                     <Route path="/sub-committee-members/new" element={<ProtectedRoute user={user} requiredPermissions={['/sub-committee-members']}><SubMemberForm /></ProtectedRoute>} />
                     <Route path="/sub-committee-members/:id/edit" element={<ProtectedRoute user={user} requiredPermissions={['/sub-committee-members']}><SubMemberForm /></ProtectedRoute>} />
                     <Route path="/sub-committee-members/:id" element={<ProtectedRoute user={user} requiredPermissions={['/sub-committee-members']}><SubMemberView /></ProtectedRoute>} />
 
-                    {/* Meeting Routes */}
                     <Route path="/meetings/create" element={<ProtectedRoute user={user} requiredPermissions={['/meetings']}><CreateMeeting /></ProtectedRoute>} />
                     <Route path="/meetings/archive" element={<ProtectedRoute user={user} requiredPermissions={['/meetings']}><ArchiveMeetings /></ProtectedRoute>} />
                     <Route path="/meetings/:meetingId/resolutions" element={<ProtectedRoute user={user} requiredPermissions={['/meetings']}><MeetingResolutions /></ProtectedRoute>} />
                     <Route path="/meetings/:meetingId/tasks" element={<ProtectedRoute user={user} requiredPermissions={['/meetings']}><MeetingResolutions /></ProtectedRoute>} />
                     <Route path="/meetings/:meetingId/task-management" element={<ProtectedRoute user={user} requiredPermissions={['/meetings']}><CommitteeSecretaryTaskManagement /></ProtectedRoute>} />
 
-                    {/* Invitation Routes */}
                     <Route path="/invitations" element={<ProtectedRoute user={user} requiredPermissions={['/invitations']}><InvitationManager /></ProtectedRoute>} />
                     <Route path="/invitations/send" element={<ProtectedRoute user={user} requiredPermissions={['/invitations']}><EnhancedSendInvitations /></ProtectedRoute>} />
                     <Route path="/invitations/manage" element={<ProtectedRoute user={user} requiredPermissions={['/invitations']}><InvitationManager /></ProtectedRoute>} />
 
-                    {/* User Profile */}
                     <Route path="/profile" element={<ProtectedRoute user={user} requiredPermissions={['/profile']}><UserProfile /></ProtectedRoute>} />
 
-                    {/* Enhanced Secretary Portal Routes */}
                     <Route path="/secretary/meeting-invitations" element={<ProtectedRoute user={user} requiredPermissions={['/secretary/dashboard']}><EnhancedMeetingInvitationManager /></ProtectedRoute>} />
                     <Route path="/secretary/resolution-assignment" element={<ProtectedRoute user={user} requiredPermissions={['/secretary/dashboard']}><EnhancedResolutionWorkflow /></ProtectedRoute>} />
                     <Route path="/meeting-invitations/enhanced" element={<ProtectedRoute user={user} requiredPermissions={['/invitations']}><EnhancedMeetingInvitationManager /></ProtectedRoute>} />
                     <Route path="/resolutions/enhanced" element={<ProtectedRoute user={user} requiredPermissions={['/resolutions']}><EnhancedResolutionWorkflow /></ProtectedRoute>} />
 
-                    {/* Minutes Routes */}
                     <Route path="/minutes/take" element={<ProtectedRoute user={user} requiredPermissions={['/minutes']}><TakeMinutes /></ProtectedRoute>} />
-
-                    {/* Attendance Routes */}
                     <Route path="/attendance/take" element={<ProtectedRoute user={user} requiredPermissions={['/attendance']}><TakeAttendance /></ProtectedRoute>} />
-
-                    {/* Notifications */}
                     <Route path="/notifications" element={<ProtectedRoute user={user} requiredPermissions={['/notifications']}><Notifications /></ProtectedRoute>} />
+                    <Route path="/reports" element={<ProtectedRoute user={user} requiredPermissions={['/reports']}><ReportsHubPage /></ProtectedRoute>} />
+                    <Route path="/reports/filter" element={<ProtectedRoute user={user} requiredPermissions={['/reports/filter']}><FilterReportsPage /></ProtectedRoute>} />
 
-                    {/* Reports */}
-                    <Route
-                      path="/reports"
-                      element={
-                        <ProtectedRoute user={user} requiredPermissions={['/reports']}>
-                          <ReportsHubPage />
-                        </ProtectedRoute>
-                      }
-                    />
-                    <Route
-                      path="/reports/filter"
-                      element={
-                        <ProtectedRoute user={user} requiredPermissions={['/reports/filter']}>
-                          <FilterReportsPage />
-                        </ProtectedRoute>
-                      }
-                    />
-
-                    {/* Fallback - redirect to appropriate dashboard */}
                     <Route path="*" element={<DashboardRouter user={user} />} />
                   </Routes>
                 </Layout>
