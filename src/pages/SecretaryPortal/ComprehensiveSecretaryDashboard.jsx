@@ -54,7 +54,7 @@ const ComprehensiveSecretaryDashboard = () => {
         };
       case 'DELEGATION_SECRETARY':
         return {
-          title: 'Delegation Secretary Dashboard',
+          title: 'EARA TC Secretary Dashboard',
           subtitle: 'Manage CG meetings and all technical subcommittee meetings & minutes'
         };
       default:
