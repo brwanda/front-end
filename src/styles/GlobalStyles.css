@@ -1307,6 +1307,7 @@ select:focus {
 :where(.table, .users-table, .performance-table, table) td {
   font-size: 0.875rem !important;
   padding: 0.75rem 1rem !important;
+  vertical-align: middle !important;
 }
 
 /* Robust text handling for long values */

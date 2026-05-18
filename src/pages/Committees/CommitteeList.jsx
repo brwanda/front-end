@@ -363,13 +363,11 @@ const CommitteeList = () => {
         <div className="members-grid">
           {members.map((m) => (
             <div key={m.id} className={`member-card ${cardClass}`}>
+              <div className="member-avatar">{getRoleIcon(m)}</div>
               <div className="member-info">
-                <div className="member-avatar">{getRoleIcon(m)}</div>
-                <div className="member-details">
-                  <h5 className="member-name">{m.name}</h5>
-                  <p className="member-role">{getRoleLabel(m)}</p>
-                  {m.email && <p className="member-email">{m.email}</p>}
-                </div>
+                <h5 className="member-name">{m.name}</h5>
+                <p className="member-role">{getRoleLabel(m)}</p>
+                {m.email && <p className="member-email">{m.email}</p>}
               </div>
             </div>
           ))}

@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './HomePage.css';
 
-import EaracgRealLogo from '../assets/earacg-faceted-peak.svg';
+import EaracgRealLogo from '../assets/earacg-faceted-peak.png';
 import RwandaLogo from '../assets/Rwanda.jpeg';
 import KenyaLogo from '../assets/Kenya.jpeg';
 import UgandaLogo from '../assets/Uganda.jpeg';

@@ -3,7 +3,7 @@
 import jsPDF from 'jspdf';
 import autoTable from 'jspdf-autotable';
 import AuthService from './authService';
-import EaracgPickedLogo from '../assets/earacg-faceted-peak.svg';
+import EaracgPickedLogo from '../assets/earacg-faceted-peak.png';
 
 class PDFService {
 

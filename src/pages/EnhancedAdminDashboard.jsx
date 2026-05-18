@@ -711,7 +711,7 @@ const EnhancedAdminDashboard = () => {
               </div>
               <div className="stat-info">
                 <p className="stat-label">System Health</p>
-                <p className="stat-value" style={{ fontSize: '1.2rem' }}>{stats.systemHealth}</p>
+                <p className="stat-value">{stats.systemHealth}</p>
               </div>
             </div>
           </div>

@@ -9,7 +9,8 @@
 <div className="mt-2 text-xs text-blue-600">
   💡 All members of selected subcommittees receive automatic email notifications
 </div>
-</div>import React, { useState, useEffect } from 'react';
+</div>
+import React, { useState, useEffect } from 'react';
 import { FaFileAlt, FaUsers, FaPlus, FaTrash, FaCheck, FaTimes, FaSpinner, FaExclamationTriangle, FaCalculator } from 'react-icons/fa';
 import ResolutionAssignmentService from '../services/resolutionAssignmentService';
 

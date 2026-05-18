@@ -181,7 +181,9 @@
     margin: 0;
     line-height: 1;
     letter-spacing: -0.02em;
-    word-break: break-word;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 /* Main Content Area */
