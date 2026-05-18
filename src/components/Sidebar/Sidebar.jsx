@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { FaSignOutAlt, FaCalendar, FaFileAlt, FaArchive, FaChartBar, FaGlobe, FaUsers, FaTasks } from 'react-icons/fa';
-import EaracgLogo from '../../assets/earacg-faceted-peak.svg';
+import EaracgLogo from '../../assets/earacg-faceted-peak.png';
 import './Sidebar.css';
 
 const Sidebar = () => {

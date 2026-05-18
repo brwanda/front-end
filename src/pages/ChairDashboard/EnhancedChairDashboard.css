@@ -1,7 +1,7 @@
 /* Enhanced Chair Dashboard Styles */
 .enhanced-chair-dashboard {
   min-height: 100vh;
-  background: #f8fafc;
+  background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
   padding: 16px;
   overflow-x: hidden;
 }

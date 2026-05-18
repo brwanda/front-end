@@ -1,5 +1,5 @@
 import React from 'react';
-import EaracgRealLogo from '../../assets/earacg-faceted-peak.svg';
+import EaracgRealLogo from '../../assets/earacg-faceted-peak.png';
 
 const RealLogoBadge = ({ size = 42 }) => {
   return (

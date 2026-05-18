@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaSpinner } from 'react-icons/fa';
-import EaracgRealLogo from '../assets/earacg-faceted-peak.svg';
+import EaracgRealLogo from '../assets/earacg-faceted-peak.png';
 
 const LoadingScreen = ({ message = "Loading..." }) => {
   return (

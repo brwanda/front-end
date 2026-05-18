@@ -202,7 +202,6 @@ const ReportsHubPage = () => {
           </div>
           <div>
             <h1>East African Revenue Authorities Commissioner General</h1>
-            <p>P.O. Box 2461 Kigali, Rwanda | www.eara-connect.org | info@eara-connect.org</p>
           </div>
         </div>
         <h2>SYSTEM ACTIVITIES AND PERFORMANCE REPORTS</h2>

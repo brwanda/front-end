@@ -590,13 +590,17 @@ input[readonly] {
 
 .member-card {
   background-color: #ffffff;
-  border-radius: 8px;
-  padding: 1.25rem;
+  border-radius: 12px;
+  padding: 1.5rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
   border: 1px solid #e5e7eb;
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .member-card::before {
@@ -617,19 +621,23 @@ input[readonly] {
 
 .member-header {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  margin-bottom: 0.64rem;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  width: 100%;
 }
 
 .member-name {
   margin: 0;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   display: flex;
   align-items: center;
-  gap: 10px;
+  justify-content: center;
+  gap: 8px;
   color: #1f2937;
   font-weight: 600;
+  width: 100%;
 }
 
 .role-icon {
@@ -662,28 +670,31 @@ input[readonly] {
 
 .member-position {
   font-size: 0.85rem;
-  color: #8b5cf6;
-  background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+  color: #a78bfa;
+  background: rgba(139, 92, 246, 0.1);
   padding: 0.4rem 0.8rem;
   border-radius: 20px;
-  border: 1px solid #d1d5db;
+  border: 1px solid rgba(139, 92, 246, 0.3);
   font-weight: 500;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: none;
+  display: inline-block;
 }
 
 .member-contacts {
   margin-bottom: 0.64rem;
+  width: 100%;
 }
 
 .contact-item {
   display: flex;
   align-items: center;
-  gap: 6.4px;
-  margin-bottom: 0.32rem;
-  font-size: 0.95rem;
-  padding: 0.24rem 0.4rem;
-  background-color: #f8f9fa;
-  border-radius: 4px;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  padding: 0.5rem 0.8rem;
+  background-color: rgba(248, 249, 250, 0.5);
+  border-radius: 6px;
   transition: background-color 0.2s;
 }
 
