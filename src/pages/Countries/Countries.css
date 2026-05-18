@@ -584,7 +584,7 @@ input[readonly] {
 
 .members-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 1.25rem;
 }
 
@@ -638,6 +638,10 @@ input[readonly] {
   color: #1f2937;
   font-weight: 600;
   width: 100%;
+  white-space: nowrap;
+  overflow: visible;
+  text-overflow: clip;
+  flex-wrap: nowrap;
 }
 
 .role-icon {

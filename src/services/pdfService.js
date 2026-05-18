@@ -116,11 +116,6 @@ class PDFService {
     doc.setTextColor(16, 67, 120);
     doc.text('East African Revenue Authorities Commissioner General', 64, 15);
 
-    doc.setFontSize(8);
-    doc.setFont('helvetica', 'normal');
-    doc.setTextColor(70, 70, 70);
-    doc.text('P.O. Box 2461 Kigali, Rwanda  |  www.eara-connect.org  |  info@eara-connect.org', 64, 21);
-
     doc.setFontSize(16);
     doc.setFont('helvetica', 'bold');
     doc.setTextColor(22, 22, 22);
