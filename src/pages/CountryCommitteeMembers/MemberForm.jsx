@@ -69,11 +69,29 @@ const MemberForm = () => {
         ]);
 
         console.log('✅ MemberForm: Countries data:', countriesData);
-        console.log('✅ MemberForm: Committees data:', committeesData);
+        console.log('✅ MemberForm: Committees data (raw):', committeesData);
         console.log('✅ MemberForm: SubCommittees data:', subCommitteesData);
 
+        // Filter committees to only show Commissioner General and Head of Delegation
+        const allCommittees = Array.isArray(committeesData) ? committeesData : [];
+        const filteredCommittees = allCommittees.filter(committee => {
+          const name = (committee.name || committee.committeeName || '').toLowerCase();
+          return name.includes('commissioner general') || 
+                 name.includes('head of delegation') ||
+                 name.includes('commissioner-general') ||
+                 name.includes('head-of-delegation');
+        });
+
+        // If no CG or HOD committees found, use fallback
+        const finalCommittees = filteredCommittees.length > 0 ? filteredCommittees : [
+          { id: 1, name: "Commissioner General", committeeName: "Commissioner General" },
+          { id: 2, name: "Head of Delegation", committeeName: "Head of Delegation" }
+        ];
+
+        console.log('✅ MemberForm: Filtered committees:', finalCommittees);
+
         setCountries(Array.isArray(countriesData) ? countriesData : []);
-        setCommittees(Array.isArray(committeesData) ? committeesData : []);
+        setCommittees(finalCommittees);
         setSubCommittees(Array.isArray(subCommitteesData) ? subCommitteesData : []);
 
         if (!id) {

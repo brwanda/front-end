@@ -226,7 +226,25 @@ const EnhancedAdminDashboard = () => {
 
       try {
         const { data } = await http.get('/api/committees');
-        committeesData = Array.isArray(data) ? data : [];
+        const allCommittees = Array.isArray(data) ? data : [];
+        
+        // Filter to only show Commissioner General and Head of Delegation committees
+        committeesData = allCommittees.filter(committee => {
+          const name = (committee.name || committee.committeeName || '').toLowerCase();
+          return name.includes('commissioner general') || 
+                 name.includes('head of delegation') ||
+                 name.includes('commissioner-general') ||
+                 name.includes('head-of-delegation');
+        });
+
+        // If no CG or HOD committees found, use fallback
+        if (committeesData.length === 0) {
+          console.warn('No CG or HOD committees found in API response, using fallback data');
+          committeesData = [
+            { id: 1, name: "Commissioner General", committeeName: "Commissioner General" },
+            { id: 2, name: "Head of Delegation", committeeName: "Head of Delegation" }
+          ];
+        }
       } catch (apiError) {
         console.warn('Committees API failed, using fallback data');
 
@@ -238,6 +256,7 @@ const EnhancedAdminDashboard = () => {
       }
 
       setCommittees(committeesData);
+      console.log('Committees loaded:', committeesData); // Debug log
     } catch (error) {
       console.error('Error fetching committees:', error);
     }
