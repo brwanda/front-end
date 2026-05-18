@@ -171,11 +171,59 @@ const MemberList = () => {
     return result || 'No role assigned';
   };
 
+  const handleFixCommittees = async () => {
+    if (!window.confirm('This will fix incorrect committee names in the database. Continue?')) {
+      return;
+    }
+
+    try {
+      // Get all committees
+      const response = await fetch(`${process.env.REACT_APP_BASE_URL}/committees`, {
+        credentials: 'include'
+      });
+      const committees = await response.json();
+      
+      console.log('Current committees:', committees);
+      
+      // Find and fix incorrect committees
+      for (const committee of committees) {
+        const name = (committee.name || '').toLowerCase();
+        
+        // Fix "single room" to "Head Of Delegation"
+        if (name === 'single room' || name === 'foreman' || name === 'commissioner genera') {
+          const newName = name === 'single room' ? 'Head Of Delegation' : 
+                         name === 'foreman' ? 'Head Of Delegation' : 
+                         'Commissioner General';
+          
+          console.log(`Fixing committee ${committee.id}: "${committee.name}" -> "${newName}"`);
+          
+          await fetch(`${process.env.REACT_APP_BASE_URL}/committees/${committee.id}`, {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            credentials: 'include',
+            body: JSON.stringify({ id: committee.id, name: newName })
+          });
+        }
+      }
+      
+      alert('✅ Committees fixed! Refreshing page...');
+      window.location.reload();
+    } catch (error) {
+      console.error('Error fixing committees:', error);
+      alert('❌ Failed to fix committees: ' + error.message);
+    }
+  };
+
   return (
     <div className="member-container">
       <div className="header">
         <h2>Committee Members</h2>
-        <Link to="/members/new" className="btn btn-primary">Add Member</Link>
+        <div style={{ display: 'flex', gap: '10px' }}>
+          <button onClick={handleFixCommittees} className="btn btn-secondary" style={{ backgroundColor: '#ffc107', color: '#000' }}>
+            Fix Committee Names
+          </button>
+          <Link to="/members/new" className="btn btn-primary">Add Member</Link>
+        </div>
       </div>
       
       {error && <div className="error-message">{error}</div>}
