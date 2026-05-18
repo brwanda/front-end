@@ -370,8 +370,6 @@ const MemberForm = () => {
           isDelegationSecretary: member.roles.delegationSecretary || false
         };
 
-        console.log('💾 Saving committee member with payload:', JSON.stringify(payload, null, 2));
-
         if (id) {
           await updateCommitteeMember(id, payload);
         } else {
