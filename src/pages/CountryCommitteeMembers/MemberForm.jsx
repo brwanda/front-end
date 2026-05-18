@@ -361,14 +361,16 @@ const MemberForm = () => {
           name: member.name,
           phone: normalizedPhone,
           email: member.email,
-          country: member.country,
-          committee: member.committee,
+          country: { id: parseInt(member.country.id) },
+          committee: { id: parseInt(member.committee.id) },
           isChair: member.roles.chair || false,
           isViceChair: member.roles.viceChair || false,
           isCommitteeSecretary: member.roles.committeeSecretary || false,
           isCommitteeMember: member.roles.committeeMember || false,
           isDelegationSecretary: member.roles.delegationSecretary || false
         };
+
+        console.log('💾 Saving committee member with payload:', payload);
 
         if (id) {
           await updateCommitteeMember(id, payload);
