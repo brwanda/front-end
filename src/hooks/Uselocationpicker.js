@@ -81,7 +81,7 @@ export function useLocationPicker({ defaultValue = '', onChange, disabled = fals
 
   const [isLoaded, setIsLoaded] = useState(() => !!window.google?.maps?.places);
   const [scriptError, setScriptError] = useState(null);
-  // Display value — free to change while user types to search
+  
   const [value, setValue] = useState(defaultValue);
 
   // Sync pre-fill when defaultValue changes (edit form loads data)
@@ -144,19 +144,12 @@ export function useLocationPicker({ defaultValue = '', onChange, disabled = fals
     }
   }, [isLoaded, disabled, scriptError]);
 
-  /**
-   * handleInputChange — allows typing to search but does NOT commit the value.
-   * If the user types and then clicks away without selecting a suggestion,
-   * onBlur reverts the display back to the last confirmed Places selection.
-   */
+ 
   const handleInputChange = useCallback((e) => {
     setValue(e.target.value);
   }, []);
 
-  /**
-   * handleBlur — if the user typed something but never picked a suggestion,
-   * revert to the last confirmed value so the field stays clean.
-   */
+ 
   const handleBlur = useCallback(() => {
     // Small delay so a suggestion click registers before we revert
     setTimeout(() => {
@@ -175,31 +168,6 @@ export function useLocationPicker({ defaultValue = '', onChange, disabled = fals
   };
 }
 
-// ─── Component ────────────────────────────────────────────────────────────────
-/**
- * LocationPicker
- *
- * Drop-in autocomplete-only location input.
- * Users can type to search but the committed value must be a Places selection.
- * Blurring without selecting a suggestion reverts to the last valid value.
- *
- * Props:
- *   value        Controlled address string from parent state
- *   onChange     Called with plain address string when a place is selected
- *   defaultValue Seed value for edit forms
- *   disabled     Disables the input
- *   placeholder  Input placeholder text
- *   className    Extra CSS class for the input
- *   id / name    Forwarded to <input>
- *
- * Example:
- *   <LocationPicker
- *     id="location"
- *     value={meeting.location}
- *     onChange={(address) => setMeeting(prev => ({ ...prev, location: address }))}
- *     disabled={meeting.meetingMode !== 'PHYSICAL'}
- *   />
- */
 export function LocationPicker({
   value: controlledValue,
   onChange: onChangeProp,
