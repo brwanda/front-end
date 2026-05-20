@@ -1,6 +1,6 @@
 
 // PRODUCTION BACKEND
-const PROD_API = REACT_APP_BASE_URL;
+const PROD_API = `${process.env.REACT_APP_BASE_URL}`;
 
 export const API_BASE =  PROD_API;
 
