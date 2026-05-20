@@ -1,6 +1,6 @@
 
 // PRODUCTION BACKEND
-const PROD_API = 'https://backend-sandra.onrender.com/api';
+const PROD_API = REACT_APP_BASE_URL;
 
 export const API_BASE =  PROD_API;
 
