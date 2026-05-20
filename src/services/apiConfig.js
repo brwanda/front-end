@@ -1,6 +1,6 @@
 
 // PRODUCTION BACKEND
-const PROD_API = 'https://backend-sandra-production.up.railway.app/api';
+const PROD_API = 'https://backend-sandra.onrender.com/api';
 
 export const API_BASE =  PROD_API;
 
