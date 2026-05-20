@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "https://backend-sandra.onrender.com/api/$1"
+    }
+  ]
+}

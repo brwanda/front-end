@@ -1,0 +1,1209 @@
+src/App.css:24:  color: white;
+src/assets/earacg-faceted-peak.svg:2:  <rect width="760" height="760" fill="#ffffff"/>
+src/components/AppTopBar.css:10:  background: #ffffff;
+src/components/AppTopBar.css:33:  background: #ffffff;
+src/components/AppTopBar.css:57:  color: #ffffff;
+src/components/AppTopBar.css:63:  border: 2px solid #ffffff;
+src/components/AppTopBar.css:68:  background: #ffffff;
+src/components/AppTopBar.css:89:  white-space: nowrap;
+src/components/AppTopBar.css:98:  white-space: nowrap;
+src/components/Brand/RealLogoBadge.jsx:14:        border: '2px solid rgba(255, 255, 255, 0.75)',
+src/components/Brand/RealLogoBadge.jsx:16:        background: '#ffffff',
+src/components/Dashboard/EARAPerformanceDashboard.css:48:  color: white;
+src/components/Dashboard/EARAPerformanceDashboard.css:67:  color: white;
+src/components/Dashboard/EARAPerformanceDashboard.css:100:  background-color: rgba(255, 255, 255, 0.2);
+src/components/Dashboard/EARAPerformanceDashboard.css:101:  color: white;
+src/components/Dashboard/EARAPerformanceDashboard.css:102:  border: 1px solid rgba(255, 255, 255, 0.3);
+src/components/Dashboard/EARAPerformanceDashboard.css:114:  background-color: rgba(255, 255, 255, 0.3);
+src/components/Dashboard/EARAPerformanceDashboard.css:320:  color: white;
+src/components/Dashboard/SimplePerformanceDashboard.css:76:  color: #ffffff;
+src/components/Dashboard/SimplePerformanceDashboard.css:325:  color: white;
+src/components/Dashboard/SimplePerformanceDashboard.css:427:  color: #ffffff;
+src/components/HOD/HODProfileModal.jsx:111:      <div className="bg-white rounded-lg shadow-xl w-full max-w-md mx-4 max-h-screen overflow-y-auto">
+src/components/HOD/HODProfileModal.jsx:268:                className="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
+src/components/HOD/HODProfileModal.jsx:275:                className="px-4 py-2 text-sm font-medium text-white bg-blue-600 border border-transparent rounded-lg hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
+src/components/HOD/HODReportReview.jsx:313:      <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
+src/components/HOD/HODReportReview.jsx:368:        <div className="bg-white shadow-sm rounded-lg border border-gray-200">
+src/components/HOD/HODReportReview.jsx:444:                          className="text-xs flex items-center gap-1 px-3 py-1 rounded text-white"
+src/components/HOD/HODReportReview.jsx:472:          <div className="bg-white shadow-sm rounded-lg border border-gray-200">
+src/components/HOD/HODReportReview.jsx:480:                className="px-3 py-1.5 text-sm font-medium text-white rounded-lg flex items-center gap-1.5"
+src/components/HOD/HODReportReview.jsx:518:                <div className="bg-white border border-gray-200 rounded-lg p-3 max-h-32 overflow-y-auto">
+src/components/HOD/HODReportReview.jsx:529:                  <div className="bg-white border border-gray-200 rounded-lg p-3 max-h-24 overflow-y-auto">
+src/components/HOD/HODReportReview.jsx:596:                            color: hodRanking >= star ? '#fff' : '#6b7280',
+src/components/HOD/HODReportReview.jsx:641:                    className="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50"
+src/components/HOD/HODReportReview.jsx:648:                    className={`px-4 py-2 text-sm font-medium text-white border border-transparent rounded-lg disabled:opacity-50 flex items-center gap-2 ${
+src/components/HOD/HODReportReview.jsx:672:          <div className="bg-white shadow-sm rounded-lg border border-gray-200 flex items-center justify-center">
+src/components/HOD/Notifications.js:218:    <div className="bg-white shadow-lg rounded-lg overflow-hidden">
+src/components/HOD/Notifications.js:223:            <BellIcon className="h-8 w-8 text-white mr-3" />
+src/components/HOD/Notifications.js:225:              <h2 className="text-xl font-semibold text-white">Notifications</h2>
+src/components/HOD/Notifications.js:235:              className="inline-flex items-center px-3 py-2 border border-transparent text-sm font-medium rounded-md text-blue-700 bg-white hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+src/components/HOD/Notifications.js:245:                className="inline-flex items-center px-3 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
+src/components/HOD/Notifications.js:267:                  ? 'bg-white text-blue-700'
+src/components/HOD/Notifications.js:268:                  : 'text-blue-100 hover:text-white hover:bg-blue-500'
+src/components/HOD/Notifications.js:275:                  filter === tab.key ? 'bg-blue-100 text-blue-700' : 'bg-blue-500 text-white'
+src/components/HOD/Notifications.js:385:          <div className="relative top-20 mx-auto p-5 border w-11/12 max-w-2xl shadow-lg rounded-md bg-white">
+src/components/HOD/Notifications.js:471:                    className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+src/components/HOD/Notifications.js:486:                className="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+src/components/HOD/PerformanceDashboard.js:72:        titleColor: 'white',
+src/components/HOD/PerformanceDashboard.js:73:        bodyColor: 'white',
+src/components/HOD/PerformanceDashboard.js:74:        borderColor: 'rgba(255, 255, 255, 0.1)',
+src/components/HOD/PerformanceDashboard.js:271:      <div className="bg-white shadow-lg rounded-lg p-8">
+src/components/HOD/PerformanceDashboard.js:282:            className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+src/components/HOD/PerformanceDashboard.js:295:      <div className="bg-white shadow-lg rounded-lg overflow-hidden">
+src/components/HOD/PerformanceDashboard.js:299:              <ChartBarIcon className="h-8 w-8 text-white mr-3" />
+src/components/HOD/PerformanceDashboard.js:301:                <h2 className="text-xl font-semibold text-white">Performance Dashboard</h2>
+src/components/HOD/PerformanceDashboard.js:309:                className="inline-flex items-center px-3 py-2 border border-transparent text-sm font-medium rounded-md text-blue-700 bg-white hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+src/components/HOD/PerformanceDashboard.js:318:                className="inline-flex items-center px-3 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
+src/components/HOD/PerformanceDashboard.js:391:          <div className="bg-white shadow-lg rounded-lg p-6">
+src/components/HOD/PerformanceDashboard.js:403:          <div className="bg-white shadow-lg rounded-lg p-6">
+src/components/HOD/PerformanceDashboard.js:417:          <div className="bg-white shadow-lg rounded-lg p-6">
+src/components/HOD/PerformanceDashboard.js:431:          <div className="bg-white shadow-lg rounded-lg p-6">
+src/components/HOD/PerformanceDashboard.js:450:        <div className="bg-white shadow-lg rounded-lg p-6">
+src/components/HOD/PerformanceDashboard.js:467:        <div className="bg-white shadow-lg rounded-lg p-6">
+src/components/HOD/PerformanceDashboard.js:485:      <div className="bg-white shadow-lg rounded-lg p-6">
+src/components/HOD/PerformanceDashboard.js:505:        <div className="bg-white shadow-lg rounded-lg overflow-hidden">
+src/components/HOD/PerformanceDashboard.js:530:              <tbody className="bg-white divide-y divide-gray-200">
+src/components/HOD/ProfileUpdate.js:159:    <div className="bg-white shadow-lg rounded-lg overflow-hidden">
+src/components/HOD/ProfileUpdate.js:164:            <UserIcon className="h-8 w-8 text-white mr-3" />
+src/components/HOD/ProfileUpdate.js:166:              <h2 className="text-xl font-semibold text-white">Profile Management</h2>
+src/components/HOD/ProfileUpdate.js:174:              className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-blue-700 bg-white hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+src/components/HOD/ProfileUpdate.js:185:                className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 disabled:opacity-50 disabled:cursor-not-allowed"
+src/components/HOD/ProfileUpdate.js:190:                    <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
+src/components/HOD/ProfileUpdate.js:203:                className="inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+src/components/HOD/ProfileUpdate.js:233:                    : 'bg-white text-gray-900'
+src/components/HOD/ProfileUpdate.js:264:                    : 'bg-white text-gray-900'
+src/components/HOD/ProfileUpdate.js:295:                    : 'bg-white text-gray-900'
+src/components/HOD/ReportReview.js:158:    <div className="bg-white shadow-lg rounded-lg overflow-hidden">
+src/components/HOD/ReportReview.js:167:            className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+src/components/HOD/ReportReview.js:233:          <tbody className="bg-white divide-y divide-gray-200">
+src/components/HOD/ReportReview.js:318:          <div className="relative top-20 mx-auto p-5 border w-11/12 max-w-2xl shadow-lg rounded-md bg-white">
+src/components/HOD/ReportReview.js:446:                className="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+src/components/HOD/ReportReview.js:454:                  className={`px-4 py-2 text-sm font-medium text-white rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 ${
+src/components/HOD/ReportReview.js:462:                      <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
+src/components/HODChair/HodNotifications.js:327:    <div className="bg-white shadow-2xl rounded-2xl overflow-hidden border border-gray-200 h-full max-h-screen flex flex-col">
+src/components/HODChair/HodNotifications.js:332:            <div className="p-3 bg-white bg-opacity-20 rounded-lg">
+src/components/HODChair/HodNotifications.js:333:              <BellSolidIcon className="h-8 w-8 text-white" />
+src/components/HODChair/HodNotifications.js:336:              <h2 className="text-2xl font-bold text-white">Notifications</h2>
+src/components/HODChair/HodNotifications.js:342:                  <div className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-red-500 text-white">
+src/components/HODChair/HodNotifications.js:354:              className="inline-flex items-center px-4 py-2 bg-white bg-opacity-20 text-white rounded-lg hover:bg-opacity-30 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-800 transition-all"
+src/components/HODChair/HodNotifications.js:364:                className="inline-flex items-center px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-800 transition-all"
+src/components/HODChair/HodNotifications.js:387:                  ? 'bg-white text-blue-700'
+src/components/HODChair/HodNotifications.js:388:                  : 'text-blue-100 hover:text-white hover:bg-blue-600'
+src/components/HODChair/HodNotifications.js:395:                  filter === tab.key ? 'bg-blue-100 text-blue-700' : 'bg-blue-600 text-white'
+src/components/HODChair/HodNotifications.js:543:          <div className="relative top-20 mx-auto p-5 border w-11/12 max-w-3xl shadow-2xl rounded-2xl bg-white">
+src/components/HODChair/HodNotifications.js:672:                    className="inline-flex items-center px-6 py-3 border border-transparent text-sm font-medium rounded-xl text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors"
+src/components/HODChair/HodNotifications.js:688:                className="px-6 py-3 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-xl hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors"
+src/components/HODChair/HodPerformanceDashboard.js:96:        titleColor: 'white',
+src/components/HODChair/HodPerformanceDashboard.js:97:        bodyColor: 'white',
+src/components/HODChair/HodPerformanceDashboard.js:353:          pointBorderColor: 'rgba(255, 255, 255, 1)',
+src/components/HODChair/HodPerformanceDashboard.js:366:          pointBorderColor: 'rgba(255, 255, 255, 1)',
+src/components/HODChair/HodPerformanceDashboard.js:388:      <div className="bg-white shadow-2xl rounded-2xl p-8">
+src/components/HODChair/HodPerformanceDashboard.js:397:            className="inline-flex items-center px-6 py-3 border border-transparent text-sm font-medium rounded-xl text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors"
+src/components/HODChair/HodPerformanceDashboard.js:414:              <div className="p-4 bg-white bg-opacity-20 rounded-xl">
+src/components/HODChair/HodPerformanceDashboard.js:415:                <ChartBarIcon className="h-10 w-10 text-white" />
+src/components/HODChair/HodPerformanceDashboard.js:418:                <h1 className="text-3xl font-bold text-white">HOD Performance Dashboard</h1>
+src/components/HODChair/HodPerformanceDashboard.js:434:                className="inline-flex items-center px-6 py-3 bg-white bg-opacity-20 text-white rounded-xl hover:bg-opacity-30 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-800 transition-all font-medium"
+src/components/HODChair/HodPerformanceDashboard.js:444:                className="inline-flex items-center px-6 py-3 bg-green-600 text-white rounded-xl hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-800 disabled:opacity-50 transition-all font-medium"
+src/components/HODChair/HodPerformanceDashboard.js:449:                    <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+src/components/HODChair/HodPerformanceDashboard.js:465:          <div className="bg-white bg-opacity-10 rounded-xl p-6">
+src/components/HODChair/HodPerformanceDashboard.js:468:                <FunnelIcon className="h-5 w-5 text-white" />
+src/components/HODChair/HodPerformanceDashboard.js:469:                <h3 className="text-lg font-semibold text-white">Advanced Analytics Filters</h3>
+src/components/HODChair/HodPerformanceDashboard.js:484:                  className="w-full px-4 py-3 border border-white border-opacity-30 rounded-lg bg-white bg-opacity-20 text-white placeholder-blue-200 focus:ring-2 focus:ring-white focus:border-transparent disabled:opacity-50"
+src/components/HODChair/HodPerformanceDashboard.js:503:                  className="w-full px-4 py-3 border border-white border-opacity-30 rounded-lg bg-white bg-opacity-20 text-white placeholder-blue-200 focus:ring-2 focus:ring-white focus:border-transparent disabled:opacity-50"
+src/components/HODChair/HodPerformanceDashboard.js:521:                  className="w-full px-4 py-3 border border-white border-opacity-30 rounded-lg bg-white bg-opacity-20 text-white placeholder-blue-200 focus:ring-2 focus:ring-white focus:border-transparent disabled:opacity-50"
+src/components/HODChair/HodPerformanceDashboard.js:539:                  className="w-full px-4 py-3 border border-white border-opacity-30 rounded-lg bg-white bg-opacity-20 text-white placeholder-blue-200 focus:ring-2 focus:ring-white focus:border-transparent disabled:opacity-50"
+src/components/HODChair/HodPerformanceDashboard.js:556:          <div className="bg-white shadow-xl rounded-2xl p-8 border-l-4 border-blue-500">
+src/components/HODChair/HodPerformanceDashboard.js:580:          <div className="bg-white shadow-xl rounded-2xl p-8 border-l-4 border-green-500">
+src/components/HODChair/HodPerformanceDashboard.js:597:          <div className="bg-white shadow-xl rounded-2xl p-8 border-l-4 border-yellow-500">
+src/components/HODChair/HodPerformanceDashboard.js:614:          <div className="bg-white shadow-xl rounded-2xl p-8 border-l-4 border-purple-500">
+src/components/HODChair/HodPerformanceDashboard.js:636:        <div className="bg-white shadow-2xl rounded-2xl p-8 border border-gray-200">
+src/components/HODChair/HodPerformanceDashboard.js:661:        <div className="bg-white shadow-2xl rounded-2xl p-8 border border-gray-200">
+src/components/HODChair/HodPerformanceDashboard.js:687:      <div className="bg-white shadow-2xl rounded-2xl p-8 border border-gray-200">
+src/components/HODChair/HodPerformanceDashboard.js:713:        <div className="bg-white shadow-2xl rounded-2xl overflow-hidden border border-gray-200">
+src/components/HODChair/HodPerformanceDashboard.js:742:              <tbody className="bg-white divide-y divide-gray-200">
+src/components/HODChair/HodProfile.js:245:                <div className="h-24 w-24 rounded-full overflow-hidden bg-white shadow-lg">
+src/components/HODChair/HodProfile.js:261:                    className="absolute -bottom-2 -right-2 p-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-800 disabled:opacity-50 transition-colors"
+src/components/HODChair/HodProfile.js:265:                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
+src/components/HODChair/HodProfile.js:282:                <h1 className="text-3xl font-bold text-white">{profile.name || 'HOD User'}</h1>
+src/components/HODChair/HodProfile.js:284:                  <div className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-white bg-opacity-20 text-white">
+src/components/HODChair/HodProfile.js:302:                className="inline-flex items-center px-6 py-3 border border-transparent text-sm font-medium rounded-xl text-blue-700 bg-white hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white focus:ring-offset-blue-800 transition-all"
+src/components/HODChair/HodProfile.js:313:                  className="inline-flex items-center px-6 py-3 border border-transparent text-sm font-medium rounded-xl text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 focus:ring-offset-blue-800 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+src/components/HODChair/HodProfile.js:318:                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+src/components/HODChair/HodProfile.js:331:                  className="inline-flex items-center px-6 py-3 border border-white border-opacity-30 text-sm font-medium rounded-xl text-white hover:bg-white hover:bg-opacity-10 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white focus:ring-offset-blue-800 transition-all"
+src/components/HODChair/HodProfile.js:347:          <div className="bg-white shadow-xl rounded-2xl overflow-hidden border border-gray-200">
+src/components/HODChair/HodProfile.js:371:                          : 'bg-white text-gray-900'
+src/components/HODChair/HodProfile.js:403:                          : 'bg-white text-gray-900'
+src/components/HODChair/HodProfile.js:435:                          : 'bg-white text-gray-900'
+src/components/HODChair/HodProfile.js:502:          <div className="bg-white shadow-xl rounded-2xl overflow-hidden border border-gray-200">
+src/components/HODChair/HodReportListView.js:354:      <div className="bg-white shadow-2xl rounded-2xl p-8">
+src/components/HODChair/HodReportListView.js:363:            className="inline-flex items-center px-6 py-3 border border-transparent text-sm font-medium rounded-xl text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors"
+src/components/HODChair/HodReportListView.js:376:      <div className="bg-gradient-to-r from-blue-700 to-blue-900 rounded-2xl shadow-2xl p-8 text-white">
+src/components/HODChair/HodReportListView.js:379:            <div className="p-4 bg-white bg-opacity-20 rounded-xl">
+src/components/HODChair/HodReportListView.js:380:              <DocumentTextIcon className="h-10 w-10 text-white" />
+src/components/HODChair/HodReportListView.js:393:                  <div className="flex items-center bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+src/components/HODChair/HodReportListView.js:403:            <div className="bg-white bg-opacity-20 rounded-xl p-4">
+src/components/HODChair/HodReportListView.js:405:              <p className="text-white font-bold text-3xl">{reports.length}</p>
+src/components/HODChair/HodReportListView.js:415:      <div className="bg-white rounded-2xl shadow-xl border border-gray-200 p-6">
+src/components/HODChair/HodReportListView.js:424:            className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors"
+src/components/HODChair/HodReportListView.js:501:          <div className="col-span-full bg-white rounded-2xl shadow-xl p-12 text-center">
+src/components/HODChair/HodReportListView.js:515:                className="mt-6 inline-flex items-center px-6 py-3 border border-transparent text-sm font-medium rounded-xl text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors"
+src/components/HODChair/HodReportListView.js:530:                className="bg-white rounded-2xl shadow-xl border border-gray-200 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 overflow-hidden"
+src/components/HODChair/HodReportListView.js:597:                      className="flex-1 inline-flex items-center justify-center px-4 py-3 border border-gray-300 text-sm font-medium rounded-lg text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors"
+src/components/HODChair/HodReportListView.js:609:                          className="inline-flex items-center px-4 py-3 border border-transparent text-sm font-medium rounded-lg text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 transition-colors"
+src/components/HODChair/HodReportListView.js:618:                          className="inline-flex items-center px-4 py-3 border border-transparent text-sm font-medium rounded-lg text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 transition-colors"
+src/components/HODChair/HodReportListView.js:638:            <div className="relative bg-white rounded-2xl shadow-2xl w-full max-w-4xl max-h-screen overflow-y-auto">
+src/components/HODChair/HodReportListView.js:643:                    <div className="p-3 bg-white bg-opacity-20 rounded-lg">
+src/components/HODChair/HodReportListView.js:644:                      <DocumentTextIcon className="h-8 w-8 text-white" />
+src/components/HODChair/HodReportListView.js:647:                      <h2 className="text-2xl font-bold text-white">
+src/components/HODChair/HodReportListView.js:661:                    className="text-white hover:text-gray-200 p-2 rounded-lg hover:bg-white hover:bg-opacity-20 transition-colors"
+src/components/HODChair/HodReportListView.js:750:                    className="px-6 py-3 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-xl hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors"
+src/components/HODChair/HodReportListView.js:763:                        className="px-6 py-3 text-sm font-medium text-white bg-green-600 rounded-xl hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 transition-colors"
+src/components/HODChair/HodReportListView.js:774:                        className="px-6 py-3 text-sm font-medium text-white bg-red-600 rounded-xl hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 transition-colors"
+src/components/HODChair/HodReportReview.js:336:      <div className="bg-gradient-to-r from-blue-700 to-blue-900 rounded-xl shadow-2xl p-6 text-white">
+src/components/HODChair/HodReportReview.js:339:            <div className="p-3 bg-white bg-opacity-20 rounded-lg">
+src/components/HODChair/HodReportReview.js:340:              <DocumentTextIcon className="h-8 w-8 text-white" />
+src/components/HODChair/HodReportReview.js:361:              className="inline-flex items-center px-4 py-2 bg-white bg-opacity-20 text-white rounded-lg hover:bg-opacity-30 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-800 transition-all"
+src/components/HODChair/HodReportReview.js:372:      <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-6">
+src/components/HODChair/HodReportReview.js:449:          <div className="col-span-full bg-white rounded-xl shadow-lg p-12 text-center">
+src/components/HODChair/HodReportReview.js:468:                className={`bg-white rounded-xl shadow-lg border-l-4 ${priority.color} hover:shadow-xl transition-all duration-200 transform hover:-translate-y-1`}
+src/components/HODChair/HodReportReview.js:533:                      className="flex-1 inline-flex items-center justify-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-lg text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors"
+src/components/HODChair/HodReportReview.js:545:                          className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-lg text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 disabled:opacity-50 transition-colors"
+src/components/HODChair/HodReportReview.js:559:                          className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-lg text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 transition-colors"
+src/components/HODChair/HodReportReview.js:579:            <div className="relative bg-white rounded-2xl shadow-2xl w-full max-w-4xl max-h-screen overflow-y-auto">
+src/components/HODChair/HodReportReview.js:584:                    <div className="p-3 bg-white bg-opacity-20 rounded-lg">
+src/components/HODChair/HodReportReview.js:585:                      <DocumentTextIcon className="h-8 w-8 text-white" />
+src/components/HODChair/HodReportReview.js:588:                      <h2 className="text-2xl font-bold text-white">
+src/components/HODChair/HodReportReview.js:604:                    className="text-white hover:text-gray-200 p-2 rounded-lg hover:bg-white hover:bg-opacity-20 transition-colors"
+src/components/HODChair/HodReportReview.js:779:                    className="px-6 py-3 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-xl hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors"
+src/components/HODChair/HodReportReview.js:788:                      className={`px-6 py-3 text-sm font-medium text-white rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 transition-colors ${
+src/components/HODChair/HodReportReview.js:796:                          <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
+src/components/LoadingScreen.jsx:26:                style={{ objectFit: 'cover', border: '2px solid rgba(255,255,255,0.6)' }}
+src/components/MeetingDetailModal.css:16:  background: white;
+src/components/MeetingDetailModal.css:44:  color: white;
+src/components/MeetingDetailModal.css:55:  background: rgba(255, 255, 255, 0.2);
+src/components/MeetingDetailModal.css:57:  color: white;
+src/components/MeetingDetailModal.css:70:  background: rgba(255, 255, 255, 0.3);
+src/components/MeetingDetailModal.css:166:  background: #f9fafb;
+src/components/MeetingDetailModal.css:197:  background: white;
+src/components/MeetingDetailModal.css:204:  color: white;
+src/components/MeetingDetailModal.css:224:  background: white;
+src/components/MeetingDetailModal.css:241:  background: white;
+src/components/MeetingDetailModal.css:278:  background: #fef3c7;
+src/components/MeetingDetailModal.css:288:  background: #fee2e2;
+src/components/MeetingDetailModal.css:318:  background: white;
+src/components/MeetingDetailModal.css:386:  background: white;
+src/components/MeetingDetailModal.css:426:  background: #f3f4f6;
+src/components/MeetingDetailModal.css:472:  background: white;
+src/components/MeetingDetailModal.css:501:  background: #fef2f2;
+src/components/MeetingMinutesEditor.css:6:  background: white;
+src/components/MeetingMinutesEditor.css:20:  background: white;
+src/components/MeetingMinutesEditor.css:37:  background: #f8fafc;
+src/components/MeetingMinutesEditor.css:79:  background: #f0fdf4;
+src/components/MeetingMinutesEditor.css:85:  background: #fef2f2;
+src/components/MeetingMinutesEditor.css:99:  background: #fef2f2;
+src/components/MeetingMinutesEditor.css:105:  background: #f0fdf4;
+src/components/MeetingMinutesEditor.css:121:  background: #f8fafc;
+src/components/MeetingMinutesEditor.css:131:  color: white;
+src/components/MeetingMinutesEditor.css:195:  background: #f8fafc;
+src/components/MeetingMinutesEditor.css:216:  background: #f3f4f6;
+src/components/MeetingMinutesEditor.css:227:  color: white;
+src/components/MeetingMinutesEditor.css:244:  background: #f0fdf4;
+src/components/PersonalInfoPopup.css:15:  background: white;
+src/components/PersonalInfoPopup.css:38:  color: white;
+src/components/PersonalInfoPopup.css:63:  background: rgba(255, 255, 255, 0.2);
+src/components/PersonalInfoPopup.css:65:  color: white;
+src/components/PersonalInfoPopup.css:77:  background: rgba(255, 255, 255, 0.3);
+src/components/PersonalInfoPopup.css:118:  background: white;
+src/components/PersonalInfoPopup.css:174:  background: #f8f9fa;
+src/components/PersonalInfoPopup.css:186:  color: white;
+src/components/ProfilePicture/ProfilePicture.css:80:  color: white;
+src/components/ProfilePicture/ProfilePicture.css:105:  color: white;
+src/components/ProfilePicture/ProfilePicture.css:127:  color: white;
+src/components/ProfilePicture/ProfilePicture.css:150:  color: white;
+src/components/ProfilePicture/ProfilePicture.css:157:  white-space: nowrap;
+src/components/ReportExportBar.css:6:  background: #ffffff;
+src/components/ReportExportBar.css:39:  background: #fff;
+src/components/ReportExportBar.css:50:  color: #fff;
+src/components/ReportExportBar.css:56:  white-space: nowrap;
+src/components/ResolutionAssignmentForm.css:6:  background: white;
+src/components/ResolutionAssignmentForm.css:13:  background: #f8fafc;
+src/components/ResolutionAssignmentForm.css:41:  background: #fef2f2;
+src/components/ResolutionAssignmentForm.css:47:  background: #f0fdf4;
+src/components/ResolutionAssignmentForm.css:53:  background: #fffbeb;
+src/components/ResolutionAssignmentForm.css:100:  background: #f0fdf4;
+src/components/ResolutionAssignmentForm.css:106:  background: #fef2f2;
+src/components/ResolutionAssignmentForm.css:147:  color: white;
+src/components/ResolutionAssignmentForm.css:201:  color: white;
+src/components/ResolutionAssignmentForm.css:219:  background: #f3f4f6;
+src/components/ResolutionAssignmentForm.css:239:  background: #f8fafc;
+src/components/ResolutionAssignmentForm.css:265:  background: white;
+src/components/ResolutionAssignmentForm.css:285:  background: white;
+src/components/ResolutionAssignmentForm.css:331:  background: #f3f4f6;
+src/components/ResolutionAssignmentForm.css:342:  color: white;
+src/components/SecretaryNavigation.jsx:61:        background: 'linear-gradient(135deg, white 0%, var(--gray-50) 100%)',
+src/components/SecretaryNavigation.jsx:77:                <span className="text-white text-lg">🏛️</span>
+src/components/SecretaryNavigation.jsx:110:                className="w-10 h-10 rounded-full flex items-center justify-center text-white font-semibold"
+src/components/SecretaryNavigation.jsx:150:        className={`fixed top-16 right-0 h-full w-80 bg-white shadow-xl transform transition-transform duration-300 ease-in-out z-50 md:hidden ${
+src/components/SecretaryNavigation.jsx:175:                        ? 'bg-primary-500 text-white'
+src/components/SecretaryNavigation.jsx:193:                className="w-12 h-12 rounded-full flex items-center justify-center text-white font-semibold"
+src/components/SecretaryQuickNav.jsx:46:      <div className="bg-white rounded-lg shadow-lg border border-gray-200 p-4 max-w-sm">
+src/components/SecretaryQuickNav.jsx:60:                <div className={`p-2 rounded-lg ${item.color} text-white group-hover:scale-110 transition-transform`}>
+src/components/Sidebar/Sidebar.css:7:  color: white;
+src/components/Sidebar/Sidebar.css:16:  border-right: 1px solid rgba(255, 255, 255, 0.07);
+src/components/Sidebar/Sidebar.css:42:  background: #ffffff;
+src/components/Sidebar/Sidebar.css:43:  border: 1.5px solid rgba(255, 255, 255, 0.40);
+src/components/Sidebar/Sidebar.css:50:  color: #ffffff !important;
+src/components/Sidebar/Sidebar.css:94:  color: #ffffff;
+src/components/Sidebar/Sidebar.css:120:  color: #fff;
+src/components/Sidebar/Sidebar.css:128:  color: #ffffff;
+src/components/Sidebar/Sidebar.css:159:  background: rgba(255, 255, 255, 0.1);
+src/components/Sidebar/Sidebar.css:160:  border: 1px solid rgba(255, 255, 255, 0.15);
+src/components/Sidebar/Sidebar.css:161:  color: white;
+src/components/Sidebar/Sidebar.css:176:  background: rgba(255, 255, 255, 0.18);
+src/components/Sidebar/Sidebar.css:177:  border-color: rgba(255, 255, 255, 0.25);
+src/components/Sidebar/Sidebar.css:181:  background: rgba(255, 255, 255, 0.22);
+src/components/ui/ui.css:74:  color: #ffffff;
+src/context/ThemeContext.js:18:    document.documentElement.classList.remove('light', 'dark');
+src/context/ThemeContext.js:21:    document.body.classList.remove('light', 'dark');
+src/context/ThemeContext.js:35:    isLight: theme === 'light'
+src/pages/AdminDashboard.css:5:    background: #f8fafc;
+src/pages/AdminDashboard.css:79:    background: #ffffff;
+src/pages/AdminDashboard.css:153:    color: white;
+src/pages/AdminDashboard.css:189:    background: #ffffff;
+src/pages/AdminDashboard.css:219:    color: white;
+src/pages/AdminDashboard.css:247:    background: white;
+src/pages/AdminDashboard.css:265:    white-space: nowrap;
+src/pages/AdminDashboard.css:281:    background: #f8fafc;
+src/pages/AdminDashboard.css:373:    color: white;
+src/pages/AdminDashboard.css:384:    color: white;
+src/pages/AdminDashboard.css:389:    background: #fee2e2;
+src/pages/AdminDashboard.css:395:    color: white;
+src/pages/AdminDashboard.css:440:    background: white;
+src/pages/AdminDashboard.css:483:    color: white;
+src/pages/AdminDashboard.css:521:    background: white;
+src/pages/AdminDashboard.css:536:    background: white;
+src/pages/AdminDashboard.css:567:    background: #f3f4f6;
+src/pages/AdminDashboard.css:588:    color: white;
+src/pages/AdminDashboard.css:617:    background: #f8fafc;
+src/pages/AdminDashboard.css:743:  border: 2px solid rgba(255, 255, 255, 0.15);
+src/pages/AdminDashboard.css:752:  border-color: rgba(255, 255, 255, 0.4);
+src/pages/AdminDashboard.css:772:  color: white;
+src/pages/AdminDashboard.css:784:  background: rgba(255, 255, 255, 0.1);
+src/pages/AdminDashboard.css:788:  color: white;
+src/pages/AdminProfile.css:31:  background: white;
+src/pages/AdminProfile.css:60:  color: white;
+src/pages/AdminProfile.css:83:  background: #fef2f2;
+src/pages/AdminProfile.css:89:  background: #f0fdf4;
+src/pages/AdminProfile.css:107:  background: white;
+src/pages/AdminProfile.css:114:  background: #f8fafc;
+src/pages/AdminProfile.css:210:  background: #f3f4f6;
+src/pages/AdminProfile.css:220:  color: white;
+src/pages/AdminProfile.css:266:  background: #f59e0b;
+src/pages/AdminProfile.css:267:  color: white;
+src/pages/AdminProfile.css:284:  background: #f8fafc;
+src/pages/AdminTestInterface.css:14:  background: white;
+src/pages/AdminTestInterface.css:41:  background: white;
+src/pages/AdminTestInterface.css:98:  color: white;
+src/pages/AdminTestInterface.css:141:  color: white;
+src/pages/AdminTestInterface.css:167:  background: #f0fdf4;
+src/pages/AdminTestInterface.css:172:  background: #fef2f2;
+src/pages/AdminTestInterface.css:201:  background: #f9fafb;
+src/pages/AdminTestInterface.css:207:  white-space: pre-wrap;
+src/pages/AdminTestInterface.css:212:  background: white;
+src/pages/AdminTestInterface.css:242:  color: white;
+src/pages/AdminTestInterface.css:250:  background: #f3f4f6;
+src/pages/Attendance/TakeAttendance.css:58:  color: #fff;
+src/pages/Attendance/TakeAttendance.css:63:  color: #fff;
+src/pages/Attendance/TakeAttendance.css:95:  background: #fff;
+src/pages/Attendance/TakeAttendance.css:167:  background: #fce8e6;
+src/pages/Attendance/TakeAttendance.css:196:  color: #fff;
+src/pages/Attendance/TakeAttendance.css:203:  color: #fff;
+src/pages/Attendance/TakeAttendance.css:244:  background: #ffebee;
+src/pages/Attendance/TakeAttendance.css:249:  background: #fff3e0;
+src/pages/Attendance/TakeAttendance.css:259:  background: #f3e5f5;
+src/pages/Attendance/TakeAttendance.css:277:  background: #fff;
+src/pages/Attendance/TakeAttendance.css:286:  color: #fff;
+src/pages/Attendance/TakeAttendance.css:291:  background: #f44336;
+src/pages/Attendance/TakeAttendance.css:292:  color: #fff;
+src/pages/Attendance/TakeAttendance.css:310:  background: #fff;
+src/pages/Attendance/TakeAttendance.css:346:  color: #fff;
+src/pages/Attendance/TakeAttendance.css:388:  background: #f8fafc;
+src/pages/Attendance/TakeAttendance.css:406:  color: #fff;
+src/pages/Attendance/TakeAttendance.css:411:  background: #f44336;
+src/pages/Attendance/TakeAttendance.css:412:  color: #fff;
+src/pages/Attendance/TakeAttendance.css:417:  background: #ff9800;
+src/pages/Attendance/TakeAttendance.css:418:  color: #fff;
+src/pages/Attendance/TakeAttendance.css:424:  color: #fff;
+src/pages/Attendance/TakeAttendance.css:452:  background: #f8fafc;
+src/pages/Attendance/TakeAttendance.css:460:  background: #fff;
+src/pages/Attendance/TakeAttendance.css:470:  background: #ffebee;
+src/pages/Attendance/TakeAttendance.css:503:  color: #fff;
+src/pages/Attendance/TakeAttendance.css:528:  color: #fff;
+src/pages/ChairDashboard/ChairmanTaskAssignment.css:48:  background: white;
+src/pages/ChairDashboard/ChairmanTaskAssignment.css:112:  background: white;
+src/pages/ChairDashboard/ChairmanTaskAssignment.css:148:.chairman-task-assignment .status-badge.todo { background: #f1f5f9; color: #475569; }
+src/pages/ChairDashboard/ChairmanTaskAssignment.css:149:.chairman-task-assignment .status-badge.in_progress { background: #fef3c7; color: #92400e; }
+src/pages/ChairDashboard/ChairmanTaskAssignment.css:207:  color: white;
+src/pages/ChairDashboard/EnhancedChairDashboard.css:4:  background: #f8fafc;
+src/pages/ChairDashboard/EnhancedChairDashboard.css:36:  background: rgba(255, 255, 255, 0.95);
+src/pages/ChairDashboard/EnhancedChairDashboard.css:103:  background: white;
+src/pages/ChairDashboard/EnhancedChairDashboard.css:125:  background: white;
+src/pages/ChairDashboard/EnhancedChairDashboard.css:145:  color: white;
+src/pages/ChairDashboard/EnhancedChairDashboard.css:167:  background: white;
+src/pages/ChairDashboard/EnhancedChairDashboard.css:194:  background: #fbbf24;
+src/pages/ChairDashboard/EnhancedChairDashboard.css:200:  color: white;
+src/pages/ChairDashboard/EnhancedChairDashboard.css:205:  color: white;
+src/pages/ChairDashboard/EnhancedChairDashboard.css:267:  color: white;
+src/pages/ChairDashboard/EnhancedChairDashboard.css:283:  background: rgba(255, 255, 255, 0.95);
+src/pages/ChairDashboard/EnhancedChairDashboard.css:386:  color: white;
+src/pages/ChairDashboard/EnhancedChairDashboard.css:425:  background: rgba(255, 255, 255, 0.95);
+src/pages/ChairDashboard/EnhancedChairDashboard.css:453:  color: white;
+src/pages/ChairDashboard/EnhancedChairDashboard.css:459:  background: rgba(255, 255, 255, 0.95);
+src/pages/ChairDashboard/EnhancedChairDashboard.css:515:  background: white;
+src/pages/ChairDashboard/EnhancedChairDashboard.css:630:  color: white;
+src/pages/ChairDashboard/EnhancedChairDashboard.css:642:  background: #fef3c7;
+src/pages/ChairDashboard/EnhancedChairDashboard.css:670:  color: white;
+src/pages/ChairDashboard/EnhancedChairDashboard.css:682:  background: #fef3c7;
+src/pages/ChairDashboard/EnhancedChairDashboard.css:703:  background: white;
+src/pages/ChairDashboard/EnhancedChairDashboard.css:722:  background: white;
+src/pages/ChairDashboard/EnhancedChairDashboard.css:727:  background: white;
+src/pages/ChairDashboard/EnhancedChairDashboard.css:732:  background: white;
+src/pages/ChairDashboard/EnhancedChairDashboard.css:785:  background: white;
+src/pages/ChairDashboard/EnhancedChairDashboard.css:835:  color: white;
+src/pages/ChairDashboard/EnhancedChairDashboard.css:870:  background: white;
+src/pages/ChairDashboard/EnhancedChairDashboard.css:894:  color: white;
+src/pages/ChairDashboard/EnhancedChairDashboard.css:911:  color: white;
+src/pages/ChairDashboard/EnhancedChairDashboard.css:920:  background: rgba(255, 255, 255, 0.2);
+src/pages/ChairDashboard/EnhancedChairDashboard.css:925:  background: #f8f9fa;
+src/pages/ChairDashboard/EnhancedChairDashboard.css:934:  background: #fff3cd;
+src/pages/ChairDashboard/EnhancedChairDashboard.css:969:  background: white;
+src/pages/ChairDashboard/EnhancedChairDashboard.css:979:  background: #f7fafc;
+src/pages/ChairDashboard/EnhancedChairDashboard.css:1033:  color: white;
+src/pages/ChairDashboard/EnhancedChairDashboard.css:1110:  border: 2px solid #ffffff;
+src/pages/ChairDashboard/EnhancedChairDashboard.css:1112:  color: #ffffff;
+src/pages/ChairDashboard/EnhancedChairDashboard.css:1141:  background: #ffffff;
+src/pages/ChairDashboard/EnhancedChairDashboard.css:1224:  background: #ffffff !important;
+src/pages/ChairDashboard/EnhancedChairDashboard.jsx:798:                    <span className="btn" style={{ background: '#10b981', color: '#fff', borderRadius: 6, padding: '8px 16px', display: 'flex', alignItems: 'center', gap: 6, border: 'none' }}>
+src/pages/ChairDashboard/EnhancedChairDashboard.jsx:804:                    <span className="btn" style={{ background: '#d97706', color: '#fff', borderRadius: 6, padding: '8px 16px', display: 'flex', alignItems: 'center', gap: 6, border: 'none' }}>
+src/pages/ChairDashboard/EnhancedChairDashboard.jsx:955:                    <span className="btn" style={{ background: '#10b981', color: '#fff', borderRadius: 6, padding: '8px 16px', display: 'flex', alignItems: 'center', gap: 6, border: 'none' }}>
+src/pages/ChairDashboard/EnhancedChairDashboard.jsx:961:                    <span className="btn" style={{ background: '#d97706', color: '#fff', borderRadius: 6, padding: '8px 16px', display: 'flex', alignItems: 'center', gap: 6, border: 'none' }}>
+src/pages/ChairDashboard/EnhancedChairDashboard.jsx:1156:                            <span className="btn btn-completed" style={{ padding: '8px 16px', background: '#10b981', color: '#fff', borderRadius: 6, display: 'flex', alignItems: 'center', gap: 6, fontSize: '0.85rem', border: 'none', cursor: 'default' }}>
+src/pages/ChairDashboard/EnhancedChairDashboard.jsx:1162:                            <span className="btn btn-pending" style={{ padding: '8px 16px', background: '#d97706', color: '#fff', borderRadius: 6, display: 'flex', alignItems: 'center', gap: 6, fontSize: '0.85rem', border: 'none', cursor: 'default' }}>
+src/pages/ChairDashboard/EnhancedChairDashboard.jsx:1174:                              style={{ padding: '8px 16px', background: '#dc2626', color: '#fff', borderRadius: 6, display: 'flex', alignItems: 'center', gap: 6, fontSize: '0.85rem', border: 'none', cursor: 'pointer' }}
+src/pages/ChairDashboard/EnhancedChairDashboard.jsx:1207:                    style={{ padding: '6px 20px', fontSize: '0.85rem', background: '#3b82f6', color: '#fff', border: 'none', borderRadius: 6, cursor: 'pointer' }}
+src/pages/ChairDashboard/EnhancedChairDashboard.jsx:1240:                        color: '#fff', padding: '4px 12px', borderRadius: 12, fontSize: '0.8rem'
+src/pages/ChairDashboard/EnhancedChairDashboard.jsx:1312:                                      style={{ padding: '4px 10px', fontSize: '0.75rem', background: '#0284c7', color: '#fff', border: 'none', borderRadius: 6, cursor: 'pointer' }}
+src/pages/ChairDashboard/EnhancedChairDashboard.jsx:1320:                                    style={{ padding: '4px 10px', fontSize: '0.75rem', background: '#475569', color: '#fff', border: 'none', borderRadius: 6, cursor: 'pointer' }}
+src/pages/ChairDashboard/EnhancedChairDashboard.jsx:1334:                          style={{ padding: '5px 12px', fontSize: '0.8rem', background: '#2563eb', color: '#fff', border: 'none', borderRadius: 6, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 4 }}
+src/pages/ChairDashboard/EnhancedChairDashboard.jsx:1347:                    style={{ padding: '6px 20px', fontSize: '0.85rem', background: '#3b82f6', color: '#fff', border: 'none', borderRadius: 6, cursor: 'pointer' }}
+src/pages/ChairDashboard/EnhancedChairDashboard.jsx:1383:                        color: '#fff', padding: '4px 12px', borderRadius: 12, fontSize: '0.8rem'
+src/pages/ChairDashboard/EnhancedChairDashboard.jsx:1441:                                      style={{ padding: '4px 10px', fontSize: '0.75rem', background: '#0284c7', color: '#fff', border: 'none', borderRadius: 6, cursor: 'pointer' }}
+src/pages/ChairDashboard/EnhancedChairDashboard.jsx:1449:                                    style={{ padding: '4px 10px', fontSize: '0.75rem', background: '#475569', color: '#fff', border: 'none', borderRadius: 6, cursor: 'pointer' }}
+src/pages/ChairDashboard/EnhancedChairDashboard.jsx:1463:                          style={{ padding: '5px 12px', fontSize: '0.8rem', background: '#2563eb', color: '#fff', border: 'none', borderRadius: 6, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 4 }}
+src/pages/ChairDashboard/EnhancedChairDashboard.jsx:1485:                    style={{ padding: '6px 20px', fontSize: '0.85rem', background: '#3b82f6', color: '#fff', border: 'none', borderRadius: 6, cursor: 'pointer' }}
+src/pages/ChairDashboard/EnhancedChairDashboard.jsx:1542:                    style={{ padding: '6px 20px', fontSize: '0.85rem', background: '#3b82f6', color: '#fff', border: 'none', borderRadius: 6, cursor: 'pointer' }}
+src/pages/ChairDashboard/EnhancedChairDashboard.jsx:1945:                style={{ padding: '6px 12px', fontSize: '0.8rem', background: '#475569', color: '#fff', border: 'none', borderRadius: 6, cursor: 'pointer' }}
+src/pages/ChairDashboard.css:5:    background: #f8fafc;
+src/pages/ChairDashboard.css:59:    background: rgba(255, 255, 255, 0.95);
+src/pages/ChairDashboard.css:62:    border: 1px solid rgba(255, 255, 255, 0.2);
+src/pages/ChairDashboard.css:79:    color: white;
+src/pages/ChairDashboard.css:128:    color: white;
+src/pages/ChairDashboard.css:137:    border: 2px solid white;
+src/pages/ChairDashboard.css:151:    color: white;
+src/pages/ChairDashboard.css:170:  border: 2px solid rgba(255, 255, 255, 0.2);
+src/pages/ChairDashboard.css:179:  border-color: rgba(255, 255, 255, 0.4);
+src/pages/ChairDashboard.css:199:  color: white;
+src/pages/ChairDashboard.css:211:  background: rgba(255, 255, 255, 0.1);
+src/pages/ChairDashboard.css:242:/* Update header colors to white background with black text */
+src/pages/ChairDashboard.css:244:  background: white;
+src/pages/ChairDashboard.css:280:    background: rgba(255, 255, 255, 0.95);
+src/pages/ChairDashboard.css:284:    border: 1px solid rgba(255, 255, 255, 0.2);
+src/pages/ChairDashboard.css:319:    color: white;
+src/pages/ChairDashboard.css:361:    background: rgba(255, 255, 255, 0.95);
+src/pages/ChairDashboard.css:364:    border: 1px solid rgba(255, 255, 255, 0.2);
+src/pages/ChairDashboard.css:385:    white-space: nowrap;
+src/pages/ChairDashboard.css:416:    background: white;
+src/pages/ChairDashboard.css:459:    background: #fef3c7;
+src/pages/ChairDashboard.css:498:    background: #fef3c7;
+src/pages/ChairDashboard.css:503:    background: #fee2e2;
+src/pages/ChairDashboard.css:508:    background: #fecaca;
+src/pages/ChairDashboard.css:521:    color: white;
+src/pages/ChairDashboard.css:540:    background: #f3f4f6;
+src/pages/ChairDashboard.css:559:    background: white;
+src/pages/ChairDashboard.css:603:    background: white;
+src/pages/ChairDashboard.css:686:    background: white;
+src/pages/ChairDashboard.css:730:    background: #fef3c7;
+src/pages/ChairDashboard.css:740:    background: #fee2e2;
+src/pages/ChairDashboard.css:784:    color: white;
+src/pages/ChairDashboard.css:789:    background: #fee2e2;
+src/pages/ChairDashboard.css:821:    background: white;
+src/pages/ChairDashboard.css:920:    background: white;
+src/pages/ChairOfHeadOfDelegationDashboard.css:4:  background: #f8fafc;
+src/pages/ChairOfHeadOfDelegationDashboard.css:56:  background: rgba(255, 255, 255, 0.95);
+src/pages/ChairOfHeadOfDelegationDashboard.css:59:  border: 1px solid rgba(255, 255, 255, 0.2);
+src/pages/ChairOfHeadOfDelegationDashboard.css:76:  color: white;
+src/pages/ChairOfHeadOfDelegationDashboard.css:106:  border: 2px solid rgba(255, 255, 255, 0.2);
+src/pages/ChairOfHeadOfDelegationDashboard.css:115:  border-color: rgba(255, 255, 255, 0.4);
+src/pages/ChairOfHeadOfDelegationDashboard.css:135:  color: white;
+src/pages/ChairOfHeadOfDelegationDashboard.css:147:  background: rgba(255, 255, 255, 0.1);
+src/pages/ChairOfHeadOfDelegationDashboard.css:151:  color: white;
+src/pages/ChairOfHeadOfDelegationDashboard.css:174:/* Update header colors to white background with black text */
+src/pages/ChairOfHeadOfDelegationDashboard.css:176:  background: white;
+src/pages/ChairOfHeadOfDelegationDashboard.css:229:  color: white;
+src/pages/ChairOfHeadOfDelegationDashboard.css:249:  background: rgba(255, 255, 255, 0.95);
+src/pages/ChairOfHeadOfDelegationDashboard.css:253:  border: 1px solid rgba(255, 255, 255, 0.2);
+src/pages/ChairOfHeadOfDelegationDashboard.css:288:  color: white;
+src/pages/ChairOfHeadOfDelegationDashboard.css:342:  background: rgba(255, 255, 255, 0.95);
+src/pages/ChairOfHeadOfDelegationDashboard.css:345:  border: 1px solid rgba(255, 255, 255, 0.2);
+src/pages/ChairOfHeadOfDelegationDashboard.css:369:  white-space: nowrap;
+src/pages/ChairOfHeadOfDelegationDashboard.css:379:  background: white;
+src/pages/ChairOfHeadOfDelegationDashboard.css:385:  color: white;
+src/pages/ChairOfHeadOfDelegationDashboard.css:427:  background: white;
+src/pages/ChairOfHeadOfDelegationDashboard.css:439:  background: #f3f4f6;
+src/pages/ChairOfHeadOfDelegationDashboard.css:460:  background: white;
+src/pages/ChairOfHeadOfDelegationDashboard.css:531:  background: #fef3c7;
+src/pages/ChairOfHeadOfDelegationDashboard.css:541:  background: #fee2e2;
+src/pages/ChairOfHeadOfDelegationDashboard.css:631:  color: white;
+src/pages/ChairOfHeadOfDelegationDashboard.css:650:  background: #f3f4f6;
+src/pages/ChairOfHeadOfDelegationDashboard.css:746:  background: white;
+src/pages/ChairOfHeadOfDelegationDashboard.css:801:  background: #f3f4f6;
+src/pages/ChairOfHeadOfDelegationDashboard.css:848:  background: white;
+src/pages/ChairOfHeadOfDelegationDashboard.css:867:  color: white;
+src/pages/ChairOfHeadOfDelegationDashboard.css:873:  color: white;
+src/pages/ChairOfHeadOfDelegationDashboard.css:887:  background: #f8fafc;
+src/pages/ChairOfHeadOfDelegationDashboard.css:926:  background: white;
+src/pages/ChairOfHeadOfDelegationDashboard.css:951:  color: white;
+src/pages/ChairOfHeadOfDelegationDashboard.css:1012:  background: white;
+src/pages/CommissionerDashboard.css:5:    background: #f8fafc;
+src/pages/CommissionerDashboard.css:65:    background: rgba(255, 255, 255, 0.95);
+src/pages/CommissionerDashboard.css:68:    border: 1px solid rgba(255, 255, 255, 0.2);
+src/pages/CommissionerDashboard.css:85:    color: white;
+src/pages/CommissionerDashboard.css:134:    color: white;
+src/pages/CommissionerDashboard.css:143:    border: 2px solid white;
+src/pages/CommissionerDashboard.css:157:    color: white;
+src/pages/CommissionerDashboard.css:180:    background: rgba(255, 255, 255, 0.95);
+src/pages/CommissionerDashboard.css:184:    border: 1px solid rgba(255, 255, 255, 0.2);
+src/pages/CommissionerDashboard.css:219:    color: white;
+src/pages/CommissionerDashboard.css:278:    background: rgba(255, 255, 255, 0.95);
+src/pages/CommissionerDashboard.css:281:    border: 1px solid rgba(255, 255, 255, 0.2);
+src/pages/CommissionerDashboard.css:302:    white-space: nowrap;
+src/pages/CommissionerDashboard.css:364:    background: white;
+src/pages/CommissionerDashboard.css:378:    background: #f3f4f6;
+src/pages/CommissionerDashboard.css:394:    color: #fff;
+src/pages/CommissionerDashboard.css:403:    color: white;
+src/pages/CommissionerDashboard.css:422:    color: white;
+src/pages/CommissionerDashboard.css:442:    background: white;
+src/pages/CommissionerDashboard.css:508:    white-space: normal;
+src/pages/CommissionerDashboard.css:523:    background: #fee2e2;
+src/pages/CommissionerDashboard.css:591:    color: white;
+src/pages/CommissionerDashboard.css:641:    background: #f0fdf4;
+src/pages/CommissionerDashboard.css:675:    color: white;
+src/pages/CommissionerDashboard.css:696:    background: #f3f4f6;
+src/pages/CommissionerDashboard.css:746:    background: white;
+src/pages/CommissionerDashboard.css:787:    white-space: nowrap;
+src/pages/CommissionerDashboard.css:793:    background: #f9fafb;
+src/pages/CommissionerDashboard.css:827:    background: white;
+src/pages/CommissionerDashboard.css:873:    background: #f3f4f6;
+src/pages/CommissionerDashboard.css:917:    background: white;
+src/pages/CommissionerDashboard.css:942:    background: white;
+src/pages/CommissionerDashboard.css:965:    background: white;
+src/pages/CommissionerDashboard.css:982:    background: #fee2e2;
+src/pages/CommissionerDashboard.css:1003:    background: white;
+src/pages/CommissionerDashboard.css:1079:    background: white;
+src/pages/CommissionerDashboard.css:1110:    background: white;
+src/pages/CommissionerDashboard.css:1121:    background: #f9fafb;
+src/pages/CommissionerDashboard.css:1288:    border: 2px solid rgba(255, 255, 255, 0.2);
+src/pages/CommissionerDashboard.css:1297:    border-color: rgba(255, 255, 255, 0.35);
+src/pages/CommissionerDashboard.css:1313:    color: white;
+src/pages/CommissionerDashboard.css:1324:    background: rgba(255, 255, 255, 0.1);
+src/pages/Committees/Committees.css:17:  background: white;
+src/pages/Committees/Committees.css:52:  background: white;
+src/pages/Committees/Committees.css:83:  color: white;
+src/pages/Committees/Committees.css:138:  background: #fff;
+src/pages/Committees/Committees.css:171:  color: white;
+src/pages/Committees/Committees.css:206:  background: white;
+src/pages/Committees/Committees.css:228:  background: #f8fafc;
+src/pages/Committees/Committees.css:264:  color: white;
+src/pages/Committees/Committees.css:391:  background: white;
+src/pages/Committees/Committees.css:425:  background: white;
+src/pages/Committees/Committees.css:457:  background: white;
+src/pages/Committees/Committees.css:575:  background: white;
+src/pages/Committees/Committees.css:618:  background-color: white;
+src/pages/Committees/Committees.css:765:  background: white;
+src/pages/Committees/Committees.css:796:  color: white;
+src/pages/Committees/Committees.css:825:  background: rgba(255, 255, 255, 0.2);
+src/pages/Committees/Committees.css:830:  color: white;
+src/pages/Committees/Committees.css:841:  background: rgba(255, 255, 255, 0.3);
+src/pages/Committees/Committees.css:956:  background: #f9fafb;
+src/pages/Committees/Committees.css:995:  background: white;
+src/pages/Committees/Committees.css:1091:  background: #f9fafb;
+src/pages/Committees/Committees.css:1126:  color: white;
+src/pages/Committees/Committees.css:1136:  color: white;
+src/pages/Committees/Committees.css:1146:  color: white;
+src/pages/Committees/Committees.css:1156:  color: white;
+src/pages/Committees/Committees.css:1295:  background: white;
+src/pages/Committees/Committees.css:1309:  background: #f9fafb;
+src/pages/Committees/Committees.css:1328:  background: #f3f4f6;
+src/pages/Committees/Committees.css:1456:  background: white;
+src/pages/Committees/Committees.css:1516:  background-color: #fff;
+src/pages/Committees/Committees.css:1560:  background-color: #fff;
+src/pages/Committees/Committees.css:1580:  background-color: white;
+src/pages/Committees/Committees.css:1594:  color: white;
+src/pages/Committees/Committees.css:1701:  color: white;
+src/pages/Committees/Committees.css:1713:  color: white;
+src/pages/Countries/Countries.css:17:  background: white;
+src/pages/Countries/Countries.css:66:  color: white;
+src/pages/Countries/Countries.css:100:  background: white;
+src/pages/Countries/Countries.css:116:  background: #f8fafc;
+src/pages/Countries/Countries.css:166:  background-color: white;
+src/pages/Countries/Countries.css:257:  background: white;
+src/pages/Countries/Countries.css:289:  background: white;
+src/pages/Countries/Countries.css:377:  background: white;
+src/pages/Countries/Countries.css:462:  background-color: white;
+src/pages/Countries/Countries.css:485:  background-color: white;
+src/pages/Countries/Countries.css:515:  background-color: white;
+src/pages/Countries/Countries.css:589:  background-color: #ffffff;
+src/pages/Countries/Countries.css:735:  white-space: pre-wrap;
+src/pages/Countries/Countries.css:872:  background: #ffffff;
+src/pages/Countries/Countries.css:938:  background: #f8fafc;
+src/pages/Countries/Countries.css:993:  background: #ffffff;
+src/pages/Countries/Countries.css:1003:  background: #ffffff;
+src/pages/Countries/Countries.css:1035:  background: #ffffff;
+src/pages/Countries/Countries.css:1119:  color: #ffffff;
+src/pages/Countries/Countries.css:1131:  background-color: #ffffff;
+src/pages/CountryCommitteeMembers/Members.css:2:  background: white;
+src/pages/CountryCommitteeMembers/Members.css:25:  background: white;
+src/pages/CountryCommitteeMembers/Members.css:41:  background: #f8fafc;
+src/pages/CountryCommitteeMembers/Members.css:72:  color: white;
+src/pages/CountryCommitteeMembers/Members.css:92:  color: white;
+src/pages/Dashboard.css:45:  background: white;
+src/pages/Dashboard.css:80:  color: white;
+src/pages/Dashboard.css:133:  background: white;
+src/pages/Dashboard.css:234:  border: 2px solid rgba(255, 255, 255, 0.2);
+src/pages/Dashboard.css:243:  border-color: rgba(255, 255, 255, 0.4);
+src/pages/Dashboard.css:263:  color: white;
+src/pages/Dashboard.css:275:  background: rgba(255, 255, 255, 0.1);
+src/pages/Dashboard.css:279:  color: white;
+src/pages/EARAPerformanceDashboard/EARAPerformanceDashboardPage.css:8:  background: white;
+src/pages/EnhancedCommissionerDashboard.jsx:1032:                            style={{ backgroundColor: '#003366', color: '#fff', border: 'none' }}
+src/pages/HODDashboard.css:5:    background: #f8fafc;
+src/pages/HODDashboard.css:65:    background: rgba(255, 255, 255, 0.95);
+src/pages/HODDashboard.css:68:    border: 1px solid rgba(255, 255, 255, 0.2);
+src/pages/HODDashboard.css:71:/* Update header colors to white background with black text */
+src/pages/HODDashboard.css:73:  background: white;
+src/pages/HODDashboard.css:108:    color: white;
+src/pages/HODDashboard.css:122:  border: 2px solid rgba(255, 255, 255, 0.2);
+src/pages/HODDashboard.css:131:  border-color: rgba(255, 255, 255, 0.4);
+src/pages/HODDashboard.css:151:  color: white;
+src/pages/HODDashboard.css:163:  background: rgba(255, 255, 255, 0.1);
+src/pages/HODDashboard.css:167:  color: white;
+src/pages/HODDashboard.css:195:    color: white;
+src/pages/HODDashboard.css:204:    border: 2px solid white;
+src/pages/HODDashboard.css:218:    color: white;
+src/pages/HODDashboard.css:241:    background: rgba(255, 255, 255, 0.95);
+src/pages/HODDashboard.css:245:    border: 1px solid rgba(255, 255, 255, 0.2);
+src/pages/HODDashboard.css:280:    color: white;
+src/pages/HODDashboard.css:338:    background: rgba(255, 255, 255, 0.95);
+src/pages/HODDashboard.css:341:    border: 1px solid rgba(255, 255, 255, 0.2);
+src/pages/HODDashboard.css:362:    white-space: nowrap;
+src/pages/HODDashboard.css:416:    background: white;
+src/pages/HODDashboard.css:436:    color: white;
+src/pages/HODDashboard.css:455:    color: white;
+src/pages/HODDashboard.css:475:    background: white;
+src/pages/HODDashboard.css:535:    background: #fef3c7;
+src/pages/HODDashboard.css:545:    background: #fee2e2;
+src/pages/HODDashboard.css:608:    color: white;
+src/pages/HODDashboard.css:638:    color: white;
+src/pages/HODDashboard.css:657:    background: #f3f4f6;
+src/pages/HODDashboard.css:708:    background: white;
+src/pages/HODDashboard.css:754:    background: #f3f4f6;
+src/pages/HODDashboard.css:798:    background: white;
+src/pages/HODDashboard.css:823:    background: white;
+src/pages/HODDashboard.css:851:    background: white;
+src/pages/HODDashboard.css:926:    background: #fee2e2;
+src/pages/HODDashboard.css:931:    background: #fecaca;
+src/pages/HODDashboard.css:945:    background: white;
+src/pages/HODDashboard.css:976:    background: white;
+src/pages/HODDashboard.css:987:    background: #f9fafb;
+src/pages/HODDashboard.css:1009:    background: white;
+src/pages/HODDashboard.css:1041:    background: #f9fafb;
+src/pages/HomePage.css:10:  background: #ffffff;
+src/pages/HomePage.css:29:  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+src/pages/HomePage.css:50:  background: #ffffff;
+src/pages/HomePage.css:68:  color: #ffffff;
+src/pages/HomePage.css:120:  color: #fff;
+src/pages/HomePage.css:253:  color: #ffffff;
+src/pages/HomePage.css:258:.home-highlight {
+src/pages/HomePage.css:287:  color: #fff;
+src/pages/HomePage.css:303:  background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, transparent 50%);
+src/pages/HomePage.css:328:  color: #ffffff;
+src/pages/HomePage.css:332:  border: 2px solid rgba(255, 255, 255, 0.25);
+src/pages/HomePage.css:340:  border-color: rgba(255, 255, 255, 0.5);
+src/pages/HomePage.css:341:  background: rgba(255, 255, 255, 0.15);
+src/pages/HomePage.css:344:  box-shadow: 0 4px 16px rgba(255, 255, 255, 0.1);
+src/pages/HomePage.css:426:  background: #ffffff;
+src/pages/HomePage.css:437:  background: #f8fafc;
+src/pages/HomePage.css:472:.home-about-icon-amber { background: #fef3c7; color: #d97706; }
+src/pages/HomePage.css:491:  background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+src/pages/HomePage.css:502:  background: #ffffff;
+src/pages/HomePage.css:528:  color: #fff;
+src/pages/HomePage.css:548:  background: #ffffff;
+src/pages/HomePage.css:572:  color: #fff;
+src/pages/HomePage.css:624:  background: #ffffff;
+src/pages/HomePage.css:641:  background: #ffffff;
+src/pages/HomePage.css:679:  background: #f8fafc;
+src/pages/HomePage.jsx:94:            Welcome to <span className="home-highlight">EARA Connect</span>
+src/pages/InvitationManager/EnhancedSendInvitations.jsx:226:            <div className="bg-white rounded-lg shadow-sm border border-gray-200">
+src/pages/InvitationManager/EnhancedSendInvitations.jsx:284:              <div className="mt-6 bg-white rounded-lg shadow-sm border border-gray-200">
+src/pages/InvitationManager/EnhancedSendInvitations.jsx:310:                        : 'bg-blue-600 hover:bg-blue-700 text-white'
+src/pages/InvitationManager/EnhancedSendInvitations.jsx:333:              <div className="bg-white rounded-lg shadow-sm border border-gray-200 h-96 flex items-center justify-center">
+src/pages/InvitationManager/EnhancedSendInvitations.jsx:341:              <div className="bg-white rounded-lg shadow-sm border border-gray-200">
+src/pages/InvitationManager/EnhancedSendInvitations.jsx:379:                                    <FaCheck className="text-white text-xs" />
+src/pages/InvitationManager/EnhancedSendInvitations.jsx:426:                                    <FaCheck className="text-white text-xs" />
+src/pages/InvitationManager/InvitationManager.css:17:  background: white;
+src/pages/InvitationManager/InvitationManager.css:58:  background: #f1f5f9;
+src/pages/InvitationManager/InvitationManager.css:74:  color: white;
+src/pages/InvitationManager/InvitationManager.css:90:  background: rgba(255, 255, 255, 0.2);
+src/pages/InvitationManager/InvitationManager.css:91:  color: white;
+src/pages/InvitationManager/InvitationManager.css:104:  background: white;
+src/pages/InvitationManager/InvitationManager.css:140:  background: white;
+src/pages/InvitationManager/InvitationManager.css:222:  background: white;
+src/pages/InvitationManager/InvitationManager.css:261:  background: #f9fafb;
+src/pages/InvitationManager/InvitationManager.css:305:  background: white;
+src/pages/InvitationManager/InvitationManager.css:331:  background: white;
+src/pages/InvitationManager/InvitationManager.css:336:  background: #f9fafb;
+src/pages/InvitationManager/InvitationManager.css:351:  background: white;
+src/pages/InvitationManager/InvitationManager.css:379:  background: #fca5a5;
+src/pages/InvitationManager/InvitationManager.css:406:  color: white;
+src/pages/InvitationManager/InvitationManager.css:414:  background: #f3f4f6;
+src/pages/InvitationManager/InvitationManager.css:423:  background: #f9fafb;
+src/pages/InvitationManager/InvitationManager.css:461:  background: white;
+src/pages/InvitationManager/InvitationManager.css:477:  white-space: pre-wrap;
+src/pages/InvitationManager/InvitationManager.css:484:  background: #f9fafb;
+src/pages/InvitationManager/InvitationManager.css:522:  background: #f1f5f9;
+src/pages/InvitationManager/InvitationManager.css:528:  background: white;
+src/pages/InvitationManager/InvitationManager.css:565:  background: white;
+src/pages/InvitationManager/InvitationManager.css:604:  white-space: nowrap;
+src/pages/InvitationManager/InvitationManager.css:615:  color: white;
+src/pages/InvitationManager/InvitationManager.css:625:  color: white;
+src/pages/InvitationManager/InvitationManager.css:717:  background: #fef2f2;
+src/pages/InvitationManager/InvitationManager.css:747:  background: white;
+src/pages/InvitationManager/SendInvitations.css:14:  background: white;
+src/pages/InvitationManager/SendInvitations.css:53:  background: #fef2f2;
+src/pages/InvitationManager/SendInvitations.css:81:  background: white;
+src/pages/InvitationManager/SendInvitations.css:124:  background: white;
+src/pages/InvitationManager/SendInvitations.css:196:  background: #f3e8ff;
+src/pages/InvitationManager/SendInvitations.css:202:  background: white;
+src/pages/InvitationManager/SendInvitations.css:238:  background: #f9fafb;
+src/pages/InvitationManager/SendInvitations.css:262:  background: white;
+src/pages/InvitationManager/SendInvitations.jsx:471:                    backgroundColor: selectedMeeting?.id === meeting.id ? '#f8f9ff' : '#fff',
+src/pages/InvitationManager/SendInvitations.jsx:504:                      color: 'white',
+src/pages/InvitationManager/SendInvitations.jsx:535:                    color: 'white',
+src/pages/InvitationManager/SendInvitations.jsx:551:                    color: 'white',
+src/pages/InvitationManager/SendInvitations.jsx:613:                backgroundColor: '#fff'
+src/pages/InvitationManager/SendInvitations.jsx:627:                      backgroundColor: selectedInvitees.includes(user.id) ? '#e3f2fd' : '#fff',
+src/pages/InvitationManager/SendInvitations.jsx:683:                    color: 'white',
+src/pages/InvitationManager/SendInvitations.jsx:708:                    color: 'white',
+src/pages/Login.css:105:    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+src/pages/Login.css:112:  border: 1px solid rgba(255, 255, 255, 0.1);
+src/pages/Login.css:156:  background: #ffffff;
+src/pages/Login.css:158:  border: 1.5px solid rgba(255, 255, 255, 0.35);
+src/pages/Login.css:169:  color: #ffffff;
+src/pages/Login.css:255:  border: 1.5px solid rgba(255, 255, 255, 0.1);
+src/pages/Login.css:260:  background: rgba(255, 255, 255, 0.06);
+src/pages/Login.css:269:  background: rgba(255, 255, 255, 0.1);
+src/pages/Login.css:281:  color: white;
+src/pages/Login.css:299:  background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, transparent 50%);
+src/pages/Login.css:347:  border-top: 1px solid rgba(255, 255, 255, 0.08);
+src/pages/MeetingList.jsx:162:                className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg flex items-center gap-2"
+src/pages/MeetingList.jsx:202:          <div className="text-center py-12 bg-white rounded-lg shadow">
+src/pages/MeetingList.jsx:215:                  className="inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
+src/pages/MeetingList.jsx:226:              <div key={meeting.id} className="bg-white shadow rounded-lg overflow-hidden">
+src/pages/MeetingList.jsx:233:                        className="px-2 py-1 text-xs font-semibold rounded-full text-white"
+src/pages/Meetings/ArchiveMeetings.css:31:  background: white;
+src/pages/Meetings/ArchiveMeetings.css:63:  background: #f9fafb;
+src/pages/Meetings/ArchiveMeetings.css:67:  background: white;
+src/pages/Meetings/ArchiveMeetings.css:95:  background: white;
+src/pages/Meetings/ArchiveMeetings.css:115:  background: #f8fafc;
+src/pages/Meetings/ArchiveMeetings.css:138:  background: white;
+src/pages/Meetings/ArchiveMeetings.css:168:  color: white;
+src/pages/Meetings/ArchiveMeetings.css:192:  background: rgba(255, 255, 255, 0.15);
+src/pages/Meetings/ArchiveMeetings.css:197:  white-space: nowrap;
+src/pages/Meetings/ArchiveMeetings.css:199:  border: 1px solid rgba(255, 255, 255, 0.2);
+src/pages/Meetings/ArchiveMeetings.css:200:  color: white;
+src/pages/Meetings/ArchiveMeetings.css:210:  white-space: nowrap;
+src/pages/Meetings/ArchiveMeetings.css:211:  background: rgba(255, 255, 255, 0.1);
+src/pages/Meetings/ArchiveMeetings.css:214:  color: white;
+src/pages/Meetings/ArchiveMeetings.css:218:  color: rgba(255, 255, 255, 0.9);
+src/pages/Meetings/ArchiveMeetings.css:231:  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+src/pages/Meetings/ArchiveMeetings.css:269:  background: #f3f4f6;
+src/pages/Meetings/ArchiveMeetings.css:280:  white-space: normal;
+src/pages/Meetings/ArchiveMeetings.css:301:  white-space: nowrap;
+src/pages/Meetings/ArchiveMeetings.css:351:  background: #f8f9fa;
+src/pages/Meetings/ArchiveMeetings.css:357:  background: #f8f9fa;
+src/pages/Meetings/ArchiveMeetings.css:378:  background: white;
+src/pages/Meetings/ArchiveMeetings.css:422:  background: #fee;
+src/pages/Meetings/CreateMeeting.css:24:  background: white;
+src/pages/Meetings/CreateMeeting.css:38:  background: #ffffff;
+src/pages/Meetings/CreateMeeting.css:98:  background: #f8fafc;
+src/pages/Meetings/CreateMeeting.css:104:  background: #f1f5f9;
+src/pages/Meetings/CreateMeeting.css:131:  color: white;
+src/pages/Meetings/CreateMeeting.css:167:  background: #fee;
+src/pages/Meetings/CreateMeeting.css:201:  color: white;
+src/pages/Meetings/CreateMeeting.css:217:  color: white;
+src/pages/Meetings/EnhancedMeetingForm.jsx:198:        <div className="bg-white shadow rounded-lg">
+src/pages/Meetings/EnhancedMeetingForm.jsx:412:                className="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50"
+src/pages/Meetings/EnhancedMeetingForm.jsx:420:                className="px-4 py-2 text-sm font-medium text-white bg-blue-600 border border-transparent rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 flex items-center"
+src/pages/Meetings/EnhancedMeetingInvitationManager.css:6:    background: #f8fafc;
+src/pages/Meetings/EnhancedMeetingInvitationManager.css:21:        radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.15) 0%, transparent 50%);
+src/pages/Meetings/EnhancedMeetingInvitationManager.css:51:    color: rgba(255, 255, 255, 0.9);
+src/pages/Meetings/EnhancedMeetingInvitationManager.css:103:    white-space: pre-line;
+src/pages/Meetings/EnhancedMeetingInvitationManager.css:174:    background: rgba(255, 255, 255, 0.95);
+src/pages/Meetings/EnhancedMeetingInvitationManager.css:176:    border: 1px solid rgba(255, 255, 255, 0.2);
+src/pages/Meetings/EnhancedMeetingInvitationManager.css:185:    background: rgba(255, 255, 255, 0.8);
+src/pages/Meetings/EnhancedMeetingInvitationManager.css:224:    background: rgba(255, 255, 255, 0.9);
+src/pages/Meetings/EnhancedMeetingInvitationManager.css:318:    white-space: nowrap;
+src/pages/Meetings/EnhancedMeetingInvitationManager.css:327:    background: #fef3c7;
+src/pages/Meetings/EnhancedMeetingInvitationManager.css:387:    background: rgba(255, 255, 255, 0.95);
+src/pages/Meetings/EnhancedMeetingInvitationManager.css:389:    border: 1px solid rgba(255, 255, 255, 0.2);
+src/pages/Meetings/EnhancedMeetingInvitationManager.css:397:    background: rgba(255, 255, 255, 0.8);
+src/pages/Meetings/EnhancedMeetingInvitationManager.css:414:    background: white;
+src/pages/Meetings/EnhancedMeetingInvitationManager.css:428:    background: white;
+src/pages/Meetings/EnhancedMeetingInvitationManager.css:488:    color: white;
+src/pages/Meetings/EnhancedMeetingInvitationManager.css:554:    background: white;
+src/pages/Meetings/EnhancedMeetingInvitationManager.css:568:    background: white;
+src/pages/Meetings/EnhancedMeetingInvitationManager.css:641:    background: rgba(255, 255, 255, 0.5);
+src/pages/Meetings/EnhancedMeetingInvitationManager.css:708:    background: rgba(255, 255, 255, 0.7);
+src/pages/Meetings/EnhancedMeetingInvitationManager.css:745:    color: white;
+src/pages/Meetings/EnhancedMeetingInvitationManager.css:801:    color: white;
+src/pages/Meetings/EnhancedMeetingInvitationManager.css:807:    border: 4px solid rgba(255, 255, 255, 0.3);
+src/pages/Meetings/EnhancedMeetingInvitationManager.css:808:    border-top: 4px solid white;
+src/pages/Meetings/EnhancedMeetingInvitationManager.css:957:  background: white;
+src/pages/Meetings/EnhancedMeetingInvitationManager.css:966:  color: white;
+src/pages/Meetings/EnhancedMeetingInvitationManager.css:992:  white-space: nowrap;
+src/pages/Meetings/EnhancedMeetingInvitationManager.css:1031:  background: #f8fff9;
+src/pages/Meetings/EnhancedMeetingInvitationManager.css:1036:  background: #fff8f8;
+src/pages/Meetings/EnhancedMeetingInvitationManager.css:1059:  background: white;
+src/pages/Meetings/EnhancedMeetingInvitationManager.css:1108:  color: white;
+src/pages/Meetings/EnhancedMeetingInvitationManager.css:1135:  background: #f8f9fa;
+src/pages/Meetings/EnhancedMeetingInvitationManager.css:1158:  background: white;
+src/pages/Meetings/EnhancedMeetingInvitationManager.css:1191:  background: #f8d7da;
+src/pages/Meetings/EnhancedMeetingInvitationManager.css:1225:  background: #f8d7da;
+src/pages/Meetings/EnhancedMeetingInvitationManager.css:1264:  background: #f8f9fa;
+src/pages/Meetings/EnhancedMeetingInvitationManager.css:1286:  background: white;
+src/pages/Meetings/EnhancedMeetingInvitationManager.css:1303:  color: white;
+src/pages/Meetings/EnhancedMeetingInvitationManager.css:1309:  color: white;
+src/pages/Meetings/EnhancedMeetingInvitationManager.css:1315:  color: white;
+src/pages/Meetings/EnhancedMeetingInvitationManager.css:1321:  color: white;
+src/pages/Meetings/EnhancedMeetingInvitations.jsx:207:        <div className="bg-white rounded-lg p-8 text-center">
+src/pages/Meetings/EnhancedMeetingInvitations.jsx:217:      <div className="bg-white rounded-lg shadow-xl max-w-6xl w-full max-h-[90vh] overflow-hidden">
+src/pages/Meetings/EnhancedMeetingInvitations.jsx:330:                                <FaCheck className="text-white text-xs" />
+src/pages/Meetings/EnhancedMeetingInvitations.jsx:376:                                <FaCheck className="text-white text-xs" />
+src/pages/Meetings/EnhancedMeetingInvitations.jsx:404:            <div className="mb-6 p-4 bg-white rounded-lg border">
+src/pages/Meetings/EnhancedMeetingInvitations.jsx:424:              <div className="mb-6 p-4 bg-white rounded-lg border">
+src/pages/Meetings/EnhancedMeetingInvitations.jsx:438:            <div className="mb-6 p-4 bg-white rounded-lg border">
+src/pages/Meetings/EnhancedMeetingInvitations.jsx:460:                  : 'bg-blue-600 hover:bg-blue-700 text-white'
+src/pages/Meetings/FixedSendInvitations.jsx:164:        <div className="bg-white rounded-lg p-8 text-center">
+src/pages/Meetings/FixedSendInvitations.jsx:174:      <div className="bg-white rounded-lg shadow-xl max-w-4xl w-full max-h-[90vh] overflow-hidden">
+src/pages/Meetings/FixedSendInvitations.jsx:269:                            <FaCheck className="text-white text-xs" />
+src/pages/Meetings/FixedSendInvitations.jsx:316:                            <FaCheck className="text-white text-xs" />
+src/pages/Meetings/FixedSendInvitations.jsx:358:                  : 'bg-blue-600 hover:bg-blue-700 text-white'
+src/pages/Meetings/Meetings.css:11:  background: white;
+src/pages/Meetings/Meetings.css:28:  background: #f3f4f6;
+src/pages/Meetings/Meetings.css:40:  background: #ffffff;
+src/pages/Meetings/Meetings.css:67:  background: #ffffff;
+src/pages/Meetings/Meetings.css:91:  color: white;
+src/pages/Meetings/Meetings.css:109:  background: white;
+src/pages/Meetings/Meetings.css:214:  background: #f9fafb;
+src/pages/Meetings/Meetings.css:221:  background: #ffffff;
+src/pages/Meetings/Meetings.css:241:  background: #f9fafb;
+src/pages/Meetings/Meetings.css:276:  background: #f9fafb;
+src/pages/Meetings/Meetings.css:283:  background: #ffffff;
+src/pages/Meetings/Meetings.css:319:  background: #fee2e2;
+src/pages/Meetings/Meetings.css:324:  background: #fef3c7;
+src/pages/Meetings/Meetings.css:329:  background: #f3f4f6;
+src/pages/Meetings/Meetings.css:338:  background: #ffffff;
+src/pages/Meetings/Meetings.css:366:  background: #f9fafb;
+src/pages/Meetings/Meetings.css:373:  background: #ffffff;
+src/pages/Meetings/Meetings.css:410:  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+src/pages/Meetings/Meetings.css:442:  background: white;
+src/pages/Meetings/Meetings.css:592:  background: #ffffff;
+src/pages/Meetings/Meetings.css:624:  background: white;
+src/pages/Meetings/Meetings.css:687:  background-color: #fff;
+src/pages/Meetings/Meetings.css:721:  color: white;
+src/pages/Meetings/Meetings.css:752:  background: white;
+src/pages/Meetings/Meetings.css:770:  background: #f8fafc;
+src/pages/Meetings/Meetings.css:779:  background: white;
+src/pages/Meetings/Meetings.css:931:  background: white;
+src/pages/Meetings/Meetings.css:955:  background: #fef3c7;
+src/pages/Meetings/Meetings.css:961:  background: #fee2e2;
+src/pages/Meetings/Meetings.css:967:  background: #f3f4f6;
+src/pages/Meetings/Meetings.css:1008:  background: #f9fafb;
+src/pages/Meetings/Meetings.css:1107:  color: white;
+src/pages/Meetings/Meetings.css:1139:  background: white;
+src/pages/Meetings/Meetings.css:1170:  color: white;
+src/pages/Meetings/Meetings.css:1192:  color: white;
+src/pages/Meetings/Meetings.css:1226:  background: white;
+src/pages/Meetings/Meetings.css:1318:  background: #fef3c7;
+src/pages/Meetings/Meetings.css:1328:  background: #fee2e2;
+src/pages/Meetings/Meetings.css:1363:  background: #f9fafb;
+src/pages/Meetings/Meetings.css:1465:  background: white;
+src/pages/Meetings/Meetings.css:1497:  background: white;
+src/pages/Meetings/Meetings.css:1525:  background: #fef2f2;
+src/pages/MemberDashboard.css:5:    background: #f8fafc;
+src/pages/MemberDashboard.css:65:    background: rgba(255, 255, 255, 0.95);
+src/pages/MemberDashboard.css:68:    border: 1px solid rgba(255, 255, 255, 0.2);
+src/pages/MemberDashboard.css:85:    color: white;
+src/pages/MemberDashboard.css:134:    color: white;
+src/pages/MemberDashboard.css:143:    border: 2px solid white;
+src/pages/MemberDashboard.css:157:    color: white;
+src/pages/MemberDashboard.css:180:    background: rgba(255, 255, 255, 0.95);
+src/pages/MemberDashboard.css:184:    border: 1px solid rgba(255, 255, 255, 0.2);
+src/pages/MemberDashboard.css:219:    color: white;
+src/pages/MemberDashboard.css:278:    background: rgba(255, 255, 255, 0.95);
+src/pages/MemberDashboard.css:281:    border: 1px solid rgba(255, 255, 255, 0.2);
+src/pages/MemberDashboard.css:302:    white-space: nowrap;
+src/pages/MemberDashboard.css:333:    background: white;
+src/pages/MemberDashboard.css:383:    background: #f1f5f9;
+src/pages/MemberDashboard.css:414:    background: #fef3c7;
+src/pages/MemberDashboard.css:507:    background: #fef3c7;
+src/pages/MemberDashboard.css:512:    background: #fee2e2;
+src/pages/MemberDashboard.css:517:    background: #fecaca;
+src/pages/MemberDashboard.css:540:    color: white;
+src/pages/MemberDashboard.css:568:    background: white;
+src/pages/MemberDashboard.css:652:    background: #fee2e2;
+src/pages/MemberDashboard.css:657:    background: #fecaca;
+src/pages/MemberDashboard.css:668:    background: white;
+src/pages/MemberDashboard.css:697:    white-space: nowrap;
+src/pages/MemberDashboard.css:715:    background: #fef3c7;
+src/pages/MemberDashboard.css:725:    background: #fee2e2;
+src/pages/MemberDashboard.css:753:    background: #f8fafc;
+src/pages/MemberDashboard.css:771:    color: white;
+src/pages/MemberDashboard.css:790:    background: #f3f4f6;
+src/pages/MemberDashboard.css:823:    background: white;
+src/pages/MemberDashboard.css:866:    background: white;
+src/pages/MemberDashboard.css:877:    background: #f9fafb;
+src/pages/MemberDashboard.css:907:    background: white;
+src/pages/MemberDashboard.css:953:    background: #f3f4f6;
+src/pages/MemberDashboard.css:1022:    background: white;
+src/pages/MemberDashboard.css:1025:    border: 1px solid rgba(255, 255, 255, 0.2);
+src/pages/MemberDashboard.css:1055:    background: #fef3c7;
+src/pages/MemberDashboard.css:1060:    background: #fee2e2;
+src/pages/MemberDashboard.css:1094:    background: white;
+src/pages/MemberDashboard.css:1113:    color: white;
+src/pages/MemberDashboard.css:1231:  border: 2px solid rgba(255, 255, 255, 0.2);
+src/pages/MemberDashboard.css:1240:  border-color: rgba(255, 255, 255, 0.4);
+src/pages/MemberDashboard.css:1260:  color: white;
+src/pages/MemberDashboard.css:1272:  background: rgba(255, 255, 255, 0.1);
+src/pages/MemberDashboard.css:1276:  color: white;
+src/pages/MemberDashboard.css:1299:/* Update header colors to white background with black text */
+src/pages/MemberDashboard.css:1301:  background: white;
+src/pages/MemberDashboard.css:1352:  background: white;
+src/pages/MemberDashboard.css:1355:  border: 1px solid rgba(255, 255, 255, 0.2);
+src/pages/MemberDashboard.css:1381:  color: white;
+src/pages/MemberDashboard.css:1408:  background: white;
+src/pages/MemberDashboard.css:1462:  color: white;
+src/pages/MemberDashboard.css:1507:  background: #fef3c7;
+src/pages/MemberDashboard.css:1517:  background: #fecaca;
+src/pages/MemberDashboard.css:1530:  background: #f8fafc;
+src/pages/MemberDashboard.css:1556:  background: #fee2e2;
+src/pages/MemberDashboard.css:1561:  background: #fef3c7;
+src/pages/MemberDashboard.css:1585:  color: white;
+src/pages/MemberDashboard.css:1596:  color: white;
+src/pages/MemberDashboard.css:1749:    background: white;
+src/pages/MemberDashboard.css:1759:    background: #f9fafb;
+src/pages/MemberDashboard.css:1770:    background: #fffbeb;
+src/pages/Minutes/TakeMinutes.css:7:  background: #f8fafc;
+src/pages/Minutes/TakeMinutes.css:12:  background: white;
+src/pages/Minutes/TakeMinutes.css:22:  color: white;
+src/pages/Minutes/TakeMinutes.css:47:  background: rgba(255, 255, 255, 0.2);
+src/pages/Minutes/TakeMinutes.css:49:  color: white;
+src/pages/Minutes/TakeMinutes.css:63:  background: rgba(255, 255, 255, 0.3);
+src/pages/Minutes/TakeMinutes.css:102:  background: white;
+src/pages/Minutes/TakeMinutes.css:169:  color: white;
+src/pages/Minutes/TakeMinutes.css:170:  white-space: nowrap;
+src/pages/Minutes/TakeMinutes.css:203:  background: #f3f4f6;
+src/pages/Minutes/TakeMinutes.css:271:  background: #fafbfc;
+src/pages/Minutes/TakeMinutes.css:281:  background: white;
+src/pages/Minutes/TakeMinutes.css:328:  background: #f8fafc;
+src/pages/Minutes/TakeMinutes.css:347:  background: #f8fafc;
+src/pages/Minutes/TakeMinutes.css:409:  color: white;
+src/pages/Minutes/TakeMinutes.css:427:  color: white;
+src/pages/Minutes/TakeMinutes.css:438:  color: white;
+src/pages/Minutes/TakeMinutes.css:490:  background: #f8fafc;
+src/pages/Minutes/TakeMinutes.css:658:  background: #f1f5f9;
+src/pages/Minutes/TakeMinutes.css:664:  color: white;
+src/pages/Minutes/TakeMinutes.css:670:  background: #fffbeb;
+src/pages/Minutes/TakeMinutes.jsx:294:        <div className="meeting-card-actions" style={{ padding: '0.5rem 1rem 0.75rem', borderTop: '1px solid rgba(255,255,255,0.08)' }}>
+src/pages/Notifications/Notifications.css:39:  color: white;
+src/pages/Notifications/Notifications.css:49:  color: white;
+src/pages/Notifications/Notifications.css:58:  border: 2px solid white;
+src/pages/Notifications/Notifications.css:62:  background: white;
+src/pages/Notifications/Notifications.css:111:  color: white;
+src/pages/Notifications/Notifications.css:205:  color: white;
+src/pages/Notifications/Notifications.css:216:  background: #f1f5f9;
+src/pages/Notifications/Notifications.css:228:  background: #fee2e2;
+src/pages/Notifications/Notifications.css:235:  color: white;
+src/pages/Notifications/Notifications.css:273:  background: #fef2f2;
+src/pages/Reports/ReportReviewForm.jsx:246:          <div className="bg-white shadow rounded-lg">
+src/pages/Reports/ReportReviewForm.jsx:328:                          className="flex items-center gap-1 px-3 py-1 text-xs font-medium text-white rounded"
+src/pages/Reports/ReportReviewForm.jsx:344:            <div className="bg-white shadow rounded-lg">
+src/pages/Reports/ReportReviewForm.jsx:382:                    <div className="bg-white border border-gray-200 rounded-lg p-3">
+src/pages/Reports/ReportReviewForm.jsx:393:                      <div className="bg-white border border-gray-200 rounded-lg p-3">
+src/pages/Reports/ReportReviewForm.jsx:520:                      className="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50"
+src/pages/Reports/ReportReviewForm.jsx:527:                      className={`px-4 py-2 text-sm font-medium text-white border border-transparent rounded-md disabled:opacity-50 flex items-center gap-2 ${
+src/pages/Reports/ReportReviewForm.jsx:560:        <div className="mt-8 bg-white shadow rounded-lg p-6">
+src/pages/Resolutions/EnhancedResolutionWorkflow.css:6:    background: #f8fafc;
+src/pages/Resolutions/EnhancedResolutionWorkflow.css:21:        radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.15) 0%, transparent 50%),
+src/pages/Resolutions/EnhancedResolutionWorkflow.css:52:    color: rgba(255, 255, 255, 0.9);
+src/pages/Resolutions/EnhancedResolutionWorkflow.css:115:    white-space: pre-line;
+src/pages/Resolutions/EnhancedResolutionWorkflow.css:148:    background: rgba(255, 255, 255, 0.8);
+src/pages/Resolutions/EnhancedResolutionWorkflow.css:178:    background: rgba(255, 255, 255, 0.95);
+src/pages/Resolutions/EnhancedResolutionWorkflow.css:180:    border: 1px solid rgba(255, 255, 255, 0.2);
+src/pages/Resolutions/EnhancedResolutionWorkflow.css:189:    background: rgba(255, 255, 255, 0.8);
+src/pages/Resolutions/EnhancedResolutionWorkflow.css:244:    background: rgba(255, 255, 255, 0.7);
+src/pages/Resolutions/EnhancedResolutionWorkflow.css:317:    background: #fef3c7;
+src/pages/Resolutions/EnhancedResolutionWorkflow.css:322:    background: #f3e8ff;
+src/pages/Resolutions/EnhancedResolutionWorkflow.css:352:    background: rgba(255, 255, 255, 0.8);
+src/pages/Resolutions/EnhancedResolutionWorkflow.css:376:    color: white;
+src/pages/Resolutions/EnhancedResolutionWorkflow.css:387:    color: white;
+src/pages/Resolutions/EnhancedResolutionWorkflow.css:449:    background: linear-gradient(white, white) padding-box,
+src/pages/Resolutions/EnhancedResolutionWorkflow.css:537:    background: rgba(255, 255, 255, 0.3);
+src/pages/Resolutions/EnhancedResolutionWorkflow.css:598:    background: rgba(255, 255, 255, 0.8);
+src/pages/Resolutions/EnhancedResolutionWorkflow.css:663:    background: white;
+src/pages/Resolutions/EnhancedResolutionWorkflow.css:775:    color: white;
+src/pages/Resolutions/EnhancedResolutionWorkflow.css:807:    background: rgba(255, 255, 255, 0.8);
+src/pages/Resolutions/EnhancedResolutionWorkflow.css:847:    background: rgba(255, 255, 255, 0.8);
+src/pages/Resolutions/EnhancedResolutionWorkflow.css:917:    color: white;
+src/pages/Resolutions/EnhancedResolutionWorkflow.css:923:    border: 4px solid rgba(255, 255, 255, 0.3);
+src/pages/Resolutions/EnhancedResolutionWorkflow.css:924:    border-top: 4px solid white;
+src/pages/Resolutions/EnhancedResolutionWorkflow.css:1128:    background: white;
+src/pages/Resolutions/EnhancedResolutionWorkflow.css:1165:    background: white;
+src/pages/Resolutions/EnhancedResolutionWorkflow.css:1213:    background: #fee2e2;
+src/pages/Resolutions/EnhancedResolutionWorkflow.css:1223:    background: #fecaca;
+src/pages/Resolutions/EnhancedResolutionWorkflow.css:1254:    color: white;
+src/pages/Resolutions/EnhancedResolutionWorkflow.css:1350:    background: #fee2e2;
+src/pages/Resolutions/EnhancedResolutionWorkflow.css:1363:    color: white;
+src/pages/Resolutions/EnhancedResolutionWorkflow.jsx:717:                    color: 'white',
+src/pages/Resolutions/MeetingResolutions.css:31:  white-space: nowrap;
+src/pages/Resolutions/MeetingResolutions.css:94:  background: rgba(255,255,255,0.04);
+src/pages/Resolutions/MeetingResolutions.css:95:  border: 1px solid rgba(255,255,255,0.08);
+src/pages/Resolutions/MeetingResolutions.css:133:  background: rgba(255,255,255,0.05);
+src/pages/Resolutions/MeetingResolutions.css:134:  border: 1px solid rgba(255,255,255,0.12);
+src/pages/Resolutions/MeetingResolutions.css:162:  background: rgba(255,255,255,0.03);
+src/pages/Resolutions/MeetingResolutions.css:163:  border: 1px solid rgba(255,255,255,0.07);
+src/pages/Resolutions/MeetingResolutions.css:187:.mr-btn-primary { background: linear-gradient(135deg, #6366f1, #8b5cf6); color: white; }
+src/pages/Resolutions/ResolutionAssignmentForm.jsx:230:<div className="bg-white shadow rounded-lg">
+src/pages/Resolutions/ResolutionAssignmentForm.jsx:268:        className="inline-flex px-2 py-1 text-xs font-semibold rounded-full text-white"
+src/pages/Resolutions/ResolutionAssignmentForm.jsx:283:<div className="bg-white shadow rounded-lg">
+src/pages/Resolutions/ResolutionAssignmentForm.jsx:292:  className="bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded-lg flex items-center gap-2 text-sm"
+src/pages/Resolutions/ResolutionAssignmentForm.jsx:427:  className="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50"
+src/pages/Resolutions/ResolutionAssignmentForm.jsx:434:  className="px-4 py-2 text-sm font-medium text-white bg-blue-600 border border-transparent rounded-md hover:bg-blue-700 disabled:opacity-50 flex items-center gap-2"
+src/pages/Resolutions/Resolutions.css:19:  color: white;
+src/pages/Resolutions/Resolutions.css:57:  background: white;
+src/pages/Resolutions/Resolutions.css:87:  background: white;
+src/pages/Resolutions/Resolutions.css:135:  color: white;
+src/pages/Resolutions/Resolutions.css:146:  background: white;
+src/pages/Resolutions/Resolutions.css:180:  background: #f9fafb;
+src/pages/Resolutions/Resolutions.css:228:  background: white;
+src/pages/SecretaryDashboard.css:34:  background: white;
+src/pages/SecretaryDashboard.css:70:  color: white;
+src/pages/SecretaryDashboard.css:87:  background: #f0fdf4;
+src/pages/SecretaryDashboard.css:93:  background: #fef2f2;
+src/pages/SecretaryDashboard.css:115:  background: white;
+src/pages/SecretaryDashboard.css:138:  color: white;
+src/pages/SecretaryDashboard.css:143:  background: #f59e0b;
+src/pages/SecretaryDashboard.css:184:  background: white;
+src/pages/SecretaryDashboard.css:230:  color: white;
+src/pages/SecretaryDashboard.css:238:  background: #f3f4f6;
+src/pages/SecretaryPortal/ComprehensiveSecretaryDashboard.jsx:442:                          color: '#fff', borderRadius: '12px', padding: '3px 10px', fontSize: '12px', fontWeight: 600
+src/pages/SecretaryPortal/EnhancedSecretaryDashboard.css:6:    background: #f8fafc;
+src/pages/SecretaryPortal/EnhancedSecretaryDashboard.css:20:        radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.15) 0%, transparent 50%),
+src/pages/SecretaryPortal/EnhancedSecretaryDashboard.css:27:    background: rgba(255, 255, 255, 0.95);
+src/pages/SecretaryPortal/EnhancedSecretaryDashboard.css:28:    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+src/pages/SecretaryPortal/EnhancedSecretaryDashboard.css:89:  border: 2px solid rgba(255, 255, 255, 0.2);
+src/pages/SecretaryPortal/EnhancedSecretaryDashboard.css:98:  border-color: rgba(255, 255, 255, 0.4);
+src/pages/SecretaryPortal/EnhancedSecretaryDashboard.css:118:  color: white;
+src/pages/SecretaryPortal/EnhancedSecretaryDashboard.css:130:  background: rgba(255, 255, 255, 0.1);
+src/pages/SecretaryPortal/EnhancedSecretaryDashboard.css:134:  color: white;
+src/pages/SecretaryPortal/EnhancedSecretaryDashboard.css:157:/* Update header colors to white background with black text */
+src/pages/SecretaryPortal/EnhancedSecretaryDashboard.css:159:  background: white;
+src/pages/SecretaryPortal/EnhancedSecretaryDashboard.css:185:    background: rgba(255, 255, 255, 0.8);
+src/pages/SecretaryPortal/EnhancedSecretaryDashboard.css:219:    color: white;
+src/pages/SecretaryPortal/EnhancedSecretaryDashboard.css:232:    border: 2px solid white;
+src/pages/SecretaryPortal/EnhancedSecretaryDashboard.css:250:    background: rgba(255, 255, 255, 0.9);
+src/pages/SecretaryPortal/EnhancedSecretaryDashboard.css:287:    color: white;
+src/pages/SecretaryPortal/EnhancedSecretaryDashboard.css:303:    background: rgba(255, 255, 255, 0.3);
+src/pages/SecretaryPortal/EnhancedSecretaryDashboard.css:304:    color: white;
+src/pages/SecretaryPortal/EnhancedSecretaryDashboard.css:350:    background: rgba(255, 255, 255, 0.9);
+src/pages/SecretaryPortal/EnhancedSecretaryDashboard.css:353:    border: 1px solid rgba(255, 255, 255, 0.2);
+src/pages/SecretaryPortal/EnhancedSecretaryDashboard.css:397:    color: white;
+src/pages/SecretaryPortal/EnhancedSecretaryDashboard.css:435:    background: rgba(255, 255, 255, 0.9);
+src/pages/SecretaryPortal/EnhancedSecretaryDashboard.css:437:    border: 1px solid rgba(255, 255, 255, 0.2);
+src/pages/SecretaryPortal/EnhancedSecretaryDashboard.css:445:    background: rgba(255, 255, 255, 0.5);
+src/pages/SecretaryPortal/EnhancedSecretaryDashboard.css:514:    color: white;
+src/pages/SecretaryPortal/EnhancedSecretaryDashboard.css:519:    color: white;
+src/pages/SecretaryPortal/EnhancedSecretaryDashboard.css:549:    background: rgba(255, 255, 255, 0.9);
+src/pages/SecretaryPortal/EnhancedSecretaryDashboard.css:551:    border: 1px solid rgba(255, 255, 255, 0.2);
+src/pages/SecretaryPortal/EnhancedSecretaryDashboard.css:558:    background: rgba(255, 255, 255, 0.5);
+src/pages/SecretaryPortal/EnhancedSecretaryDashboard.css:615:    background: rgba(255, 255, 255, 0.7);
+src/pages/SecretaryPortal/EnhancedSecretaryDashboard.css:653:    background: #fef3c7;
+src/pages/SecretaryPortal/EnhancedSecretaryDashboard.css:668:    background: #f3e8ff;
+src/pages/SecretaryPortal/EnhancedSecretaryDashboard.css:736:    color: white;
+src/pages/SecretaryPortal/EnhancedSecretaryDashboard.css:742:    border: 4px solid rgba(255, 255, 255, 0.3);
+src/pages/SecretaryPortal/EnhancedSecretaryDashboard.css:743:    border-top: 4px solid white;
+src/pages/SecretaryPortal/EnhancedSecretaryDashboard.css:912:  white-space: nowrap;
+src/pages/SecretaryPortal/EnhancedSecretaryDashboard.css:917:  color: #ffffff;
+src/pages/SecretaryPortal/EnhancedSecretaryDashboard.css:934:  color: #ffffff;
+src/pages/SecretaryPortal/EnhancedSecretaryDashboard.css:961:  background: #ffffff;
+src/pages/SecretaryPortal/EnhancedSecretaryDashboard.css:985:  background: #ffffff;
+src/pages/SecretaryPortal/EnhancedSecretaryDashboard.css:1002:  background: #ffffff;
+src/pages/SecretaryPortal/EnhancedSecretaryDashboard.css:1014:  background: #f8faff;
+src/pages/SecretaryPortal/EnhancedSecretaryDashboard.css:1048:  background: #fafbff;
+src/pages/SecretaryPortal/EnhancedSecretaryDashboard.css:1056:  background: #f0f5ff;
+src/pages/SecretaryPortal/EnhancedSecretaryDashboard.css:1066:  background: #fee2e2;
+src/pages/SecretaryPortal/EnhancedSecretaryDashboard.css:1076:  background: #fef3c7;
+src/pages/SecretaryPortal/EnhancedSecretaryDashboard.css:1086:  background: #f3f4f6;
+src/pages/SecretaryPortal/EnhancedSecretaryDashboard.css:1099:  background: #ffffff;
+src/pages/SecretaryPortal/EnhancedSecretaryDashboard.css:1111:  background: #f0f5ff;
+src/pages/SecretaryPortal/EnhancedSecretaryDashboard.css:1120:  background: #ffffff;
+src/pages/SecretaryPortal/QuickTestInterface.jsx:275:                ? 'bg-blue-600 text-white shadow-md' 
+src/pages/SecretaryPortal/QuickTestInterface.jsx:276:                : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
+src/pages/SecretaryPortal/QuickTestInterface.jsx:279:            <FaEnvelope className={`text-lg ${activeTab === 'invitations' ? 'text-white' : 'text-blue-600'}`} />
+src/pages/SecretaryPortal/QuickTestInterface.jsx:286:                ? 'bg-blue-600 text-white shadow-md' 
+src/pages/SecretaryPortal/QuickTestInterface.jsx:287:                : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
+src/pages/SecretaryPortal/QuickTestInterface.jsx:290:            <FaFileAlt className={`text-lg ${activeTab === 'resolutions' ? 'text-white' : 'text-blue-600'}`} />
+src/pages/SecretaryPortal/QuickTestInterface.jsx:312:          <div className="bg-white rounded-lg shadow">
+src/pages/SecretaryPortal/QuickTestInterface.jsx:328:                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-gray-900"
+src/pages/SecretaryPortal/QuickTestInterface.jsx:365:                              <FaCheck className="text-white text-xs" />
+src/pages/SecretaryPortal/QuickTestInterface.jsx:402:                              <FaCheck className="text-white text-xs" />
+src/pages/SecretaryPortal/QuickTestInterface.jsx:428:                      loading ? 'bg-gray-300 text-gray-600 cursor-not-allowed' : 'bg-blue-600 text-white hover:bg-blue-700'
+src/pages/SecretaryPortal/QuickTestInterface.jsx:443:          <div className="bg-white rounded-lg shadow">
+src/pages/SecretaryPortal/QuickTestInterface.jsx:459:                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-gray-900"
+src/pages/SecretaryPortal/QuickTestInterface.jsx:503:                    <div key={assignment.id} className="border border-gray-200 rounded-lg bg-white">
+src/pages/SecretaryPortal/QuickTestInterface.jsx:525:                            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-gray-900"
+src/pages/SecretaryPortal/QuickTestInterface.jsx:544:                            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white text-gray-900"
+src/pages/SecretaryPortal/QuickTestInterface.jsx:571:                          : 'bg-green-600 text-white hover:bg-green-700'
+src/pages/SecretaryPortal/SecretaryPortal.css:16:    background: white;
+src/pages/SecretaryPortal/SecretaryPortal.css:50:    color: white;
+src/pages/SecretaryPortal/SecretaryPortal.css:60:    background-color: white;
+src/pages/SecretaryPortal/SecretaryPortal.css:77:    background: rgba(255, 255, 255, 0.2);
+src/pages/SecretaryPortal/SecretaryPortal.css:78:    color: white;
+src/pages/SecretaryPortal/SecretaryPortal.css:133:    background: white;
+src/pages/SecretaryPortal/SecretaryPortal.css:147:    background: linear-gradient(135deg, #ffffff, #f8fafc);
+src/pages/SecretaryPortal/SecretaryPortal.css:213:    background: white;
+src/pages/SecretaryPortal/SecretaryPortal.css:250:    background: #fef3c7;
+src/pages/SecretaryPortal/SecretaryPortal.css:260:    background: #f3e8ff;
+src/pages/SecretaryPortal/SecretaryPortal.css:309:    background: #f9fafb;
+src/pages/SecretaryPortal/SecretaryPortal.css:323:    background: white;
+src/pages/SecretaryPortal/SecretaryPortal.css:398:    background: white;
+src/pages/SecretaryPortal/SecretaryPortal.css:435:    color: white;
+src/pages/SecretaryPortal/SecretaryPortal.css:446:    background: white;
+src/pages/SecretaryPortal/SecretaryPortal.css:452:    background: #f9fafb;
+src/pages/SecretaryPortal/SecretaryPortal.css:532:    white-space: nowrap;
+src/pages/SecretaryPortal/SecretaryPortal.jsx:101:      <div className="bg-white shadow-sm border-b">
+src/pages/SecretaryPortal/SecretaryPortal.jsx:119:      <div className="bg-white border-b">
+src/pages/SecretaryPortal/SecretaryPortal.jsx:150:              <div className="bg-white rounded-lg shadow p-6">
+src/pages/SecretaryPortal/SecretaryPortal.jsx:162:              <div className="bg-white rounded-lg shadow p-6">
+src/pages/SecretaryPortal/SecretaryPortal.jsx:174:              <div className="bg-white rounded-lg shadow p-6">
+src/pages/SecretaryPortal/SecretaryPortal.jsx:186:              <div className="bg-white rounded-lg shadow p-6">
+src/pages/SecretaryPortal/SecretaryPortal.jsx:200:            <div className="bg-white rounded-lg shadow">
+src/pages/SecretaryPortal/SecretaryPortal.jsx:234:              <div className="bg-white rounded-lg shadow">
+src/pages/SecretaryPortal/SecretaryPortal.jsx:266:              <div className="bg-white rounded-lg shadow">
+src/pages/SecretaryPortal/SecretaryPortal.jsx:292:            <div className="bg-white rounded-lg shadow">
+src/pages/SecretaryPortal/SecretaryPortal.jsx:313:                            className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg flex items-center gap-2"
+src/pages/SubCommitteeMembers/SubCommitteeMembers.css:3:  background: white;
+src/pages/SubCommitteeMembers/SubCommitteeMembers.css:61:  color: white;
+src/pages/SubCommitteeMembers/SubCommitteeMembers.css:66:  color: white;
+src/pages/SubCommitteeMembers/SubCommitteeMembers.css:71:  color: white;
+src/pages/SubCommitteeMembers/SubCommitteeMembers.css:76:  color: white;
+src/pages/SubCommitteeMembers/SubCommitteeMembers.css:81:  color: white;
+src/pages/SubCommitteeMembers/SubCommitteeMembers.css:93:  background: white;
+src/pages/SubCommitteeMembers/SubCommitteeMembers.css:180:  background: white;
+src/pages/SubCommitteeMembers/SubCommitteeMembers.css:241:  color: white;
+src/pages/SubCommitteeMembers/SubCommitteeMembers.css:250:  color: white;
+src/pages/SubCommitteeMembers/SubCommitteeMembers.css:259:  color: white;
+src/pages/SubCommitteeMembers/SubCommitteeMembers.css:268:  color: white;
+src/pages/SubCommitteeMembers/SubCommitteeMembers.css:277:  color: white;
+src/pages/SubCommitteeMembers/SubCommitteeMembers.css:286:  color: white;
+src/pages/SubCommitteeMembers/SubCommitteeMembers.css:298:  color: white;
+src/pages/SubCommitteeMembers/SubCommitteeMembers.css:307:  color: white;
+src/pages/SubCommitteeMembers/SubCommitteeMembers.css:316:  color: white;
+src/pages/SubCommitteeMembers/SubCommitteeMembers.css:364:  white-space: nowrap;
+src/pages/UserProfile/UserProfile.css:18:  color: white;
+src/pages/UserProfile/UserProfile.css:27:  color: white;
+src/pages/UserProfile/UserProfile.css:38:  background: rgba(255, 255, 255, 0.2);
+src/pages/UserProfile/UserProfile.css:39:  color: white;
+src/pages/UserProfile/UserProfile.css:40:  border: 1px solid rgba(255, 255, 255, 0.3);
+src/pages/UserProfile/UserProfile.css:49:  background: rgba(255, 255, 255, 0.3);
+src/pages/UserProfile/UserProfile.css:93:  background: white;
+src/pages/UserProfile/UserProfile.css:136:  background: #f1f5f9;
+src/pages/UserProfile/UserProfile.css:144:  background: #f8fafc;
+src/pages/UserProfile/UserProfile.css:224:  background: white;
+src/pages/UserProfile/UserProfile.css:282:  color: white;
+src/pages/UserProfile/UserProfile.css:291:  color: white;
+src/pages/UserProfile/UserProfile.css:300:  color: white;
+src/pages/UserProfile/UserProfile.css:301:  color: white;
+src/pages/UserProfile/UserProfile.css:310:  color: white;
+src/pages/UserProfile/UserProfile.css:359:  background: #f9fafb;
+src/pages/UserProfile/UserProfile.css:366:  background: white;
+src/pages/UserProfile/UserProfile.css:378:  background: #f9fafb;
+src/pages/UserProfile/UserProfile.css:389:  background: #f3f4f6;
+src/pages/UserProfile/UserProfile.css:404:  background: #f8fafc;
+src/styles/GlobalStyles.css:291:  white-space: nowrap;
+src/styles/GlobalStyles.css:335:  color: white;
+src/styles/GlobalStyles.css:359:  color: white;
+src/styles/GlobalStyles.css:371:  color: white;
+src/styles/GlobalStyles.css:383:  color: white;
+src/styles/GlobalStyles.css:432:  background: white;
+src/styles/GlobalStyles.css:460:  background: white;
+src/styles/GlobalStyles.css:490:  font-size: 0.9375rem;  /* Reduced slightly */
+src/styles/GlobalStyles.css:544:  background: white;
+src/styles/GlobalStyles.css:574:  background: white;
+src/styles/GlobalStyles.css:591:  white-space: nowrap;
+src/styles/GlobalStyles.css:734:  background: #fff;
+src/styles/GlobalStyles.css:749:  background: #fff;
+src/styles/GlobalStyles.css:755:  background: #fff;
+src/styles/GlobalStyles.css:766:  white-space: nowrap;
+src/styles/GlobalStyles.css:890:  body:not(.light):not(.dark) {
+src/styles/GlobalStyles.css:977:/* Smooth selection highlight */
+src/styles/GlobalStyles.css:1070:  background: #f8fafc !important;
+src/styles/GlobalStyles.css:1535:    background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%) !important;
+src/styles/GlobalStyles.css:1555:    border: 2px solid rgba(255, 255, 255, 0.75) !important;
+src/styles/GlobalStyles.css:1579:    background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%) !important;
+src/styles/GlobalStyles.css:1658:    background: #f8fafc;
+src/styles/GlobalStyles.css:1710:    background: #f8fafc;
+src/styles/GlobalStyles.css:1760:    background: #fef3c7 !important;
+src/styles/GlobalStyles.css:1766:    background: #fee2e2 !important;
+src/styles/GlobalStyles.css:1781:    background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+src/styles/PhoneField.css:10:  background: #ffffff !important;
+src/styles/PhoneField.css:25:  background: #ffffff !important;
+src/styles/PhoneField.css:30:  background: #ffffff !important;
+src/styles/PhoneField.css:37:.intl-phone-dropdown .country.highlight {
+src/styles/PhoneField.css:38:  background: #f2f5f8 !important;
+src/styles/Theme.css:76:/* Hard lock app shell in dark mode so page-level CSS cannot drift to light surfaces */
+src/styles/Theme.css:335:/* Secretary dashboard has decorative light overlays; darken them explicitly */
+src/styles/Theme.css:345:  .bg-white,
+src/styles/Theme.css:385:/* Inline-style light background fallback */
+src/styles/Theme.css:387:  [style*="background: white"],
+src/styles/Theme.css:388:  [style*="background:white"],
+src/styles/Theme.css:389:  [style*="background-color: white"],
+src/styles/Theme.css:390:  [style*="background-color:white"],
+src/styles/Theme.css:391:  [style*="background: #fff"],
+src/styles/Theme.css:392:  [style*="background:#fff"],
+src/styles/Theme.css:393:  [style*="background: #f8fafc"],
+src/styles/Theme.css:394:  [style*="background:#f8fafc"],
+src/styles/Theme.css:395:  [style*="background: #f9fafb"],
+src/styles/Theme.css:396:  [style*="background:#f9fafb"],
+src/styles/Theme.css:397:  [style*="background: #f3f4f6"],
+src/styles/Theme.css:398:  [style*="background:#f3f4f6"],
+src/styles/Theme.css:399:  [style*="background-color: #fff"],
+src/styles/Theme.css:400:  [style*="background-color:#fff"],
+src/styles/Theme.css:401:  [style*="background: rgb(255, 255, 255)"],
+src/styles/Theme.css:402:  [style*="background-color: rgb(255, 255, 255)"],
+src/styles/Theme.css:458:/* Browser-like global fallback: catch remaining light page components by common structural class names */
+src/styles/Theme.css:487:/* Force dark on light gradients used by legacy page CSS */
+src/utils/constants.js:208:        titleColor: 'white',
+src/utils/constants.js:209:        bodyColor: 'white',
+src/utils/constants.js:210:        borderColor: 'rgba(255, 255, 255, 0.1)',
+public/manifest.json:24:  "background_color": "#ffffff"
